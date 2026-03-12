@@ -7,7 +7,7 @@
   <meta name="description" content="Rear Econ – professional economic research, analysis, and publications." />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.jpeg">
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <!-- Typography -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -201,25 +201,45 @@
       font-size: 1rem;
     }
 
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .contact-card {
-      background: #fff;
-      padding: 1.6rem;
+    /* Enhanced Contact Section */
+    .enhanced-contact {
+      padding: 2rem;
       border-radius: var(--radius);
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
+      background: #fff;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .contact-icon {
+      font-size: 1.6rem;
+      background: var(--accent);
+      color: #fff;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-btn {
+      margin-top: 1rem;
+      width: 100%;
+      text-align: center;
     }
 
     .social-links a {
       display: inline-block;
       margin-right: 1rem;
       color: var(--accent);
-      font-weight: 500;
+      font-weight: 600;
       text-decoration: none;
     }
 
@@ -446,21 +466,30 @@
     <h2 class="section-title">Contact</h2>
     <p class="section-sub">Reach out to collaborate, learn, or connect with us.</p>
 
-    <div class="contact-card">
-      <div>
-        <div class="contact-label">Email</div>
-        <div class="contact-value">rearecon2025@gmail.com</div>
+    <div class="contact-card enhanced-contact">
+
+      <div class="contact-row">
+        <div class="contact-icon">📧</div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value">rearecon2025@gmail.com</div>
+        </div>
       </div>
 
-      <div>
-        <div class="contact-label">Location</div>
-        <div class="contact-value">Lalitpur, Nepal</div>
+      <div class="contact-row">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-label">Location</div>
+          <div class="contact-value">Lalitpur, Nepal</div>
+        </div>
       </div>
 
-      <div>
-        <div class="contact-label">Social Links</div>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/company/rear-econ/posts/?feedView=all" target="_blank">LinkedIn</a>
+      <div class="contact-row">
+        <div class="contact-icon">🌐</div>
+        <div>
+          <div class="contact-label">Social Links</div>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/company/rear-econ/posts/?feedView=all" target="_blank">LinkedIn</a>
           <a href="https://www.instagram.com/rearecon2025/" target="_blank">Instagram</a>
           <a href="https://www.facebook.com/p/REAR-Econ-61579375343643/" target="_blank">Facebook</a>
           <a href="https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw" target="_blank">YouTube</a>
