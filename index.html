@@ -60,6 +60,85 @@
       overflow-x: hidden;
     }
 
+.contact-enhanced {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f6ff 100%);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.contact-heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.contact-text {
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  background: var(--accent);
+  color: #fff;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(47,128,237,0.25);
+}
+
+.contact-btn {
+  margin-top: 0.5rem;
+  width: fit-content;
+}
+
+.contact-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-graphic {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background: radial-gradient(circle at 30% 30%, #dceaff, #bcd7ff, #a7c8ff);
+  opacity: 0.7;
+  filter: blur(20px);
+}
+
+@media (max-width: 900px) {
+  .contact-enhanced {
+    grid-template-columns: 1fr;
+  }
+  .contact-right {
+    display: none;
+  }
+}
+
+
+    
     /* Fade-in animation */
     .fade {
       opacity: 0;
@@ -521,41 +600,53 @@
   <h2 class="section-title">Contact</h2>
   <p class="section-sub">Reach out to collaborate, learn, or connect with us.</p>
 
-  <div class="contact-card enhanced-contact">
+  <div class="contact-enhanced">
 
-    <div class="contact-row">
-      <div class="contact-icon">📧</div>
-      <div>
-        <div class="contact-label">Email</div>
-        <div class="contact-value">rearecon2025@gmail.com</div>
-      </div>
-    </div>
+    <div class="contact-left">
+      <h3 class="contact-heading">Let’s work together</h3>
+      <p class="contact-text">
+        Whether you're a researcher, student, mentor, or organization, we’d love to hear from you.
+      </p>
 
-    <div class="contact-row">
-      <div class="contact-icon">📍</div>
-      <div>
-        <div class="contact-label">Location</div>
-        <div class="contact-value">Lalitpur, Nepal</div>
-      </div>
-    </div>
-
-    <div class="contact-row">
-      <div class="contact-icon">🌐</div>
-      <div>
-        <div class="contact-label">Social Links</div>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/company/rear-econ/posts/?feedView=all" target="_blank">LinkedIn</a>
-          <a href="https://www.instagram.com/rearecon2025/" target="_blank">Instagram</a>
-          <a href="https://www.facebook.com/p/REAR-Econ-61579375343643/" target="_blank">Facebook</a>
-          <a href="https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw" target="_blank">YouTube</a>
+      <div class="contact-row">
+        <div class="contact-icon">📧</div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value">rearecon2025@gmail.com</div>
         </div>
       </div>
+
+      <div class="contact-row">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-label">Location</div>
+          <div class="contact-value">Lalitpur, Nepal</div>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-icon">🌐</div>
+        <div>
+          <div class="contact-label">Social Links</div>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/company/rear-econ/posts/?feedView=all" target="_blank">LinkedIn</a>
+            <a href="https://www.instagram.com/rearecon2025/" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/p/REAR-Econ-61579375343643/" target="_blank">Facebook</a>
+            <a href="https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw" target="_blank">YouTube</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="mailto:rearecon2025@gmail.com" class="btn contact-btn">Start a conversation</a>
     </div>
 
-    <a href="mailto:rearecon2025@gmail.com" class="btn" style="margin-top:0.6rem;">Start a conversation</a>
+    <div class="contact-right">
+      <div class="contact-graphic"></div>
+    </div>
 
   </div>
 </section>
+
 
 <footer>
   © <span id="year"></span> Rear Econ — Economic Research & Insight
