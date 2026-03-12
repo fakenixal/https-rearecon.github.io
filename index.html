@@ -2,11 +2,9 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8" />
   <title>Rear Econ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Rear Econ – professional economic research, analysis, and publications." />
 
   <!-- Primary SEO Meta Tags -->
   <meta name="title" content="Rear Econ – Applied Economics Research Collective">
@@ -144,29 +142,66 @@
 
     nav a:hover { color: var(--primary); }
 
-    .hero {
-      max-width: 1200px;
-      margin: auto;
-      padding: 9rem 1.5rem 5rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
+    /* Hero with brush background */
+    .hero-brush {
+      position: relative;
+      padding: 10rem 1.5rem 6rem;
+      text-align: left;
+      display: flex;
       align-items: center;
+      justify-content: flex-start;
+      overflow: hidden;
+      background: #f7f9fc;
     }
 
-    .hero h1 {
-      font-size: 2.8rem;
+    .hero-inner {
+      max-width: 650px;
+      z-index: 2;
+    }
+
+    .hero-inner h1 {
+      font-size: 3.2rem;
       font-weight: 700;
       color: var(--primary);
-      line-height: 1.2;
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
     }
 
-    .hero p {
-      font-size: 1.05rem;
+    .hero-inner p {
+      font-size: 1.25rem;
       color: var(--muted);
-      max-width: 36rem;
-      margin-bottom: 1.8rem;
+      line-height: 1.6;
+      margin-bottom: 2.2rem;
+      max-width: 600px;
+    }
+
+    .hero-brush::after {
+      content: "";
+      position: absolute;
+      right: -5%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 55%;
+      height: 80%;
+      background-image: url('data:image/svg+xml;utf8,<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg"><path d="M50 200 Q250 50 550 120 T750 200 Q550 350 250 280 T50 200" fill="%23e3efff"/></svg>');
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    @media (max-width: 900px) {
+      .hero-brush {
+        text-align: center;
+        justify-content: center;
+      }
+
+      .hero-brush::after {
+        width: 90%;
+        height: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        opacity: 0.5;
+      }
     }
 
     .btn {
@@ -183,14 +218,6 @@
     }
 
     .btn:hover { background: #2563eb; transform: translateY(-2px); }
-
-    .hero-card {
-      background: #fff;
-      padding: 1.8rem;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-    }
 
     .section {
       max-width: 1200px;
@@ -263,7 +290,6 @@
       align-items: flex-start;
     }
 
-    /* Avatar now uses photos */
     .avatar {
       width: 60px;
       height: 60px;
@@ -280,7 +306,6 @@
       display: block;
     }
 
-    /* Enhanced Contact Section */
     .enhanced-contact {
       padding: 2rem;
       border-radius: var(--radius);
@@ -336,11 +361,9 @@
     }
 
     @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; }
       .grid-3, .grid-2 { grid-template-columns: 1fr; }
     }
   </style>
-
 </head>
 
 <body>
@@ -363,26 +386,13 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero fade">
-    <div>
-      <h1>Evidence‑driven economic insight<br>for policy, markets, and strategy.</h1>
+  <section class="hero-brush fade">
+    <div class="hero-inner">
+      <h1>REAR Econ</h1>
       <p>
-        REAR Econ empowers aspiring applied economics researchers to become world-class, policy-engaged, and socially conscious
-        leaders, with a focus on those from low-income backgrounds, first-generation families, marginalized communities, and women.
+        We help aspiring applied economics researchers grow into world‑class, policy engaged, and socially conscious leaders.
       </p>
       <a href="#work" class="btn">Explore our work</a>
-    </div>
-
-    <div class="hero-card fade">
-      <h3 style="color:var(--primary); font-size:1.1rem; margin-bottom:0.6rem;">Rear Econ at a glance</h3>
-      <p style="color:var(--muted); font-size:0.9rem; margin-bottom:0.8rem;">
-        Evidence-first economics for organizations that need clarity, not noise.
-      </p>
-      <ul style="margin-top:0.4rem; color:var(--muted); font-size:0.9rem; line-height:1.5; list-style:none; padding-left:0;">
-        <li>• Independent, transparent analysis</li>
-        <li>• Tailored outputs for policy & private sector</li>
-        <li>• Commitment to reproducibility</li>
-      </ul>
     </div>
   </section>
 
@@ -539,13 +549,35 @@
   <!-- ABOUT -->
   <section id="about" class="section fade">
     <h2 class="section-title">About Rear Econ</h2>
-    <p class="section-sub">How we think and how we work.</p>
+    <p class="section-sub">Here’s what we do.</p>
 
-    <div class="two-col">
-      <div>
-        <p>Rear Econ is built on a simple premise: economic analysis should be rigorous enough to stand up to scrutiny and clear enough to guide real decisions.</p>
-        <p>Our work spans policy design, market analysis, and impact evaluation — but the core remains the same: careful reasoning, transparent methods, and outputs that are actually usable.</p>
+    <div style="max-width:700px; margin:auto; font-size:1rem; color:#374151; line-height:1.7;">
+
+      <div style="display:flex; align-items:flex-start; gap:1rem; margin-bottom:1.2rem;">
+        <div style="font-size:1.4rem;">📊</div>
+        <p>Run practical research and data workshops that build real analytical skills.</p>
       </div>
+
+      <div style="display:flex; align-items:flex-start; gap:1rem; margin-bottom:1.2rem;">
+        <div style="font-size:1.4rem;">🤝</div>
+        <p>Connect emerging researchers with mentors who guide their academic and professional growth.</p>
+      </div>
+
+      <div style="display:flex; align-items:flex-start; gap:1rem; margin-bottom:1.2rem;">
+        <div style="font-size:1.4rem;">📑</div>
+        <p>Collaborate on real‑world economic studies that sharpen applied research experience.</p>
+      </div>
+
+      <div style="display:flex; align-items:flex-start; gap:1rem; margin-bottom:1.2rem;">
+        <div style="font-size:1.4rem;">🌐</div>
+        <p>Build networks and open doors to opportunities in policy, academia, and industry.</p>
+      </div>
+
+      <div style="display:flex; align-items:flex-start; gap:1rem;">
+        <div style="font-size:1.4rem;">✍️</div>
+        <p>Support writing, presenting, and publishing work so researchers can share their ideas with the world.</p>
+      </div>
+
     </div>
   </section>
 
