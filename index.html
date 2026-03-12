@@ -35,7 +35,6 @@
       overflow-x: hidden;
     }
 
-    /* Fade-in animation */
     .fade {
       opacity: 0;
       transform: translateY(20px);
@@ -48,7 +47,6 @@
       }
     }
 
-    /* NAVBAR */
     header {
       position: fixed;
       top: 0;
@@ -79,14 +77,14 @@
       width: auto;
     }
 
-    .logo span {
+    .logo-text {
       font-weight: 700;
       font-size: 1rem;
       letter-spacing: 0.05em;
       color: var(--primary);
     }
 
-    .logo span span {
+    .logo-text span {
       color: var(--accent);
     }
 
@@ -101,7 +99,6 @@
       color: var(--primary);
     }
 
-    /* HERO */
     .hero {
       max-width: 1200px;
       margin: auto;
@@ -123,7 +120,7 @@
     .hero p {
       font-size: 1.05rem;
       color: var(--muted);
-      max-width: 32rem;
+      max-width: 36rem;
       margin-bottom: 1.8rem;
     }
 
@@ -152,7 +149,6 @@
       border: 1px solid var(--border);
     }
 
-    /* SECTION HEADERS */
     .section {
       max-width: 1200px;
       margin: auto;
@@ -183,7 +179,6 @@
       margin-bottom: 2rem;
     }
 
-    /* CARDS */
     .grid {
       display: grid;
       gap: 1.6rem;
@@ -230,7 +225,6 @@
       color: #374151;
     }
 
-    /* TEAM */
     .team-card {
       display: flex;
       gap: 1rem;
@@ -250,7 +244,6 @@
       font-size: 1rem;
     }
 
-    /* ABOUT + CONTACT */
     .two-col {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
@@ -277,7 +270,6 @@
       margin-bottom: 1rem;
     }
 
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -287,7 +279,6 @@
       margin-top: 3rem;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 900px) {
       .hero {
         grid-template-columns: 1fr;
@@ -308,8 +299,8 @@
   <header>
     <div class="nav">
       <div class="logo">
-        <img src="assets/logo.png" alt="Rear Econ Logo">
-        <span>REAR <span>ECON</span></span>
+        <img src="rear-econ-logo.png" alt="Rear Econ Logo">
+        <div class="logo-text">REAR <span>ECON</span></div>
       </div>
       <nav>
         <a href="#work">Work</a>
@@ -325,18 +316,21 @@
   <section class="hero fade">
     <div>
       <h1>Evidence‑driven economic insight<br>for policy, markets, and strategy.</h1>
-      <p>Rear Econ delivers rigorous analysis, clear narratives, and decision‑ready insight for institutions that cannot afford guesswork.</p>
+      <p>
+        REAR Econ empowers aspiring applied economics researchers to become world-class, policy-engaged, and socially conscious
+        leaders, with a focus on those from low-income backgrounds, first-generation families, marginalized communities, and women.
+      </p>
       <a href="#work" class="btn">Explore our work</a>
     </div>
 
     <div class="hero-card fade">
       <h3 style="color:var(--primary); font-size:1.1rem; margin-bottom:0.6rem;">Rear Econ at a glance</h3>
-      <p style="color:var(--muted); font-size:0.9rem;">
-        Evidence‑first economics for organizations that need clarity, not noise.
+      <p style="color:var(--muted); font-size:0.9rem; margin-bottom:0.8rem;">
+        Evidence-first economics for organizations that need clarity, not noise.
       </p>
-      <ul style="margin-top:1rem; color:var(--muted); font-size:0.9rem; line-height:1.5;">
+      <ul style="margin-top:0.4rem; color:var(--muted); font-size:0.9rem; line-height:1.5; list-style:none; padding-left:0;">
         <li>• Independent, transparent analysis</li>
-        <li>• Tailored outputs for policy & private sector</li>
+        <li>• Tailored outputs for policy &amp; private sector</li>
         <li>• Commitment to reproducibility</li>
       </ul>
     </div>
@@ -350,13 +344,13 @@
     <div class="grid grid-3">
       <div class="card">
         <div class="card-label">Practice Area</div>
-        <div class="card-title">Policy & Program Design</div>
+        <div class="card-title">Policy &amp; Program Design</div>
         <div class="card-body">Structured economic frameworks to design, stress‑test, and refine public policies and social protection programs.</div>
       </div>
 
       <div class="card">
         <div class="card-label">Practice Area</div>
-        <div class="card-title">Market & Sector Analysis</div>
+        <div class="card-title">Market &amp; Sector Analysis</div>
         <div class="card-body">Deep dives into sectors, markets, and regulatory environments to inform investment and strategic decisions.</div>
       </div>
 
@@ -407,7 +401,6 @@
 
     <div class="grid grid-2">
 
-      <!-- Founder -->
       <div class="card team-card">
         <div class="avatar">PD</div>
         <div>
@@ -419,7 +412,6 @@
         </div>
       </div>
 
-      <!-- Research Associate -->
       <div class="card team-card">
         <div class="avatar">NJ</div>
         <div>
@@ -431,7 +423,6 @@
         </div>
       </div>
 
-      <!-- Research Associate -->
       <div class="card team-card">
         <div class="avatar">SP</div>
         <div>
@@ -443,7 +434,6 @@
         </div>
       </div>
 
-      <!-- Research Associate -->
       <div class="card team-card">
         <div class="avatar">SG</div>
         <div>
@@ -472,12 +462,12 @@
       <div id="contact" class="contact-card">
         <div>
           <div class="contact-label">Email</div>
-          <div class="contact-value">contact@rearecon.example</div>
+          <div class="contact-value">rearecon2025@gmail.com</div>
         </div>
 
         <div>
           <div class="contact-label">Location</div>
-          <div class="contact-value">City, Country</div>
+          <div class="contact-value">Lalitpur, Nepal</div>
         </div>
 
         <div>
@@ -485,7 +475,7 @@
           <div class="contact-value">Open to collaborations and commissioned research.</div>
         </div>
 
-        <a href="mailto:contact@rearecon.example" class="btn" style="margin-top:0.6rem;">Start a conversation</a>
+        <a href="mailto:rearecon2025@gmail.com" class="btn" style="margin-top:0.6rem;">Start a conversation</a>
       </div>
     </div>
   </section>
