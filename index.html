@@ -94,10 +94,16 @@
     }
 
     .fade {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 0.8s ease forwards;
-    }
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
     @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
 
     header {
@@ -574,9 +580,18 @@
     © <span id="year"></span> Rear Econ — Economic Research & Insight
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.15 });
 
+  document.querySelectorAll('.fade').forEach((el) => observer.observe(el));
+</script>
+
+  
 </body>
 </html>
