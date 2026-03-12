@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Rear Econ – professional economic research, analysis, and publications." />
 
-  <!-- Typography: Plus Jakarta Sans -->
+  <!-- Typography -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -21,11 +21,7 @@
       --shadow: 0 8px 24px rgba(0,0,0,0.06);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: "Plus Jakarta Sans", sans-serif;
@@ -40,12 +36,7 @@
       transform: translateY(20px);
       animation: fadeIn 0.8s ease forwards;
     }
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+    @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
 
     header {
       position: fixed;
@@ -66,26 +57,9 @@
       align-items: center;
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
     .logo img {
-      height: 42px;
+      height: 48px;
       width: auto;
-    }
-
-    .logo-text {
-      font-weight: 700;
-      font-size: 1rem;
-      letter-spacing: 0.05em;
-      color: var(--primary);
-    }
-
-    .logo-text span {
-      color: var(--accent);
     }
 
     nav a {
@@ -95,9 +69,7 @@
       text-decoration: none;
       transition: 0.2s;
     }
-    nav a:hover {
-      color: var(--primary);
-    }
+    nav a:hover { color: var(--primary); }
 
     .hero {
       max-width: 1200px;
@@ -136,10 +108,7 @@
       transition: 0.2s;
       text-decoration: none;
     }
-    .btn:hover {
-      background: #2563eb;
-      transform: translateY(-2px);
-    }
+    .btn:hover { background: #2563eb; transform: translateY(-2px); }
 
     .hero-card {
       background: #fff;
@@ -179,18 +148,9 @@
       margin-bottom: 2rem;
     }
 
-    .grid {
-      display: grid;
-      gap: 1.6rem;
-    }
-
-    .grid-3 {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .grid-2 {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    .grid { display: grid; gap: 1.6rem; }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
 
     .card {
       background: #fff;
@@ -200,10 +160,7 @@
       box-shadow: var(--shadow);
       transition: 0.2s;
     }
-
-    .card:hover {
-      transform: translateY(-4px);
-    }
+    .card:hover { transform: translateY(-4px); }
 
     .card-label {
       font-size: 0.75rem;
@@ -220,10 +177,7 @@
       margin-bottom: 0.4rem;
     }
 
-    .card-body {
-      font-size: 0.9rem;
-      color: #374151;
-    }
+    .card-body { font-size: 0.9rem; color: #374151; }
 
     .team-card {
       display: flex;
@@ -258,18 +212,6 @@
       box-shadow: var(--shadow);
     }
 
-    .contact-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.2rem;
-    }
-
-    .contact-value {
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -280,15 +222,9 @@
     }
 
     @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-      .grid-3, .grid-2 {
-        grid-template-columns: 1fr;
-      }
-      .two-col {
-        grid-template-columns: 1fr;
-      }
+      .hero { grid-template-columns: 1fr; }
+      .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -300,12 +236,12 @@
     <div class="nav">
       <div class="logo">
         <img src="rear-econ-logo.png" alt="Rear Econ Logo">
-        <div class="logo-text">REAR <span>ECON</span></div>
       </div>
       <nav>
         <a href="#work">Work</a>
         <a href="#publications">Publications</a>
         <a href="#team">Team</a>
+        <a href="#videos">Videos</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -330,7 +266,7 @@
       </p>
       <ul style="margin-top:0.4rem; color:var(--muted); font-size:0.9rem; line-height:1.5; list-style:none; padding-left:0;">
         <li>• Independent, transparent analysis</li>
-        <li>• Tailored outputs for policy &amp; private sector</li>
+        <li>• Tailored outputs for policy & private sector</li>
         <li>• Commitment to reproducibility</li>
       </ul>
     </div>
@@ -344,13 +280,13 @@
     <div class="grid grid-3">
       <div class="card">
         <div class="card-label">Practice Area</div>
-        <div class="card-title">Policy &amp; Program Design</div>
+        <div class="card-title">Policy & Program Design</div>
         <div class="card-body">Structured economic frameworks to design, stress‑test, and refine public policies and social protection programs.</div>
       </div>
 
       <div class="card">
         <div class="card-label">Practice Area</div>
-        <div class="card-title">Market &amp; Sector Analysis</div>
+        <div class="card-title">Market & Sector Analysis</div>
         <div class="card-body">Deep dives into sectors, markets, and regulatory environments to inform investment and strategic decisions.</div>
       </div>
 
@@ -448,6 +384,36 @@
     </div>
   </section>
 
+  <!-- VIDEOS -->
+  <section id="videos" class="section fade">
+    <h2 class="section-title">Meeting Sessions</h2>
+    <p class="section-sub">Watch our recorded discussions, workshops, and research sessions.</p>
+
+    <div class="grid grid-2">
+
+      <div class="card" style="padding:0;">
+        <iframe width="100%" height="315"
+          src="https://www.youtube.com/embed/VIDEO_ID_1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="card" style="padding:0;">
+        <iframe width="100%" height="315"
+          src="https://www.youtube.com/embed/VIDEO_ID_2"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
   <!-- ABOUT + CONTACT -->
   <section id="about" class="section fade">
     <h2 class="section-title">About Rear Econ</h2>
@@ -462,12 +428,12 @@
       <div id="contact" class="contact-card">
         <div>
           <div class="contact-label">Email</div>
-          <div class="contact-value">rearecon2025@gmail.com</div>
+          <div class="contact-value">contact@rearecon.example</div>
         </div>
 
         <div>
           <div class="contact-label">Location</div>
-          <div class="contact-value">Lalitpur, Nepal</div>
+          <div class="contact-value">City, Country</div>
         </div>
 
         <div>
@@ -475,7 +441,7 @@
           <div class="contact-value">Open to collaborations and commissioned research.</div>
         </div>
 
-        <a href="mailto:rearecon2025@gmail.com" class="btn" style="margin-top:0.6rem;">Start a conversation</a>
+        <a href="mailto:contact@rearecon.example" class="btn" style="margin-top:0.6rem;">Start a conversation</a>
       </div>
     </div>
   </section>
