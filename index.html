@@ -7,7 +7,7 @@
   <meta name="description" content="Rear Econ – professional economic research, analysis, and publications." />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.jpeg">
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <!-- Typography -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -203,7 +203,7 @@
 
     .two-col {
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
+      grid-template-columns: 1fr;
       gap: 2rem;
     }
 
@@ -213,6 +213,18 @@
       border-radius: var(--radius);
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin-right: 1rem;
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -227,7 +239,6 @@
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; }
       .grid-3, .grid-2 { grid-template-columns: 1fr; }
-      .two-col { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -417,7 +428,7 @@
     </div>
   </section>
 
-  <!-- ABOUT + CONTACT -->
+  <!-- ABOUT -->
   <section id="about" class="section fade">
     <h2 class="section-title">About Rear Econ</h2>
     <p class="section-sub">How we think and how we work.</p>
@@ -427,25 +438,36 @@
         <p>Rear Econ is built on a simple premise: economic analysis should be rigorous enough to stand up to scrutiny and clear enough to guide real decisions.</p>
         <p>Our work spans policy design, market analysis, and impact evaluation — but the core remains the same: careful reasoning, transparent methods, and outputs that are actually usable.</p>
       </div>
+    </div>
+  </section>
 
-      <div id="contact" class="contact-card">
-        <div>
-          <div class="contact-label">Email</div>
-          <div class="contact-value">contact@rearecon.example</div>
-        </div>
+  <!-- CONTACT -->
+  <section id="contact" class="section fade">
+    <h2 class="section-title">Contact</h2>
+    <p class="section-sub">Reach out to collaborate, learn, or connect with us.</p>
 
-        <div>
-          <div class="contact-label">Location</div>
-          <div class="contact-value">City, Country</div>
-        </div>
-
-        <div>
-          <div class="contact-label">Availability</div>
-          <div class="contact-value">Open to collaborations and commissioned research.</div>
-        </div>
-
-        <a href="mailto:contact@rearecon.example" class="btn" style="margin-top:0.6rem;">Start a conversation</a>
+    <div class="contact-card">
+      <div>
+        <div class="contact-label">Email</div>
+        <div class="contact-value">rearecon2025@gmail.com</div>
       </div>
+
+      <div>
+        <div class="contact-label">Location</div>
+        <div class="contact-value">Lalitpur, Nepal</div>
+      </div>
+
+      <div>
+        <div class="contact-label">Social Links</div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/rear-econ/posts/?feedView=all" target="_blank">LinkedIn</a>
+          <a href="https://www.instagram.com/rearecon2025/" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/p/REAR-Econ-61579375343643/" target="_blank">Facebook</a>
+          <a href="https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw" target="_blank">YouTube</a>
+        </div>
+      </div>
+
+      <a href="mailto:rearecon2025@gmail.com" class="btn" style="margin-top:0.6rem;">Start a conversation</a>
     </div>
   </section>
 
