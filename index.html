@@ -132,6 +132,46 @@
       width: auto;
     }
 
+.about-wrapper {
+  max-width: 750px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+  border: 1px solid var(--border);
+}
+
+.about-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.about-icon {
+  font-size: 1.4rem;
+  background: var(--accent);
+  color: #fff;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(47,128,237,0.25);
+}
+
+.about-item p {
+  font-size: 1rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+    
     nav a {
       margin-left: 1.8rem;
       font-size: 0.9rem;
@@ -547,39 +587,40 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section fade">
-    <h2 class="section-title">About Rear Econ</h2>
-    <p class="section-sub">Here’s what we do.</p>
+ <section id="about" class="section fade">
+  <h2 class="section-title">About Rear Econ</h2>
+  <p class="section-sub">Here’s what we do.</p>
 
-    <div style="max-width:700px; margin:auto; font-size:1rem; color:#374151; line-height:1.7;">
+  <div class="about-wrapper">
 
-      <div style="display:flex; align-items:flex-start; gap:1rem; margin-bottom:1.2rem;">
-        <div style="font-size:1.4rem;">📊</div>
-        <p>Run practical research and data workshops that build real analytical skills.</p>
-      </div>
-
-      <div style="display:flex; align-items:flex-start; gap:1rem; margin-bottom:1.2rem;">
-        <div style="font-size:1.4rem;">🤝</div>
-        <p>Connect emerging researchers with mentors who guide their academic and professional growth.</p>
-      </div>
-
-      <div style="display:flex; align-items:flex-start; gap:1rem; margin-bottom:1.2rem;">
-        <div style="font-size:1.4rem;">📑</div>
-        <p>Collaborate on real‑world economic studies that sharpen applied research experience.</p>
-      </div>
-
-      <div style="display:flex; align-items:flex-start; gap:1rem; margin-bottom:1.2rem;">
-        <div style="font-size:1.4rem;">🌐</div>
-        <p>Build networks and open doors to opportunities in policy, academia, and industry.</p>
-      </div>
-
-      <div style="display:flex; align-items:flex-start; gap:1rem;">
-        <div style="font-size:1.4rem;">✍️</div>
-        <p>Support writing, presenting, and publishing work so researchers can share their ideas with the world.</p>
-      </div>
-
+    <div class="about-item">
+      <div class="about-icon">📊</div>
+      <p>Run practical research and data workshops that build real analytical skills.</p>
     </div>
-  </section>
+
+    <div class="about-item">
+      <div class="about-icon">🤝</div>
+      <p>Connect emerging researchers with mentors who guide their academic and professional growth.</p>
+    </div>
+
+    <div class="about-item">
+      <div class="about-icon">🗂️</div>
+      <p>Collaborate on real‑world economic studies that sharpen applied research experience.</p>
+    </div>
+
+    <div class="about-item">
+      <div class="about-icon">🌐</div>
+      <p>Build networks and open doors to opportunities in policy, academia, and industry.</p>
+    </div>
+
+    <div class="about-item">
+      <div class="about-icon">✍️</div>
+      <p>Support writing, presenting, and publishing work so researchers can share their ideas with the world.</p>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- CONTACT -->
   <section id="contact" class="section fade">
