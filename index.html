@@ -169,6 +169,25 @@
       max-width: 600px;
     }
 
+    /* Updated hero button */
+    .hero-btn {
+      background: transparent;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+      padding: 0.75rem 1.6rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: 0.3s ease;
+      text-decoration: none;
+    }
+
+    .hero-btn:hover {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(47,128,237,0.25);
+    }
+
     .hero-brush::after {
       content: "";
       position: absolute;
@@ -336,9 +355,46 @@
       box-shadow: 0 4px 12px rgba(47,128,237,0.25);
     }
 
-    .contact-btn {
-      margin-top: 0.5rem;
-      width: fit-content;
+    /* Social link pills */
+    .social-pill {
+      display: inline-block;
+      padding: 0.45rem 1rem;
+      margin-right: 0.6rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: #fff;
+      transition: 0.25s ease;
+    }
+
+    .linkedin { background: #0A66C2; }
+    .instagram { background: #E1306C; }
+    .facebook { background: #1877F2; }
+    .youtube { background: #FF0000; }
+
+    .social-pill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    /* Blue-filled CTA button */
+    .primary-btn {
+      background: var(--accent);
+      color: #fff !important;
+      padding: 0.8rem 1.8rem;
+      border-radius: 999px;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(47,128,237,0.25);
+      transition: 0.25s ease;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .primary-btn:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
     }
 
     .contact-right {
@@ -457,7 +513,7 @@
         font-size: 1.2rem;
       }
 
-      .contact-btn {
+      .primary-btn {
         width: 100%;
         text-align: center;
       }
@@ -494,7 +550,7 @@
   <div class="hero-inner">
     <h1>REAR Econ</h1>
     <p>We help aspiring applied economics researchers grow into world‑class, policy engaged, and socially conscious leaders.</p>
-    <a href="#work" class="btn">Explore our work</a>
+    <a href="#about" class="hero-btn">Explore our work</a>
   </div>
 </section>
 
@@ -518,40 +574,11 @@
 
     <div class="card">
       <div class="card-label">Practice Area</div>
-      <div class="card-title">Impact Evaluation</div>
-      <div class="card-body">Quantitative and mixed‑method evaluations that connect interventions to measurable outcomes.</div>
-    </div>
-  </div>
-</section>
-
-<!-- PUBLICATIONS -->
-<section id="publications" class="section fade">
-  <h2 class="section-title">Publications</h2>
-  <p class="section-sub">Representative outputs and written work.</p>
-
-  <div class="grid grid-2">
-    <div class="card">
-      <div class="card-label">Report</div>
-      <div class="card-title">Flagship Report Title</div>
-      <div class="card-body">Short abstract‑style description highlighting the core question, methodology, and key findings.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-label">Working Paper</div>
-      <div class="card-title">Working Paper Title</div>
-      <div class="card-body">Concise summary of the research question, empirical strategy, and implications.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-label">Brief</div>
-      <div class="card-title">Policy or Strategy Brief</div>
-      <div class="card-body">A decision‑oriented document translating technical analysis into clear options and trade‑offs.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-label">Insight Note</div>
-      <div class="card-title">Insight or Commentary</div>
-      <div class="card-body">A focused note combining data, theory, and practical experience to clarify what matters.</div>
+      <div class="card-title">Impact Evaluation
+      </div>
+      <div class="card-body">
+        Quantitative and mixed‑method evaluations that connect interventions to measurable outcomes.
+      </div>
     </div>
   </div>
 </section>
@@ -564,8 +591,7 @@
   <div class="grid grid-2">
 
     <div class="card team-card">
-      <div class="avatar"><img src="prajjwal.jpg" alt="Prajjwal Dhungana">
-      </div>
+      <div class="avatar"><img src="prajjwal.jpg" alt="Prajjwal Dhungana"></div>
       <div>
         <div class="card-title">Prajjwal Dhungana</div>
         <div class="card-label">Founder</div>
@@ -699,16 +725,18 @@
         <div class="contact-icon">🌐</div>
         <div>
           <div class="contact-label">Social Links</div>
+
           <div class="social-links">
-            <a href="https://www.linkedin.com/company/rear-econ/posts/?feedView=all" target="_blank">LinkedIn</a>
-            <a href="https://www.instagram.com/rearecon2025/" target="_blank">Instagram</a>
-            <a href="https://www.facebook.com/p/REAR-Econ-61579375343643/" target="_blank">Facebook</a>
-            <a href="https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw" target="_blank">YouTube</a>
+            <a href="https://www.linkedin.com/company/rear-econ/posts/?feedView=all" target="_blank" class="social-pill linkedin">LinkedIn</a>
+            <a href="https://www.instagram.com/rearecon2025/" target="_blank" class="social-pill instagram">Instagram</a>
+            <a href="https://www.facebook.com/p/REAR-Econ-61579375343643/" target="_blank" class="social-pill facebook">Facebook</a>
+            <a href="https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw" target="_blank" class="social-pill youtube">YouTube</a>
           </div>
+
         </div>
       </div>
 
-      <a href="mailto:rearecon2025@gmail.com" class="btn contact-btn">Start a conversation</a>
+      <a href="mailto:rearecon2025@gmail.com" class="btn contact-btn primary-btn">Start a conversation</a>
     </div>
 
     <div class="contact-right">
