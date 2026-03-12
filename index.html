@@ -8,7 +8,7 @@
 
   <!-- Primary SEO Meta Tags -->
   <meta name="title" content="Rear Econ – Applied Economics Research Collective">
-  <meta name="description" content="Rear Econ empowers aspiring applied economics researchers to become world‑class, policy‑engaged, and socially conscious leaders, with a focus on marginalized communities in Nepal.">
+  <meta name="description" content="Rear Econ empowers aspiring applied economics researchers to become world‑class, policy‑engaged, and socially conscious leaders.">
 
   <!-- Keywords -->
   <meta name="keywords" content="Rear Econ, economics Nepal, applied economics, research collective, policy research Nepal, economic analysis, impact evaluation, market analysis, Nepal research group">
@@ -16,7 +16,7 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://rearecon.vercel.app/">
 
-  <!-- OpenGraph / Facebook -->
+  <!-- OpenGraph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://rearecon.vercel.app/">
   <meta property="og:title" content="Rear Econ – Applied Economics Research Collective">
@@ -25,7 +25,6 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://rearecon.vercel.app/">
   <meta name="twitter:title" content="Rear Econ – Applied Economics Research Collective">
   <meta name="twitter:description" content="Rear Econ empowers aspiring applied economics researchers to become world‑class leaders.">
   <meta name="twitter:image" content="https://rearecon.vercel.app/rear-econ-logo.png">
@@ -60,85 +59,6 @@
       overflow-x: hidden;
     }
 
-.contact-enhanced {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 2.5rem;
-  padding: 2.5rem;
-  background: linear-gradient(135deg, #ffffff 0%, #f0f6ff 100%);
-  border-radius: 20px;
-  border: 1px solid var(--border);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.06);
-}
-
-.contact-left {
-  display: flex;
-  flex-direction: column;
-  gap: 1.4rem;
-}
-
-.contact-heading {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--primary);
-}
-
-.contact-text {
-  color: #4b5563;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.contact-row {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.contact-icon {
-  font-size: 1.5rem;
-  background: var(--accent);
-  color: #fff;
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(47,128,237,0.25);
-}
-
-.contact-btn {
-  margin-top: 0.5rem;
-  width: fit-content;
-}
-
-.contact-right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contact-graphic {
-  width: 100%;
-  height: 100%;
-  border-radius: 16px;
-  background: radial-gradient(circle at 30% 30%, #dceaff, #bcd7ff, #a7c8ff);
-  opacity: 0.7;
-  filter: blur(20px);
-}
-
-@media (max-width: 900px) {
-  .contact-enhanced {
-    grid-template-columns: 1fr;
-  }
-  .contact-right {
-    display: none;
-  }
-}
-
-
-    
     /* Fade-in animation */
     .fade {
       opacity: 0;
@@ -191,6 +111,7 @@
       position: relative;
       display: flex;
       gap: 1.8rem;
+      flex-wrap: nowrap;
     }
 
     nav a {
@@ -261,31 +182,6 @@
       opacity: 0.9;
     }
 
-    @media (max-width: 900px) {
-      .hero-brush { text-align: center; justify-content: center; }
-      .hero-brush::after {
-        width: 90%;
-        height: 50%;
-        right: 50%;
-        transform: translate(50%, -50%);
-        opacity: 0.5;
-      }
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--accent);
-      color: #fff;
-      padding: 0.75rem 1.6rem;
-      border-radius: 999px;
-      font-size: 0.95rem;
-      font-weight: 500;
-      box-shadow: 0 8px 20px rgba(47,128,237,0.25);
-      transition: 0.2s;
-      text-decoration: none;
-    }
-    .btn:hover { background: #2563eb; transform: translateY(-2px); }
-
     /* Sections */
     .section {
       max-width: 1200px;
@@ -317,7 +213,7 @@
       margin-bottom: 2rem;
     }
 
-    /* About Section (Popping Version) */
+    /* About Section */
     .about-wrapper {
       max-width: 750px;
       margin: auto;
@@ -351,12 +247,6 @@
       box-shadow: 0 4px 12px rgba(47,128,237,0.25);
     }
 
-    .about-item p {
-      font-size: 1rem;
-      color: #374151;
-      line-height: 1.6;
-    }
-
     /* Cards */
     .grid { display: grid; gap: 1.6rem; }
     .grid-3 { grid-template-columns: repeat(3, 1fr); }
@@ -376,6 +266,7 @@
       box-shadow: 0 12px 28px rgba(0,0,0,0.12);
     }
 
+    /* Team */
     .team-card {
       display: flex;
       gap: 1rem;
@@ -396,6 +287,76 @@
       object-fit: cover;
     }
 
+    /* Contact Enhanced */
+    .contact-enhanced {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2.5rem;
+      padding: 2.5rem;
+      background: linear-gradient(135deg, #ffffff 0%, #f0f6ff 100%);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+    }
+
+    .contact-left {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .contact-heading {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .contact-text {
+      color: #4b5563;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .contact-icon {
+      font-size: 1.5rem;
+      background: var(--accent);
+      color: #fff;
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(47,128,237,0.25);
+    }
+
+    .contact-btn {
+      margin-top: 0.5rem;
+      width: fit-content;
+    }
+
+    .contact-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-graphic {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      background: radial-gradient(circle at 30% 30%, #dceaff, #bcd7ff, #a7c8ff);
+      opacity: 0.7;
+      filter: blur(20px);
+    }
+
+    /* Footer */
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -403,6 +364,103 @@
       font-size: 0.85rem;
       border-top: 1px solid var(--border);
       margin-top: 3rem;
+    }
+
+    /* ============================
+       MOBILE OPTIMIZATION
+       ============================ */
+    @media (max-width: 768px) {
+
+      nav {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        font-size: 0.85rem;
+      }
+
+      .nav-indicator {
+        display: none;
+      }
+
+      .hero-brush {
+        padding: 7rem 1.2rem 4rem;
+        text-align: center;
+      }
+
+      .hero-inner h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-inner p {
+        font-size: 1.05rem;
+      }
+
+      .hero-brush::after {
+        width: 100%;
+        height: 45%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        opacity: 0.35;
+      }
+
+      .about-wrapper {
+        padding: 1.6rem;
+        gap: 1.2rem;
+      }
+
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr !important;
+      }
+
+      .card {
+        padding: 1.3rem;
+      }
+
+      .team-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+
+      .team-card .avatar {
+        margin-bottom: 0.6rem;
+      }
+
+      .contact-enhanced {
+        grid-template-columns: 1fr;
+        padding: 1.8rem;
+      }
+
+      .contact-right {
+        display: none;
+      }
+
+      .contact-heading {
+        font-size: 1.25rem;
+      }
+
+      .contact-text {
+        font-size: 0.95rem;
+      }
+
+      .contact-row {
+        gap: 0.8rem;
+      }
+
+      .contact-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
+
+      .contact-btn {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -506,11 +564,14 @@
   <div class="grid grid-2">
 
     <div class="card team-card">
-      <div class="avatar"><img src="prajjwal.jpg" alt="Prajjwal Dhungana"></div>
+      <div class="avatar"><img src="prajjwal.jpg" alt="Prajjwal Dhungana">
+      </div>
       <div>
         <div class="card-title">Prajjwal Dhungana</div>
         <div class="card-label">Founder</div>
-        <div class="card-body">Leads Rear Econ’s vision and research direction, specializing in applied economics, policy design, and analytical strategy.</div>
+        <div class="card-body">
+          Leads Rear Econ’s vision and research direction, specializing in applied economics, policy design, and analytical strategy.
+        </div>
       </div>
     </div>
 
@@ -519,7 +580,9 @@
       <div>
         <div class="card-title">Shreepriya Ghimire</div>
         <div class="card-label">Research Associate</div>
-        <div class="card-body">Focuses on quantitative analysis, economic modeling, and data‑driven insights for policy and market research.</div>
+        <div class="card-body">
+          Focuses on quantitative analysis, economic modeling, and data‑driven insights for policy and market research.
+        </div>
       </div>
     </div>
 
@@ -528,7 +591,9 @@
       <div>
         <div class="card-title">Saurya Pandit</div>
         <div class="card-label">Research Associate</div>
-        <div class="card-body">Works on sectoral research, impact evaluation, and translating complex findings into clear, actionable insights.</div>
+        <div class="card-body">
+          Works on sectoral research, impact evaluation, and translating complex findings into clear, actionable insights.
+        </div>
       </div>
     </div>
 
@@ -537,7 +602,9 @@
       <div>
         <div class="card-title">Nischal Jugjali</div>
         <div class="card-label">Research Associate</div>
-        <div class="card-body">Specializes in mixed‑method research, qualitative synthesis, and evidence‑based policy analysis.</div>
+        <div class="card-body">
+          Specializes in mixed‑method research, qualitative synthesis, and evidence‑based policy analysis.
+        </div>
       </div>
     </div>
 
@@ -551,11 +618,15 @@
 
   <div class="grid grid-2">
     <div class="card" style="padding:0;">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+      <iframe width="100%" height="315"
+        src="https://www.youtube.com/embed/VIDEO_ID_1"
+        frameborder="0" allowfullscreen></iframe>
     </div>
 
     <div class="card" style="padding:0;">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+      <iframe width="100%" height="315"
+        src="https://www.youtube.com/embed/VIDEO_ID_2"
+        frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
 </section>
@@ -568,31 +639,31 @@
   <div class="about-wrapper">
 
     <div class="about-item">
-      <div class="about-icon">📊</div
-                                         <p>Run practical research and data workshops that build real analytical skills.</p>
-      </div>
-
-      <div class="about-item">
-        <div class="about-icon">🤝</div>
-        <p>Connect emerging researchers with mentors who guide their academic and professional growth.</p>
-      </div>
-
-      <div class="about-item">
-        <div class="about-icon">🗂️</div>
-        <p>Collaborate on real‑world economic studies that sharpen applied research experience.</p>
-      </div>
-
-      <div class="about-item">
-        <div class="about-icon">🌐</div>
-        <p>Build networks and open doors to opportunities in policy, academia, and industry.</p>
-      </div>
-
-      <div class="about-item">
-        <div class="about-icon">✍️</div>
-        <p>Support writing, presenting, and publishing work so researchers can share their ideas with the world.</p>
-      </div>
-
+      <div class="about-icon">📊</div>
+      <p>Run practical research and data workshops that build real analytical skills.</p>
     </div>
+
+    <div class="about-item">
+      <div class="about-icon">🤝</div>
+      <p>Connect emerging researchers with mentors who guide their academic and professional growth.</p>
+    </div>
+
+    <div class="about-item">
+      <div class="about-icon">🗂️</div>
+      <p>Collaborate on real‑world economic studies that sharpen applied research experience.</p>
+    </div>
+
+    <div class="about-item">
+      <div class="about-icon">🌐</div>
+      <p>Build networks and open doors to opportunities in policy, academia, and industry.</p>
+    </div>
+
+    <div class="about-item">
+      <div class="about-icon">✍️</div>
+      <p>Support writing, presenting, and publishing work so researchers can share their ideas with the world.</p>
+    </div>
+
+  </div>
 </section>
 
 <!-- CONTACT -->
@@ -647,16 +718,13 @@
   </div>
 </section>
 
-
 <footer>
   © <span id="year"></span> Rear Econ — Economic Research & Insight
 </footer>
 
 <script>
-  // Update year
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Fade-in on scroll
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) entry.target.classList.add('show');
@@ -665,14 +733,12 @@
 
   document.querySelectorAll('.fade').forEach((el) => observer.observe(el));
 
-  // Shrinking navbar
   window.addEventListener("scroll", () => {
     const header = document.querySelector("header");
     if (window.scrollY > 40) header.classList.add("shrink");
     else header.classList.remove("shrink");
   });
 
-  // Sliding nav indicator
   const navLinks = document.querySelectorAll("nav a");
   const indicator = document.querySelector(".nav-indicator");
 
