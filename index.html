@@ -58,6 +58,46 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
+/* Fix uneven card heights in Our Work section */
+#work .grid-3 {
+  align-items: stretch;
+}
+
+#work .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+/* Ensure titles and labels don't push layout */
+#work .card-label {
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+#work .card-title {
+  margin-bottom: 0.6rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+#work .card-body {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  #work .card {
+    height: auto;
+  }
+}
 
     /* Fade-in animation */
     .fade {
