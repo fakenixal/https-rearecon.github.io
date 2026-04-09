@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<title>AEMM – Applied Economics Is More Than Money</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/jpeg" href="favicon.jpeg">
+
+<style>
+:root {
+  --primary: #1f3b57;
+  --accent: #2f80ed;
+  --bg: #f7f9fc;
+  --text: #1a1a1a;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* NAVBAR */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 1.8rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+/* HERO */
+.hero {
+  padding: 10rem 1.5rem 5rem;
+  text-align: center;
+  background: linear-gradient(135deg, #eaf2ff, #ffffff);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 700px;
+  margin: auto;
+}
+
+/* SECTION */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 1.5rem;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.section-sub {
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <a href="index.html">
+        <img src="rear-econ-logo.png" alt="Rear Econ Logo" style="height:60px;">
+      </a>
+    </div>
+
+    <nav>
+      <a href="index.html#work">Work</a>
+      <a href="aemm.html" style="color:var(--primary); font-weight:600;">AEMM</a>
+      <a href="index.html#team">Team</a>
+      <a href="index.html#videos">Videos</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Applied Economics Is More Than Money</h1>
+  <p>
+    A storytelling series where we explore real human behavior through the lens of applied economics — migration, risk, incentives, insurance, and the choices people make every day.
+  </p>
+</section>
+
+<!-- AEMM POSTS -->
+<section class="section">
+  <h2 class="section-title">Episodes</h2>
+  <p class="section-sub">Newest episodes appear first.</p>
+
+  <div class="grid grid-2">
+
+    <blockquote class="instagram-media"
+      data-instgrm-permalink="https://www.instagram.com/p/DWb0uUfAZik/?img_index=1"
+      data-instgrm-version="14"
+      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
+    </blockquote>
+
+    <blockquote class="instagram-media"
+      data-instgrm-permalink="https://www.instagram.com/p/DWEh7QSk8X0/?img_index=1"
+      data-instgrm-version="14"
+      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
+    </blockquote>
+
+    <blockquote class="instagram-media"
+      data-instgrm-permalink="https://www.instagram.com/p/DVWL7f1D_qq/?img_index=1"
+      data-instgrm-version="14"
+      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
+    </blockquote>
+
+    <blockquote class="instagram-media"
+      data-instgrm-permalink="https://www.instagram.com/p/DVBo6UvD2pb/?img_index=1"
+      data-instgrm-version="14"
+      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
+    </blockquote>
+
+  </div>
+
+  <script async src="//www.instagram.com/embed.js"></script>
+</section>
+
+</body>
+</html>
