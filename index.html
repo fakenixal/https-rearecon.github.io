@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- ORGANIZATION STRUCTURED DATA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -19,40 +17,595 @@
 </script>
 
 <head>
-<meta charset="UTF-8" />
-<title>Rear Econ</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <title>Rear Econ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- SEO -->
-<meta name="title" content="Rear Econ – Applied Economics Research Collective">
-<meta name="description" content="Rear Econ empowers aspiring applied economics researchers to become world‑class, policy‑engaged, and socially conscious leaders.">
-<meta name="keywords" content="Rear Econ, economics Nepal, applied economics, research collective, policy research Nepal, economic analysis, impact evaluation, market analysis, Nepal research group">
+  <!-- Primary SEO Meta Tags -->
+  <meta name="title" content="Rear Econ – Applied Economics Research Collective">
+  <meta name="description" content="Rear Econ empowers aspiring applied economics researchers to become world‑class, policy‑engaged, and socially conscious leaders.">
 
-<!-- Canonical -->
-<link rel="canonical" href="https://rearecon.me/">
+  <!-- Keywords -->
+  <meta name="keywords" content="Rear Econ, economics Nepal, applied economics, research collective, policy research Nepal, economic analysis, impact evaluation, market analysis, Nepal research group">
 
-<!-- OpenGraph -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://rearecon.me/">
-<meta property="og:title" content="Rear Econ – Applied Economics Research Collective">
-<meta property="og:description" content="Rear Econ empowers aspiring applied economics researchers to become world‑class, policy‑engaged, and socially conscious leaders.">
-<meta property="og:image" content="https://rearecon.me/rear-econ-logo.png">
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://rearecon.vercel.app/">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Rear Econ – Applied Economics Research Collective">
-<meta name="twitter:description" content="Rear Econ empowers aspiring applied economics researchers to become world‑class leaders.">
-<meta name="twitter:image" content="https://rearecon.me/rear-econ-logo.png">
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rearecon.vercel.app/">
+  <meta property="og:title" content="Rear Econ – Applied Economics Research Collective">
+  <meta property="og:description" content="Rear Econ empowers aspiring applied economics researchers to become world‑class, policy‑engaged, and socially conscious leaders.">
+  <meta property="og:image" content="https://rearecon.vercel.app/rear-econ-logo.png">
 
-<!-- Favicon -->
-<link rel="icon" type="image/jpeg" href="favicon.jpeg">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rear Econ – Applied Economics Research Collective">
+  <meta name="twitter:description" content="Rear Econ empowers aspiring applied economics researchers to become world‑class leaders.">
+  <meta name="twitter:image" content="https://rearecon.vercel.app/rear-econ-logo.png">
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="favicon.jpeg">
 
-<style>
-/* ——— your full CSS unchanged ——— */
-</style>
+  <!-- Typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1f3b57;
+      --accent: #2f80ed;
+      --bg: #f7f9fc;
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --radius: 14px;
+      --shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+/* Fix uneven card heights in Our Work section */
+#work .grid-3 {
+  align-items: stretch;
+}
+
+#work .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+/* Ensure titles and labels don't push layout */
+#work .card-label {
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+#work .card-title {
+  margin-bottom: 0.6rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+#work .card-body {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  #work .card {
+    height: auto;
+  }
+}
+
+    /* Fade-in animation */
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Fix Work Section Card Layout */
+#work .grid-3 {
+  gap: 1.8rem;
+}
+
+#work .card {
+  padding: 1.8rem;
+  border-radius: 16px;
+}
+
+#work .card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+#work .card-body {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* Mobile improvements */
+@media (max-width: 768px) {
+  #work .card {
+    padding: 1.4rem;
+  }
+}
+
+    /* Sticky shrinking navbar */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 50;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: padding 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    header .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: padding 0.25s ease;
+    }
+
+    header.shrink {
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    }
+    header.shrink .nav {
+      padding: 0.5rem 1.5rem;
+    }
+
+    /* Logo clickable */
+    .logo img {
+      height: 65px;
+      width: auto;
+      cursor: pointer;
+    }
+
+    /* Navigation */
+    nav {
+      position: relative;
+      display: flex;
+      gap: 1.8rem;
+      flex-wrap: nowrap;
+    }
+
+    nav a {
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-decoration: none;
+      position: relative;
+      transition: color 0.2s ease, text-shadow 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+      text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    /* Sliding highlight indicator */
+    .nav-indicator {
+      position: absolute;
+      bottom: -6px;
+      height: 2px;
+      background: var(--accent);
+      width: 0;
+      left: 0;
+      transition: all 0.25s ease;
+      border-radius: 2px;
+    }
+
+    /* HERO */
+    .hero-brush {
+      position: relative;
+      padding: 10rem 1.5rem 6rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: hidden;
+      background: #f7f9fc;
+    }
+
+    .hero-inner {
+      max-width: 650px;
+      z-index: 2;
+    }
+
+    .hero-inner h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-inner p {
+      font-size: 1.25rem;
+      color: var(--muted);
+      margin-bottom: 2.2rem;
+      max-width: 600px;
+    }
+
+    /* Updated hero button */
+    .hero-btn {
+      background: transparent;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+      padding: 0.75rem 1.6rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: 0.3s ease;
+      text-decoration: none;
+    }
+
+    .hero-btn:hover {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(47,128,237,0.25);
+    }
+
+    .hero-brush::after {
+      content: "";
+      position: absolute;
+      right: -5%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 55%;
+      height: 80%;
+      background-image: url('data:image/svg+xml;utf8,<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg"><path d="M50 200 Q250 50 550 120 T750 200 Q550 350 250 280 T50 200" fill="%23e3efff"/></svg>');
+      background-size: cover;
+      opacity: 0.9;
+    }
+
+    /* Sections */
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 4px;
+      height: 22px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    /* About Section */
+    .about-wrapper {
+      max-width: 750px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      padding: 2rem;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+      border: 1px solid var(--border);
+    }
+
+    .about-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .about-icon {
+      font-size: 1.4rem;
+      background: var(--accent);
+      color: #fff;
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(47,128,237,0.25);
+    }
+
+    /* Cards */
+    .grid { display: grid; gap: 1.6rem; }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+    .card {
+      background: #fff;
+      padding: 1.6rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+    }
+
+    /* Team */
+    .team-card {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+ .avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--accent);
+  flex-shrink: 0;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+    /* Contact Enhanced */
+    .contact-enhanced {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2.5rem;
+      padding: 2.5rem;
+      background: linear-gradient(135deg, #ffffff 0%, #f0f6ff 100%);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+    }
+
+    .contact-left {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .contact-heading {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .contact-text {
+      color: #4b5563;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .contact-icon {
+      font-size: 1.5rem;
+      background: var(--accent);
+      color: #fff;
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(47,128,237,0.25);
+    }
+
+    /* Social link pills */
+    .social-pill {
+      display: inline-block;
+      padding: 0.45rem 1rem;
+      margin-right: 0.6rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: #fff;
+      transition: 0.25s ease;
+    }
+
+    .linkedin { background: #0A66C2; }
+    .instagram { background: #E1306C; }
+    .facebook { background: #1877F2; }
+    .youtube { background: #FF0000; }
+
+    .social-pill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    /* Blue-filled CTA button */
+    .primary-btn {
+      background: var(--accent);
+      color: #fff !important;
+      padding: 0.8rem 1.8rem;
+      border-radius: 999px;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(47,128,237,0.25);
+      transition: 0.25s ease;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .primary-btn:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+
+    .contact-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-graphic {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      background: radial-gradient(circle at 30% 30%, #dceaff, #bcd7ff, #a7c8ff);
+      opacity: 0.7;
+      filter: blur(20px);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+    }
+
+    /* ============================
+       MOBILE OPTIMIZATION
+       ============================ */
+    @media (max-width: 768px) {
+
+      nav {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        font-size: 0.85rem;
+      }
+
+      .nav-indicator {
+        display: none;
+      }
+
+      .hero-brush {
+        padding: 7rem 1.2rem 4rem;
+        text-align: center;
+      }
+
+      .hero-inner h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-inner p {
+        font-size: 1.05rem;
+      }
+
+      .hero-brush::after {
+        width: 100%;
+        height: 45%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        opacity: 0.35;
+      }
+
+      .about-wrapper {
+        padding: 1.6rem;
+        gap: 1.2rem;
+      }
+
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr !important;
+      }
+
+      .card {
+        padding: 1.3rem;
+      }
+
+      .team-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+
+      .team-card .avatar {
+        margin-bottom: 0.6rem;
+      }
+
+      .contact-enhanced {
+        grid-template-columns: 1fr;
+        padding: 1.8rem;
+      }
+
+      .contact-right {
+        display: none;
+      }
+
+      .contact-heading {
+        font-size: 1.25rem;
+      }
+
+      .contact-text {
+        font-size: 0.95rem;
+      }
+
+      .contact-row {
+        gap: 0.8rem;
+      }
+
+      .contact-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
+
+      .primary-btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -74,12 +627,12 @@
       <a href="#videos">Videos</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
+
       <div class="nav-indicator"></div>
     </nav>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero-brush fade">
   <div class="hero-inner">
     <h1>REAR Econ</h1>
@@ -94,61 +647,80 @@
   <p class="section-sub">Selected areas where Rear Econ typically operates.</p>
 
   <div class="grid grid-3">
+
     <div class="card">
       <div class="card-label">Practice Area</div>
       <div class="card-title">Policy & Program Design</div>
-      <div class="card-body">Structured economic frameworks to design, stress‑test, and refine public policies and social protection programs.</div>
+      <div class="card-body">
+        Structured economic frameworks to design, stress‑test, and refine public policies and social protection programs.
+      </div>
     </div>
 
     <div class="card">
       <div class="card-label">Practice Area</div>
       <div class="card-title">Market & Sector Analysis</div>
-      <div class="card-body">Deep dives into sectors, markets, and regulatory environments to inform investment and strategic decisions.</div>
+      <div class="card-body">
+        Deep dives into sectors, markets, and regulatory environments to inform investment and strategic decisions.
+      </div>
     </div>
 
     <div class="card">
       <div class="card-label">Practice Area</div>
       <div class="card-title">Impact Evaluation</div>
-      <div class="card-body">Quantitative and mixed‑method evaluations that connect interventions to measurable outcomes.</div>
+      <div class="card-body">
+        Quantitative and mixed‑method evaluations that connect interventions to measurable outcomes.
+      </div>
     </div>
+
   </div>
 </section>
 
-<!-- AEMM SECTION (REPLACES PUBLICATIONS) -->
+
+<!-- AEMM -->
 <section id="AEMM" class="section fade">
   <h2 class="section-title">Applied Economics Is More Than Money</h2>
-  <p class="section-sub">Explore our AEMM episodes — newest posts appear first.</p>
+  <p class="section-sub">Check out our episodes of Applied Economics Is More Than Money</p>
 
   <div class="grid grid-2">
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DWb0uUfAZik/?img_index=1"
+    <!-- Instagram Post 1 -->
+    <blockquote 
+      class="instagram-media" 
+      data-instgrm-permalink="https://www.instagram.com/p/DWb0uUfAZik/?img_index=1" 
       data-instgrm-version="14"
       style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
     </blockquote>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DWEh7QSk8X0/?img_index=1"
+    <!-- Instagram Post 2 -->
+    <blockquote 
+      class="instagram-media" 
+      data-instgrm-permalink="https://www.instagram.com/p/DWEh7QSk8X0/?img_index=1" 
       data-instgrm-version="14"
       style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
     </blockquote>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DVWL7f1D_qq/?img_index=1"
+    <!-- Instagram Post 3 -->
+    <blockquote 
+      class="instagram-media" 
+      data-instgrm-permalink="https://www.instagram.com/p/DVWL7f1D_qq/?img_index=1" 
       data-instgrm-version="14"
       style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
     </blockquote>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DVBo6UvD2pb/?img_index=1"
+    <!-- Instagram Post 4 -->
+    <blockquote 
+      class="instagram-media" 
+      data-instgrm-permalink="https://www.instagram.com/p/DVBo6UvD2pb/?img_index=1" 
       data-instgrm-version="14"
       style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
     </blockquote>
 
   </div>
 
+  <!-- Instagram embed script (must appear once) -->
   <script async src="//www.instagram.com/embed.js"></script>
 </section>
+
 
 <!-- TEAM -->
 <section id="team" class="section fade">
@@ -156,12 +728,15 @@
   <p class="section-sub">People behind Rear Econ.</p>
 
   <div class="grid grid-2">
+
     <div class="card team-card">
       <div class="avatar"><img src="prajjwal.jpg" alt="Prajjwal Dhungana"></div>
       <div>
         <div class="card-title">Prajjwal Dhungana</div>
         <div class="card-label">Founder</div>
-        <div class="card-body">Work description with personal interest and experiences will be here.</div>
+        <div class="card-body">
+          Work description with personal interest and experiences will be here.
+        </div>
       </div>
     </div>
 
@@ -170,7 +745,9 @@
       <div>
         <div class="card-title">Shreepriya Ghimire</div>
         <div class="card-label">Research Associate</div>
-        <div class="card-body">Work description with personal interest and experiences will be here.</div>
+        <div class="card-body">
+          Work description with personal interest and experiences will be here.
+        </div>
       </div>
     </div>
 
@@ -179,7 +756,9 @@
       <div>
         <div class="card-title">Saurya Pandit</div>
         <div class="card-label">Research Associate</div>
-        <div class="card-body">Work description with personal interest and experiences will be here.</div>
+        <div class="card-body">
+          Work description with personal interest and experiences will be here.
+        </div>
       </div>
     </div>
 
@@ -188,9 +767,12 @@
       <div>
         <div class="card-title">Nischal Jugjali</div>
         <div class="card-label">Research Associate</div>
-        <div class="card-body">Work description with personal interest and experiences will be here.</div>
+        <div class="card-body">
+          Work description with personal interest and experiences will be here.
+        </div>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -201,11 +783,15 @@
 
   <div class="grid grid-2">
     <div class="card" style="padding:0;">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+      <iframe width="100%" height="315"
+        src="https://www.youtube.com/embed/VIDEO_ID_1"
+        frameborder="0" allowfullscreen></iframe>
     </div>
 
     <div class="card" style="padding:0;">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+      <iframe width="100%" height="315"
+        src="https://www.youtube.com/embed/VIDEO_ID_2"
+        frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
 </section>
@@ -216,6 +802,7 @@
   <p class="section-sub">Here’s what we do.</p>
 
   <div class="about-wrapper">
+
     <div class="about-item">
       <div class="about-icon">📊</div>
       <p>Run practical research and data workshops that build real analytical skills.</p>
@@ -240,6 +827,7 @@
       <div class="about-icon">✍️</div>
       <p>Support writing, presenting, and publishing work so researchers can share their ideas with the world.</p>
     </div>
+
   </div>
 </section>
 
@@ -249,9 +837,12 @@
   <p class="section-sub">Reach out to collaborate, learn, or connect with us.</p>
 
   <div class="contact-enhanced">
+
     <div class="contact-left">
       <h3 class="contact-heading">Let’s work together</h3>
-      <p class="contact-text">Whether you're a researcher, student, mentor, or organization, we’d love to hear from you.</p>
+      <p class="contact-text">
+        Whether you're a researcher, student, mentor, or organization, we’d love to hear from you.
+      </p>
 
       <div class="contact-row">
         <div class="contact-icon">📧</div>
@@ -273,12 +864,14 @@
         <div class="contact-icon">🌐</div>
         <div>
           <div class="contact-label">Social Links</div>
+
           <div class="social-links">
             <a href="https://www.linkedin.com/company/rear-econ/posts/?feedView=all" target="_blank" class="social-pill linkedin">LinkedIn</a>
             <a href="https://www.instagram.com/rearecon2025/" target="_blank" class="social-pill instagram">Instagram</a>
             <a href="https://www.facebook.com/p/REAR-Econ-61579375343643/" target="_blank" class="social-pill facebook">Facebook</a>
             <a href="https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw" target="_blank" class="social-pill youtube">YouTube</a>
           </div>
+
         </div>
       </div>
 
@@ -288,6 +881,7 @@
     <div class="contact-right">
       <div class="contact-graphic"></div>
     </div>
+
   </div>
 </section>
 
@@ -296,37 +890,37 @@
 </footer>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('show');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('show');
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade').forEach((el) => observer.observe(el));
+
+  window.addEventListener("scroll", () => {
+    const header = document.querySelector("header");
+    if (window.scrollY > 40) header.classList.add("shrink");
+    else header.classList.remove("shrink");
   });
-}, { threshold: 0.15 });
 
-document.querySelectorAll('.fade').forEach((el) => observer.observe(el));
+  const navLinks = document.querySelectorAll("nav a");
+  const indicator = document.querySelector(".nav-indicator");
 
-window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
-  if (window.scrollY > 40) header.classList.add("shrink");
-  else header.classList.remove("shrink");
-});
-
-const navLinks = document.querySelectorAll("nav a");
-const indicator = document.querySelector(".nav-indicator");
-
-navLinks.forEach(link => {
-  link.addEventListener("mouseenter", (e) => {
-    const rect = e.target.getBoundingClientRect();
-    const navRect = e.target.parentElement.getBoundingClientRect();
-    indicator.style.width = rect.width + "px";
-    indicator.style.left = (rect.left - navRect.left) + "px";
+  navLinks.forEach(link => {
+    link.addEventListener("mouseenter", (e) => {
+      const rect = e.target.getBoundingClientRect();
+      const navRect = e.target.parentElement.getBoundingClientRect();
+      indicator.style.width = rect.width + "px";
+      indicator.style.left = (rect.left - navRect.left) + "px";
+    });
   });
-});
 
-document.querySelector("nav").addEventListener("mouseleave", () => {
-  indicator.style.width = "0px";
-});
+  document.querySelector("nav").addEventListener("mouseleave", () => {
+    indicator.style.width = "0px";
+  });
 </script>
 
 </body>
