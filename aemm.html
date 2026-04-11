@@ -107,11 +107,32 @@ nav a:hover {
 /* GRID */
 .grid {
   display: grid;
-  gap: 1.6rem;
+  gap: 2rem;
 }
 
 .grid-2 {
   grid-template-columns: repeat(2, 1fr);
+}
+
+/* UNIFORM INSTAGRAM SQUARES */
+.instagram-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* perfect square */
+  max-width: 540px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+  margin: 0 auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instagram-wrapper blockquote {
+  transform: scale(1.25); /* zoom to fill square */
+  transform-origin: top center;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -158,129 +179,147 @@ nav a:hover {
 
   <div class="grid grid-2">
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DW3afLZFI9P/?img_index=1"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-       </blockquote>
+    <!-- Each post wrapped in uniform square container -->
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DW3afLZFI9P/?img_index=1"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-      
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DWb0uUfAZik/?img_index=1"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-    </blockquote>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DWb0uUfAZik/?img_index=1"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DWEh7QSk8X0/?img_index=1"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-    </blockquote>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DWEh7QSk8X0/?img_index=1"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DVWL7f1D_qq/?img_index=1"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-    </blockquote>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DVWL7f1D_qq/?img_index=1"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DVBo6UvD2pb/?img_index=1"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-    </blockquote>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DVBo6UvD2pb/?img_index=1"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DTr8VhmDSSH/?img_index=1"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-    </blockquote>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DTr8VhmDSSH/?img_index=1"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DSxA3YCADSY/"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-    </blockquote>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DSxA3YCADSY/"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DSaMBY2jL77/"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-    </blockquote>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DSaMBY2jL77/"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DSIIK0piE1a/"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-    </blockquote>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DSIIK0piE1a/"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DR92vZnDK0-/"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-    </blockquote>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DR92vZnDK0-/"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DRkFCqLig8u/"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-    </blockquote>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DRkFCqLig8u/"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DRUrs_TlafU/"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-    </blockquote>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DRUrs_TlafU/"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DQ__n1GDjGP/"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-    </blockquote>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DQ__n1GDjGP/"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DQtynljipwJ/"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-    </blockquote>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DQtynljipwJ/"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DQhFg6Wj4P0/"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-    </blockquote>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DQhFg6Wj4P0/"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DQb2npNCEQW/"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-    </blockquote>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DQb2npNCEQW/"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DP3ducZj-hL/"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-    </blockquote>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DP3ducZj-hL/"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DPV33wDD4I4/"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-    </blockquote>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DPV33wDD4I4/"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DO-Mr4yD8YP/"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-    </blockquote>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DO-Mr4yD8YP/"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DOulEp8CNIt/"
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; padding:0; max-width:540px; width:100%;">
-    </blockquote>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DOulEp8CNIt/"
+        data-instgrm-version="14">
+      </blockquote>
+    </div>
 
-
-    
   </div>
 
   <script async src="//www.instagram.com/embed.js"></script>
