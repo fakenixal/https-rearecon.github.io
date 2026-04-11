@@ -114,10 +114,10 @@ nav a:hover {
   grid-template-columns: repeat(2, 1fr);
 }
 
-/* UNIFORM INSTAGRAM SQUARES */
+/* PORTRAIT INSTAGRAM POSTS (4:5 ratio) */
 .instagram-wrapper {
   width: 100%;
-  aspect-ratio: 1 / 1; /* perfect square */
+  aspect-ratio: 4 / 5; /* portrait */
   max-width: 540px;
   overflow: hidden;
   border-radius: 16px;
@@ -130,7 +130,7 @@ nav a:hover {
 }
 
 .instagram-wrapper blockquote {
-  transform: scale(1.25); /* zoom to fill square */
+  transform: scale(1.18); /* zoom to fill portrait frame */
   transform-origin: top center;
   width: 100%;
 }
@@ -179,7 +179,7 @@ nav a:hover {
 
   <div class="grid grid-2">
 
-    <!-- Each post wrapped in uniform square container -->
+    <!-- Each post wrapped in portrait container -->
     <div class="instagram-wrapper">
       <blockquote class="instagram-media"
         data-instgrm-permalink="https://www.instagram.com/p/DW3afLZFI9P/?img_index=1"
