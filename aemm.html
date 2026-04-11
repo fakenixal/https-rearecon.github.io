@@ -117,43 +117,21 @@ nav a:hover {
 /* PORTRAIT (first 5 posts) */
 .instagram-wrapper-portrait {
   width: 100%;
-  aspect-ratio: 2 / 3;
-  max-width: 520px;
-  overflow: hidden;
-  border-radius: 16px;
-  background: #fff;
+  max-width: 540px;
   margin: 0 auto;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.instagram-wrapper-portrait blockquote {
-  transform: scale(1.18);
-  transform-origin: top center;
-  width: 100%;
 }
 
 /* SQUARE (remaining posts) */
 .instagram-wrapper-square {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  max-width: 520px;
-  overflow: hidden;
-  border-radius: 16px;
-  background: #fff;
+  max-width: 540px;
   margin: 0 auto;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.instagram-wrapper-square blockquote {
-  transform: scale(1.25);
-  transform-origin: top center;
-  width: 100%;
+/* Let Instagram control height — prevents cropping */
+.instagram-media {
+  width: 100% !important;
+  min-width: 100% !important;
 }
 
 @media (max-width: 768px) {
@@ -278,7 +256,7 @@ nav a:hover {
       <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DO-Mr4yD8YP/" data-instgrm-version="14"></blockquote>
     </div>
 
-    <div class="instagram-wrapper-portrait">
+    <div class="instagram-wrapper-square">
       <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DOulEp8CNIt/" data-instgrm-version="14"></blockquote>
     </div>
 
