@@ -394,110 +394,99 @@
 
 
     /* Contact Enhanced */
-    .contact-enhanced {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 2.5rem;
-      padding: 2.5rem;
-      background: linear-gradient(135deg, #ffffff 0%, #f0f6ff 100%);
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.06);
-    }
+ .contact-modern {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  padding: 3rem;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+}
 
-    .contact-left {
-      display: flex;
-      flex-direction: column;
-      gap: 1.4rem;
-    }
+.contact-left h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+}
 
-    .contact-heading {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: var(--primary);
-    }
+.contact-desc {
+  color: var(--muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
 
-    .contact-text {
-      color: #4b5563;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
+.contact-item {
+  margin-bottom: 1.6rem;
+}
 
-    .contact-row {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
+.contact-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+}
 
-    .contact-icon {
-      font-size: 1.5rem;
-      background: var(--accent);
-      color: #fff;
-      width: 46px;
-      height: 46px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 12px rgba(47,128,237,0.25);
-    }
+.contact-value {
+  font-size: 1rem;
+  color: var(--text);
+}
 
-    /* Social link pills */
-    .social-pill {
-      display: inline-block;
-      padding: 0.45rem 1rem;
-      margin-right: 0.6rem;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-      color: #fff;
-      transition: 0.25s ease;
-    }
+.contact-socials a {
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 0.95rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
 
-    .linkedin { background: #0A66C2; }
-    .instagram { background: #E1306C; }
-    .facebook { background: #1877F2; }
-    .youtube { background: #FF0000; }
+.contact-socials a:hover {
+  text-decoration: underline;
+}
 
-    .social-pill:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    }
+.contact-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.9rem 1.8rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
 
-    /* Blue-filled CTA button */
-    .primary-btn {
-      background: var(--accent);
-      color: #fff !important;
-      padding: 0.8rem 1.8rem;
-      border-radius: 999px;
-      font-weight: 600;
-      box-shadow: 0 8px 20px rgba(47,128,237,0.25);
-      transition: 0.25s ease;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 1rem;
-    }
+.contact-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
 
-    .primary-btn:hover {
-      background: #2563eb;
-      transform: translateY(-2px);
-    }
+.contact-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .contact-right {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+.contact-graphic {
+  width: 80%;
+  opacity: 0.9;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.08));
+}
 
-    .contact-graphic {
-      width: 100%;
-      height: 100%;
-      border-radius: 16px;
-      background: radial-gradient(circle at 30% 30%, #dceaff, #bcd7ff, #a7c8ff);
-      opacity: 0.7;
-      filter: blur(20px);
-    }
+@media (max-width: 768px) {
+  .contact-modern {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+  .contact-right {
+    display: none;
+  }
+}
+
 
     /* Footer */
     footer {
@@ -796,54 +785,44 @@
   <h2 class="section-title">Contact</h2>
   <p class="section-sub">Reach out to collaborate, learn, or connect with us.</p>
 
-  <div class="contact-enhanced">
+  <div class="contact-modern">
 
     <div class="contact-left">
-      <h3 class="contact-heading">Let’s work together</h3>
-      <p class="contact-text">
+      <h3>Let’s work together</h3>
+      <p class="contact-desc">
         Whether you're a researcher, student, mentor, or organization, we’d love to hear from you.
       </p>
 
-      <div class="contact-row">
-        <div class="contact-icon">📧</div>
-        <div>
-          <div class="contact-label">Email</div>
-          <div class="contact-value">rearecon2025@gmail.com</div>
+      <div class="contact-item">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">rearecon2025@gmail.com</span>
+      </div>
+
+      <div class="contact-item">
+        <span class="contact-label">Location</span>
+        <span class="contact-value">Lalitpur, Nepal</span>
+      </div>
+
+      <div class="contact-item">
+        <span class="contact-label">Social</span>
+        <div class="contact-socials">
+          <a href="https://www.linkedin.com/company/rear-econ/posts/?feedView=all" target="_blank">LinkedIn</a>
+          <a href="https://www.instagram.com/rearecon2025/" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/p/REAR-Econ-61579375343643/" target="_blank">Facebook</a>
+          <a href="https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw" target="_blank">YouTube</a>
         </div>
       </div>
 
-      <div class="contact-row">
-        <div class="contact-icon">📍</div>
-        <div>
-          <div class="contact-label">Location</div>
-          <div class="contact-value">Lalitpur, Nepal</div>
-        </div>
-      </div>
-
-      <div class="contact-row">
-        <div class="contact-icon">🌐</div>
-        <div>
-          <div class="contact-label">Social Links</div>
-
-          <div class="social-links">
-            <a href="https://www.linkedin.com/company/rear-econ/posts/?feedView=all" target="_blank" class="social-pill linkedin">LinkedIn</a>
-            <a href="https://www.instagram.com/rearecon2025/" target="_blank" class="social-pill instagram">Instagram</a>
-            <a href="https://www.facebook.com/p/REAR-Econ-61579375343643/" target="_blank" class="social-pill facebook">Facebook</a>
-            <a href="https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw" target="_blank" class="social-pill youtube">YouTube</a>
-          </div>
-
-        </div>
-      </div>
-
-      <a href="mailto:rearecon2025@gmail.com" class="btn contact-btn primary-btn">Start a conversation</a>
+      <a href="mailto:rearecon2025@gmail.com" class="contact-btn">Start a conversation</a>
     </div>
 
     <div class="contact-right">
-      <div class="contact-graphic"></div>
+      <img src="rear-econ-logo.png" alt="Rear Econ" class="contact-graphic">
     </div>
 
   </div>
 </section>
+
 
 <footer>
   © <span id="year"></span> Rear Econ
