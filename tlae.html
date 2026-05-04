@@ -85,7 +85,13 @@ nav a:hover {
   margin: auto;
 }
 
-/* TLAE ANNOUNCEMENTS INSTAGRAM EMBEDS */
+/* TLAE ANNOUNCEMENTS */
+.tlae-ig-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
 .tlae-ig-wrapper {
   width: 100%;
   max-width: 540px;
@@ -96,6 +102,42 @@ nav a:hover {
   width: 100% !important;
   min-width: 100% !important;
 }
+
+/* TLAE REGISTRATION */
+.tlae-register-box {
+  max-width: 850px;
+  margin: auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+  text-align: center;
+}
+
+.tlae-register-box a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.9rem 1.8rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.tlae-register-box a:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .tlae-ig-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
   
 /* SECTION */
@@ -172,6 +214,23 @@ nav a:hover {
     A series featuring aspiring economists, exploring their motivations, challenges, and experiences that have shaped their journey.
   </p>
 </section>
+
+  <!-- TLAE REGISTRATION -->
+<section class="section">
+  <h2 class="section-title">TLAE Registration Link</h2>
+  <p class="section-sub">Join the TLAE program by registering at the link below.</p>
+
+  <div class="tlae-register-box">
+    <p class="tlae-text">
+      We invite all students and aspiring researchers to register via the link below to secure their spot.
+    </p>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd-uZQlDjdMkjzYX206XaH1sVLUca-nae0Lb-hkN8I3qaTmPg/viewform" target="_blank">
+      Register for TLAE
+    </a>
+  </div>
+</section>
+
 
 <!-- TLAE ANNOUNCEMENTS -->
 <section class="section">
