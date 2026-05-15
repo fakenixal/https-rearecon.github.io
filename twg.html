@@ -104,6 +104,42 @@ nav a:hover {
   margin-bottom: 2rem;
 }
 
+
+/* TWG DOC GRID */
+.twg-doc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.twg-doc {
+  display: block;
+  padding: 1rem 1.4rem;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  transition: 0.25s ease;
+}
+
+.twg-doc:hover {
+  background: #f0f6ff;
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .twg-doc-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+  
 /* TWG CONTENT BOX */
 .twg-box {
   max-width: 850px;
