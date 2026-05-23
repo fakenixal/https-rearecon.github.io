@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -17,50 +18,50 @@
 </script>
 
 <head>
-  <meta charset="UTF-8" />
-  <title>Rear Econ</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8" />
+<title>Rear Econ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Primary SEO Meta Tags -->
-  <meta name="title" content="Rear Econ – Applied Economics Research Collective">
-  <meta name="description" content="Rear Econ empowers aspiring applied economics researchers to become world‑class, policy‑engaged, and socially conscious leaders.">
+<!-- Primary SEO Meta Tags -->
+<meta name="title" content="Rear Econ – Applied Economics Research Collective">
+<meta name="description" content="Rear Econ empowers aspiring applied economics researchers to become world‑class, policy‑engaged, and socially conscious leaders.">
 
-  <!-- Keywords -->
-  <meta name="keywords" content="Rear Econ, economics Nepal, applied economics, research collective, policy research Nepal, economic analysis, impact evaluation, market analysis, Nepal research group">
+<!-- Keywords -->
+<meta name="keywords" content="Rear Econ, economics Nepal, applied economics, research collective, policy research Nepal, economic analysis, impact evaluation, market analysis, Nepal research group">
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://rearecon.vercel.app/">
+<!-- Canonical URL -->
+<link rel="canonical" href="https://rearecon.vercel.app/">
 
-  <!-- OpenGraph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rearecon.vercel.app/">
-  <meta property="og:title" content="Rear Econ – Applied Economics Research Collective">
-  <meta property="og:description" content="Rear Econ empowers aspiring applied economics researchers to become world‑class, policy‑engaged, and socially conscious leaders.">
-  <meta property="og:image" content="https://rearecon.vercel.app/rear-econ-logo.png">
+<!-- OpenGraph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rearecon.vercel.app/">
+<meta property="og:title" content="Rear Econ – Applied Economics Research Collective">
+<meta property="og:description" content="Rear Econ empowers aspiring applied economics researchers to become world‑class, policy‑engaged, and socially conscious leaders.">
+<meta property="og:image" content="https://rearecon.vercel.app/rear-econ-logo.png">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Rear Econ – Applied Economics Research Collective">
-  <meta name="twitter:description" content="Rear Econ empowers aspiring applied economics researchers to become world‑class leaders.">
-  <meta name="twitter:image" content="https://rearecon.vercel.app/rear-econ-logo.png">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rear Econ – Applied Economics Research Collective">
+<meta name="twitter:description" content="Rear Econ empowers aspiring applied economics researchers to become world‑class leaders.">
+<meta name="twitter:image" content="https://rearecon.vercel.app/rear-econ-logo.png">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="favicon.jpeg">
+<!-- Favicon -->
+<link rel="icon" type="image/jpeg" href="favicon.jpeg">
 
-  <!-- Typography -->
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Typography -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
- :root {
-  --primary: #0E61A5;      /* Rear Econ Blue */
-  --primary-dark: #0D3B66; /* Deep Blue */
-  
-  --accent-orange: #E67E22;
-  --accent-yellow: #F1C40F;
-  --accent-brown: #5A3A22;
+<style>
+:root {
+  --primary: #0E61A5;       /* Rear Econ Blue */
+  --primary-dark: #0D3B66;  /* Deep Blue */
+  --accent-orange: #E67E22; /* Orange */
+  --accent-yellow: #F1C40F; /* Yellow-Gold */
+  --accent-brown: #5A3A22;  /* Dark Brown */
+  --accent: #E67E22;        /* Main accent mapped to Orange */
 
-  --bg: #F4F4F4;
-  --text: #1A1A1A;
+  --bg: #F4F4F4;            /* Soft Gray */
+  --text: #1A1A1A;          /* Dark Text Gray */
   --muted: #6B7280;
   --border: #E5E7EB;
 
@@ -68,17 +69,18 @@
   --shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
 
-    html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-    body {
-      font-family: "Plus Jakarta Sans", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
 /* Fix uneven card heights in Our Work section */
 #work .grid-3 {
   align-items: stretch;
@@ -120,18 +122,19 @@
   }
 }
 
-    /* Fade-in animation */
-    .fade {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .fade.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+/* Fade-in animation */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
 
-    /* Fix Work Section Card Layout */
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fix Work Section Card Layout */
 #work .grid-3 {
   gap: 1.8rem;
 }
@@ -160,234 +163,235 @@
   }
 }
 
-    /* Sticky shrinking navbar */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 50;
-      background: rgba(255,255,255,0.7);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      transition: padding 0.25s ease, box-shadow 0.25s ease;
-    }
+/* Sticky shrinking navbar */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: padding 0.25s ease, box-shadow 0.25s ease;
+}
 
-    header .nav {
-      max-width: 1200px;
-      margin: auto;
-      padding: 1rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: padding 0.25s ease;
-    }
+header .nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: padding 0.25s ease;
+}
 
-    header.shrink {
-      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-    }
-    header.shrink .nav {
-      padding: 0.5rem 1.5rem;
-    }
+header.shrink {
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
 
-    /* Logo clickable */
-    .logo img {
-      height: 65px;
-      width: auto;
-      cursor: pointer;
-    }
+header.shrink .nav {
+  padding: 0.5rem 1.5rem;
+}
 
-    /* Navigation */
-    nav {
-      position: relative;
-      display: flex;
-      gap: 1.8rem;
-      flex-wrap: nowrap;
-    }
+/* Logo clickable */
+.logo img {
+  height: 65px;
+  width: auto;
+  cursor: pointer;
+}
 
-    nav a {
-      font-size: 0.9rem;
-      color: var(--muted);
-      text-decoration: none;
-      position: relative;
-      transition: color 0.2s ease, text-shadow 0.2s ease;
-    }
+/* Navigation */
+nav {
+  position: relative;
+  display: flex;
+  gap: 1.8rem;
+  flex-wrap: nowrap;
+}
 
-    nav a:hover {
-      color: var(--primary);
-      text-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
+nav a {
+  font-size: 0.9rem;
+  color: var(--primary-dark);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
 
-    /* Sliding highlight indicator */
-    .nav-indicator {
-      position: absolute;
-      bottom: -6px;
-      height: 2px;
-      background: var(--accent);
-      width: 0;
-      left: 0;
-      transition: all 0.25s ease;
-      border-radius: 2px;
-    }
+nav a:hover {
+  color: var(--primary);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
 
-    /* HERO */
-    .hero-brush {
-      position: relative;
-      padding: 10rem 1.5rem 6rem;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      overflow: hidden;
-      background: #f7f9fc;
-    }
+/* Sliding highlight indicator */
+.nav-indicator {
+  position: absolute;
+  bottom: -6px;
+  height: 2px;
+  background: var(--accent);
+  width: 0;
+  left: 0;
+  transition: all 0.25s ease;
+  border-radius: 2px;
+}
 
-    .hero-inner {
-      max-width: 650px;
-      z-index: 2;
-    }
+/* HERO */
+.hero-brush {
+  position: relative;
+  padding: 10rem 1.5rem 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  background: #f7f9fc;
+}
 
-    .hero-inner h1 {
-      font-size: 3.2rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 1.2rem;
-    }
+.hero-inner {
+  max-width: 650px;
+  z-index: 2;
+}
 
-    .hero-inner p {
-      font-size: 1.25rem;
-      color: var(--muted);
-      margin-bottom: 2.2rem;
-      max-width: 600px;
-    }
+.hero-inner h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+}
 
-    /* Updated hero button */
-    .hero-btn {
-      background: transparent;
-      color: var(--accent);
-      border: 2px solid var(--accent);
-      padding: 0.75rem 1.6rem;
-      border-radius: 999px;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: 0.3s ease;
-      text-decoration: none;
-    }
+.hero-inner p {
+  font-size: 1.25rem;
+  color: var(--muted);
+  margin-bottom: 2.2rem;
+  max-width: 600px;
+}
 
-    .hero-btn:hover {
-      background: var(--accent);
-      color: #fff;
-      box-shadow: 0 8px 20px rgba(47,128,237,0.25);
-    }
+/* Updated hero button */
+.hero-btn {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
 
-    .hero-brush::after {
-      content: "";
-      position: absolute;
-      right: -5%;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 55%;
-      height: 80%;
-      background-image: url('data:image/svg+xml;utf8,<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg"><path d="M50 200 Q250 50 550 120 T750 200 Q550 350 250 280 T50 200" fill="%23e3efff"/></svg>');
-      background-size: cover;
-      opacity: 0.9;
-    }
+.hero-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(14,97,165,0.25);
+}
 
-    /* Sections */
-    .section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 4rem 1.5rem;
-    }
+.hero-brush::after {
+  content: "";
+  position: absolute;
+  right: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55%;
+  height: 80%;
+  background-image: url('data:image/svg+xml;utf8,<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg"><path d="M50 200 Q250 50 550 120 T750 200 Q550 350 250 280 T50 200" fill="%23e3efff"/></svg>');
+  background-size: cover;
+  opacity: 0.9;
+}
 
-    .section-title {
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      margin-bottom: 1.2rem;
-    }
+/* Sections */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 1.5rem;
+}
 
-    .section-title::before {
-      content: "";
-      width: 4px;
-      height: 22px;
-      background: var(--accent);
-      border-radius: 2px;
-    }
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
 
-    .section-sub {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 2rem;
-    }
+.section-title::before {
+  content: "";
+  width: 4px;
+  height: 22px;
+  background: var(--accent-yellow);
+  border-radius: 2px;
+}
 
-    /* About Section */
-    .about-wrapper {
-      max-width: 750px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1.4rem;
-      padding: 2rem;
-      background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.06);
-      border: 1px solid var(--border);
-    }
+.section-sub {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
 
-    .about-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-    }
+/* About Section */
+.about-wrapper {
+  max-width: 750px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+  border: 1px solid var(--border);
+}
 
-    .about-icon {
-      font-size: 1.4rem;
-      background: var(--accent);
-      color: #fff;
-      width: 46px;
-      height: 46px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      box-shadow: 0 4px 12px rgba(47,128,237,0.25);
-    }
+.about-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
 
-    /* Cards */
-    .grid { display: grid; gap: 1.6rem; }
-    .grid-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+.about-icon {
+  font-size: 1.4rem;
+  background: var(--accent);
+  color: #fff;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(14,97,165,0.25);
+}
 
-    .card {
-      background: #fff;
-      padding: 1.6rem;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
+/* Cards */
+.grid { display: grid; gap: 1.6rem; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
 
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-    }
+.card {
+  background: #fff;
+  padding: 1.6rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
 
-    /* Team */
-    .team-card {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
 
- .avatar {
+/* Team */
+.team-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.avatar {
   width: 90px;
   height: 90px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid var(--accent);
+  border: 2px solid var(--accent-yellow);
   flex-shrink: 0;
 }
 
@@ -398,9 +402,22 @@
   object-position: center;
 }
 
+.team-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  transition: 0.25s ease;
+}
 
-    /* Contact Enhanced */
- .contact-modern {
+.team-link:hover {
+  color: var(--primary-dark);
+}
+
+/* Contact Enhanced */
+.contact-modern {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 3rem;
@@ -458,7 +475,7 @@
   display: inline-block;
   margin-top: 1rem;
   padding: 0.9rem 1.8rem;
-  background: var(--accent);
+  background: var(--primary);
   color: #fff;
   border-radius: 999px;
   font-weight: 600;
@@ -467,7 +484,7 @@
 }
 
 .contact-btn:hover {
-  background: #2563eb;
+  background: var(--primary-dark);
   transform: translateY(-2px);
 }
 
@@ -488,119 +505,119 @@
     grid-template-columns: 1fr;
     padding: 2rem;
   }
+
   .contact-right {
     display: none;
   }
 }
 
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
 
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      color: var(--muted);
-      font-size: 0.85rem;
-      border-top: 1px solid var(--border);
-      margin-top: 3rem;
-    }
+/* ============================
+   MOBILE OPTIMIZATION
+============================ */
+@media (max-width: 768px) {
+  nav {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    /* ============================
-       MOBILE OPTIMIZATION
-       ============================ */
-    @media (max-width: 768px) {
+  nav a {
+    font-size: 0.85rem;
+  }
 
-      nav {
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+  .nav-indicator {
+    display: none;
+  }
 
-      nav a {
-        font-size: 0.85rem;
-      }
+  .hero-brush {
+    padding: 7rem 1.2rem 4rem;
+    text-align: center;
+  }
 
-      .nav-indicator {
-        display: none;
-      }
+  .hero-inner h1 {
+    font-size: 2.2rem;
+  }
 
-      .hero-brush {
-        padding: 7rem 1.2rem 4rem;
-        text-align: center;
-      }
+  .hero-inner p {
+    font-size: 1.05rem;
+  }
 
-      .hero-inner h1 {
-        font-size: 2.2rem;
-      }
+  .hero-brush::after {
+    width: 100%;
+    height: 45%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    opacity: 0.35;
+  }
 
-      .hero-inner p {
-        font-size: 1.05rem;
-      }
+  .about-wrapper {
+    padding: 1.6rem;
+    gap: 1.2rem;
+  }
 
-      .hero-brush::after {
-        width: 100%;
-        height: 45%;
-        right: 50%;
-        transform: translate(50%, -50%);
-        opacity: 0.35;
-      }
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+  }
 
-      .about-wrapper {
-        padding: 1.6rem;
-        gap: 1.2rem;
-      }
+  .card {
+    padding: 1.3rem;
+  }
 
-      .grid-3,
-      .grid-2 {
-        grid-template-columns: 1fr !important;
-      }
+  .team-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 
-      .card {
-        padding: 1.3rem;
-      }
+  .team-card .avatar {
+    margin-bottom: 0.6rem;
+  }
 
-      .team-card {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-      }
+  .contact-enhanced {
+    grid-template-columns: 1fr;
+    padding: 1.8rem;
+  }
 
-      .team-card .avatar {
-        margin-bottom: 0.6rem;
-      }
+  .contact-right {
+    display: none;
+  }
 
-      .contact-enhanced {
-        grid-template-columns: 1fr;
-        padding: 1.8rem;
-      }
+  .contact-heading {
+    font-size: 1.25rem;
+  }
 
-      .contact-right {
-        display: none;
-      }
+  .contact-text {
+    font-size: 0.95rem;
+  }
 
-      .contact-heading {
-        font-size: 1.25rem;
-      }
+  .contact-row {
+    gap: 0.8rem;
+  }
 
-      .contact-text {
-        font-size: 0.95rem;
-      }
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
 
-      .contact-row {
-        gap: 0.8rem;
-      }
+  .primary-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+</style>
 
-      .contact-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-      }
-
-      .primary-btn {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -624,7 +641,6 @@
       <a href="#videos">Videos</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
-
       <div class="nav-indicator"></div>
     </nav>
   </div>
@@ -644,7 +660,6 @@
   <p class="section-sub">Selected areas where Rear Econ typically operates.</p>
 
   <div class="grid grid-3">
-
     <div class="card">
       <div class="card-label">Practice Area</div>
       <div class="card-title">Policy & Program Design</div>
@@ -668,16 +683,13 @@
         Quantitative and mixed‑method evaluations that connect interventions to measurable outcomes.
       </div>
     </div>
-
   </div>
 </section>
 
+<!-- Instagram embed script (must appear once) -->
+<script async src="//www.instagram.com/embed.js"></script>
 
-
-  <!-- Instagram embed script (must appear once) -->
-  <script async src="//www.instagram.com/embed.js"></script>
 </section>
-
 
 <!-- TEAM -->
 <section id="team" class="section fade">
@@ -685,7 +697,6 @@
   <p class="section-sub">People behind Rear Econ.</p>
 
   <div class="grid grid-2">
-
     <div class="card team-card">
       <div class="avatar"><img src="prajjwal.jpg" alt="Prajjwal Dhungana"></div>
       <div>
@@ -733,10 +744,8 @@
         <a class="team-link" href="https://www.linkedin.com/in/nischaljugjali/" target="_blank">LinkedIn</a>
       </div>
     </div>
-
   </div>
 </section>
-
 
 <!-- VIDEOS -->
 <section id="videos" class="section fade">
@@ -764,7 +773,6 @@
   <p class="section-sub">Here’s what we do.</p>
 
   <div class="about-wrapper">
-
     <div class="about-item">
       <div class="about-icon">📊</div>
       <p>Run practical research and data workshops that build real analytical skills.</p>
@@ -789,7 +797,6 @@
       <div class="about-icon">✍️</div>
       <p>Support writing, presenting, and publishing work so researchers can share their ideas with the world.</p>
     </div>
-
   </div>
 </section>
 
@@ -799,7 +806,6 @@
   <p class="section-sub">Reach out to collaborate, learn, or connect with us.</p>
 
   <div class="contact-modern">
-
     <div class="contact-left">
       <h3>Reach Out To Us</h3>
       <p class="contact-desc">
@@ -832,46 +838,45 @@
     <div class="contact-right">
       <img src="rear-econ-logo.jpeg" alt="Rear Econ" class="contact-graphic">
     </div>
-
   </div>
 </section>
-
 
 <footer>
   © <span id="year"></span> Rear Econ
 </footer>
+
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('show');
-    });
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll('.fade').forEach((el) => observer.observe(el));
-
-  window.addEventListener("scroll", () => {
-    const header = document.querySelector("header");
-    if (window.scrollY > 40) header.classList.add("shrink");
-    else header.classList.remove("shrink");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('show');
   });
+}, { threshold: 0.15 });
 
-  const navLinks = document.querySelectorAll("nav a");
-  const indicator = document.querySelector(".nav-indicator");
+document.querySelectorAll('.fade').forEach((el) => observer.observe(el));
 
-  navLinks.forEach(link => {
-    link.addEventListener("mouseenter", (e) => {
-      const rect = e.target.getBoundingClientRect();
-      const navRect = e.target.parentElement.getBoundingClientRect();
-      indicator.style.width = rect.width + "px";
-      indicator.style.left = (rect.left - navRect.left) + "px";
-    });
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  if (window.scrollY > 40) header.classList.add("shrink");
+  else header.classList.remove("shrink");
+});
+
+const navLinks = document.querySelectorAll("nav a");
+const indicator = document.querySelector(".nav-indicator");
+
+navLinks.forEach(link => {
+  link.addEventListener("mouseenter", (e) => {
+    const rect = e.target.getBoundingClientRect();
+    const navRect = e.target.parentElement.getBoundingClientRect();
+    indicator.style.width = rect.width + "px";
+    indicator.style.left = (rect.left - navRect.left) + "px";
   });
+});
 
-  document.querySelector("nav").addEventListener("mouseleave", () => {
-    indicator.style.width = "0px";
-  });
+document.querySelector("nav").addEventListener("mouseleave", () => {
+  indicator.style.width = "0px";
+});
 </script>
 
 </body>
