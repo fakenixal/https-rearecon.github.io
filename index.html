@@ -1,66 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Rear Econ",
-  "url": "https://rearecon.me",
-  "logo": "https://rearecon.me/rear-econ-logo.png",
-  "sameAs": [
-    "https://www.linkedin.com/company/rear-econ/posts/?feedView=all",
-    "https://www.instagram.com/rearecon2025/",
-    "https://www.facebook.com/p/REAR-Econ-61579375343643/",
-    "https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw"
-  ]
-}
-</script>
 
 <head>
-  <meta charset="UTF-8" />
-  <title>Rear Econ</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8" />
+<title>Rear Econ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Primary SEO Meta Tags -->
-  <meta name="title" content="Rear Econ – Applied Economics Research Collective">
-  <meta name="description" content="Rear Econ empowers aspiring applied economics researchers to become world‑class, policy‑engaged, and socially conscious leaders.">
+<!-- SEO + Social -->
+<meta name="title" content="Rear Econ – Applied Economics Research Collective">
+<meta name="description" content="Rear Econ empowers aspiring applied economics researchers to become world‑class, policy‑engaged, and socially conscious leaders.">
+<link rel="canonical" href="https://rearecon.me/">
 
-  <!-- Keywords -->
-  <meta name="keywords" content="Rear Econ, economics Nepal, applied economics, research collective, policy research Nepal, economic analysis, impact evaluation, market analysis, Nepal research group">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rear Econ – Applied Economics Research Collective">
+<meta property="og:image" content="rear-econ-logo.png">
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://rearecon.vercel.app/">
+<link rel="icon" type="image/jpeg" href="favicon.jpeg">
 
-  <!-- OpenGraph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rearecon.vercel.app/">
-  <meta property="og:title" content="Rear Econ – Applied Economics Research Collective">
-  <meta property="og:description" content="Rear Econ empowers aspiring applied economics researchers to become world‑class, policy‑engaged, and socially conscious leaders.">
-  <meta property="og:image" content="https://rearecon.vercel.app/rear-econ-logo.png">
+<!-- Typography -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Rear Econ – Applied Economics Research Collective">
-  <meta name="twitter:description" content="Rear Econ empowers aspiring applied economics researchers to become world‑class leaders.">
-  <meta name="twitter:image" content="https://rearecon.vercel.app/rear-econ-logo.png">
+<style>
+/* ============================
+   BRAND COLOR SYSTEM
+============================ */
+:root {
+  --primary: #0E61A5;        /* Rear Econ Blue */
+  --primary-dark: #0D3B66;   /* Deep Blue */
+  --accent-orange: #E67E22;  /* Orange */
+  --accent-yellow: #F1C40F;  /* Yellow Gold */
+  --accent-brown: #5A3A22;   /* Dark Brown */
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="favicon.jpeg">
-
-  <!-- Typography -->
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
- :root {
-  --primary: #0E61A5;      /* Rear Econ Blue */
-  --primary-dark: #0D3B66; /* Deep Blue */
-  
-  --accent-orange: #E67E22;
-  --accent-yellow: #F1C40F;
-  --accent-brown: #5A3A22;
-
-  --bg: #F4F4F4;
-  --text: #1A1A1A;
+  --bg: #F4F4F4;             /* Soft Gray */
+  --text: #1A1A1A;           /* Dark Text Gray */
   --muted: #6B7280;
   --border: #E5E7EB;
 
@@ -68,397 +40,227 @@
   --shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
 
-    html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: "Plus Jakarta Sans", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-/* Fix uneven card heights in Our Work section */
-#work .grid-3 {
-  align-items: stretch;
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-#work .card {
+/* ============================
+   NAVBAR
+============================ */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: 0.25s ease;
+}
+
+header .nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 1.5rem;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Ensure titles and labels don't push layout */
-#work .card-label {
-  margin-bottom: 0.4rem;
-  font-size: 0.85rem;
-  color: var(--accent);
-  font-weight: 600;
+header.shrink {
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
 }
 
-#work .card-title {
-  margin-bottom: 0.6rem;
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--primary);
+header.shrink .nav {
+  padding: 0.5rem 1.5rem;
 }
 
-#work .card-body {
-  flex-grow: 1;
-  font-size: 0.95rem;
-  line-height: 1.55;
-  color: var(--muted);
-}
-
-/* Mobile fix */
-@media (max-width: 768px) {
-  #work .card {
-    height: auto;
-  }
-}
-
-    /* Fade-in animation */
-    .fade {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .fade.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Fix Work Section Card Layout */
-#work .grid-3 {
+nav {
+  display: flex;
   gap: 1.8rem;
 }
 
-#work .card {
-  padding: 1.8rem;
-  border-radius: 16px;
+nav a {
+  font-size: 0.9rem;
+  color: var(--primary-dark);
+  text-decoration: none;
+  transition: 0.25s ease;
 }
 
-#work .card-title {
+nav a:hover {
+  color: var(--primary);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.nav-indicator {
+  position: absolute;
+  bottom: -6px;
+  height: 2px;
+  background: var(--accent-yellow);
+  width: 0;
+  left: 0;
+  transition: 0.25s ease;
+  border-radius: 2px;
+}
+
+/* ============================
+   HERO
+============================ */
+.hero-brush {
+  padding: 10rem 1.5rem 6rem;
+  display: flex;
+  align-items: center;
+  background: #F4F8FF;
+}
+
+.hero-inner h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.hero-inner p {
+  font-size: 1.25rem;
+  color: var(--muted);
+  margin: 1.2rem 0 2rem;
+}
+
+.hero-btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.hero-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* ============================
+   SECTIONS
+============================ */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 1.5rem;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.section-title::before {
+  content: "";
+  width: 4px;
+  height: 22px;
+  background: var(--accent-yellow);
+  border-radius: 2px;
+}
+
+.section-sub {
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+/* ============================
+   CARDS
+============================ */
+.grid { display: grid; gap: 1.6rem; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+.card {
+  background: #fff;
+  padding: 1.6rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--primary);
+  box-shadow: var(--shadow);
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.card-title {
   font-size: 1.15rem;
   font-weight: 600;
-  margin-bottom: 0.6rem;
+  color: var(--primary-dark);
 }
 
-#work .card-body {
-  font-size: 0.95rem;
-  line-height: 1.55;
+.card-label {
+  font-size: 0.85rem;
+  color: var(--accent-orange);
+  font-weight: 600;
+}
+
+.card-body {
   color: var(--muted);
+  margin-top: 0.5rem;
 }
 
-/* Mobile improvements */
-@media (max-width: 768px) {
-  #work .card {
-    padding: 1.4rem;
-  }
+/* ============================
+   TEAM
+============================ */
+.team-card {
+  display: flex;
+  gap: 1rem;
 }
 
-    /* Sticky shrinking navbar */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 50;
-      background: rgba(255,255,255,0.7);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      transition: padding 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    header .nav {
-      max-width: 1200px;
-      margin: auto;
-      padding: 1rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: padding 0.25s ease;
-    }
-
-    header.shrink {
-      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-    }
-    header.shrink .nav {
-      padding: 0.5rem 1.5rem;
-    }
-
-    /* Logo clickable */
-    .logo img {
-      height: 65px;
-      width: auto;
-      cursor: pointer;
-    }
-
-    /* Navigation */
-    nav {
-      position: relative;
-      display: flex;
-      gap: 1.8rem;
-      flex-wrap: nowrap;
-    }
-
-    nav a {
-      font-size: 0.9rem;
-      color: var(--muted);
-      text-decoration: none;
-      position: relative;
-      transition: color 0.2s ease, text-shadow 0.2s ease;
-    }
-
-    nav a:hover {
-      color: var(--primary);
-      text-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
-
-    /* Sliding highlight indicator */
-    .nav-indicator {
-      position: absolute;
-      bottom: -6px;
-      height: 2px;
-      background: var(--accent);
-      width: 0;
-      left: 0;
-      transition: all 0.25s ease;
-      border-radius: 2px;
-    }
-
-    /* HERO */
-    .hero-brush {
-      position: relative;
-      padding: 10rem 1.5rem 6rem;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      overflow: hidden;
-      background: #f7f9fc;
-    }
-
-    .hero-inner {
-      max-width: 650px;
-      z-index: 2;
-    }
-
-    .hero-inner h1 {
-      font-size: 3.2rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 1.2rem;
-    }
-
-    .hero-inner p {
-      font-size: 1.25rem;
-      color: var(--muted);
-      margin-bottom: 2.2rem;
-      max-width: 600px;
-    }
-
-    /* Updated hero button */
-    .hero-btn {
-      background: transparent;
-      color: var(--accent);
-      border: 2px solid var(--accent);
-      padding: 0.75rem 1.6rem;
-      border-radius: 999px;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: 0.3s ease;
-      text-decoration: none;
-    }
-
-    .hero-btn:hover {
-      background: var(--accent);
-      color: #fff;
-      box-shadow: 0 8px 20px rgba(47,128,237,0.25);
-    }
-
-    .hero-brush::after {
-      content: "";
-      position: absolute;
-      right: -5%;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 55%;
-      height: 80%;
-      background-image: url('data:image/svg+xml;utf8,<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg"><path d="M50 200 Q250 50 550 120 T750 200 Q550 350 250 280 T50 200" fill="%23e3efff"/></svg>');
-      background-size: cover;
-      opacity: 0.9;
-    }
-
-    /* Sections */
-    .section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 4rem 1.5rem;
-    }
-
-    .section-title {
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .section-title::before {
-      content: "";
-      width: 4px;
-      height: 22px;
-      background: var(--accent);
-      border-radius: 2px;
-    }
-
-    .section-sub {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 2rem;
-    }
-
-    /* About Section */
-    .about-wrapper {
-      max-width: 750px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1.4rem;
-      padding: 2rem;
-      background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.06);
-      border: 1px solid var(--border);
-    }
-
-    .about-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-
-    .about-icon {
-      font-size: 1.4rem;
-      background: var(--accent);
-      color: #fff;
-      width: 46px;
-      height: 46px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      box-shadow: 0 4px 12px rgba(47,128,237,0.25);
-    }
-
-    /* Cards */
-    .grid { display: grid; gap: 1.6rem; }
-    .grid-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid-2 { grid-template-columns: repeat(2, 1fr); }
-
-    .card {
-      background: #fff;
-      padding: 1.6rem;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-    }
-
-    /* Team */
-    .team-card {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-
- .avatar {
+.avatar {
   width: 90px;
   height: 90px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid var(--accent);
-  flex-shrink: 0;
+  border: 2px solid var(--accent-yellow);
 }
 
-.avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+.team-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
 }
 
+.team-link:hover {
+  color: var(--primary-dark);
+}
 
-    /* Contact Enhanced */
- .contact-modern {
+/* ============================
+   CONTACT
+============================ */
+.contact-modern {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 3rem;
   padding: 3rem;
-  background: #ffffff;
+  background: #fff;
   border-radius: 20px;
-  border: 1px solid var(--border);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-}
-
-.contact-left h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--primary);
-  margin-bottom: 0.8rem;
-}
-
-.contact-desc {
-  color: var(--muted);
-  margin-bottom: 2rem;
-  line-height: 1.6;
-}
-
-.contact-item {
-  margin-bottom: 1.6rem;
-}
-
-.contact-label {
-  display: block;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--primary);
-  margin-bottom: 0.3rem;
-}
-
-.contact-value {
-  font-size: 1rem;
-  color: var(--text);
-}
-
-.contact-socials a {
-  display: inline-block;
-  margin-right: 1rem;
-  font-size: 0.95rem;
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.contact-socials a:hover {
-  text-decoration: underline;
+  border: 1px solid var(--primary);
 }
 
 .contact-btn {
   display: inline-block;
-  margin-top: 1rem;
   padding: 0.9rem 1.8rem;
-  background: var(--accent);
+  background: var(--primary);
   color: #fff;
   border-radius: 999px;
   font-weight: 600;
@@ -467,152 +269,28 @@
 }
 
 .contact-btn:hover {
-  background: #2563eb;
+  background: var(--primary-dark);
   transform: translateY(-2px);
 }
 
-.contact-right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ============================
+   FOOTER
+============================ */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
 }
-
-.contact-graphic {
-  width: 80%;
-  opacity: 0.9;
-  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.08));
-}
-
-@media (max-width: 768px) {
-  .contact-modern {
-    grid-template-columns: 1fr;
-    padding: 2rem;
-  }
-  .contact-right {
-    display: none;
-  }
-}
-
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      color: var(--muted);
-      font-size: 0.85rem;
-      border-top: 1px solid var(--border);
-      margin-top: 3rem;
-    }
-
-    /* ============================
-       MOBILE OPTIMIZATION
-       ============================ */
-    @media (max-width: 768px) {
-
-      nav {
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      nav a {
-        font-size: 0.85rem;
-      }
-
-      .nav-indicator {
-        display: none;
-      }
-
-      .hero-brush {
-        padding: 7rem 1.2rem 4rem;
-        text-align: center;
-      }
-
-      .hero-inner h1 {
-        font-size: 2.2rem;
-      }
-
-      .hero-inner p {
-        font-size: 1.05rem;
-      }
-
-      .hero-brush::after {
-        width: 100%;
-        height: 45%;
-        right: 50%;
-        transform: translate(50%, -50%);
-        opacity: 0.35;
-      }
-
-      .about-wrapper {
-        padding: 1.6rem;
-        gap: 1.2rem;
-      }
-
-      .grid-3,
-      .grid-2 {
-        grid-template-columns: 1fr !important;
-      }
-
-      .card {
-        padding: 1.3rem;
-      }
-
-      .team-card {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-      }
-
-      .team-card .avatar {
-        margin-bottom: 0.6rem;
-      }
-
-      .contact-enhanced {
-        grid-template-columns: 1fr;
-        padding: 1.8rem;
-      }
-
-      .contact-right {
-        display: none;
-      }
-
-      .contact-heading {
-        font-size: 1.25rem;
-      }
-
-      .contact-text {
-        font-size: 0.95rem;
-      }
-
-      .contact-row {
-        gap: 0.8rem;
-      }
-
-      .contact-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-      }
-
-      .primary-btn {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-<a id="top"></a>
-
 <header>
   <div class="nav">
     <div class="logo">
-      <a href="#top">
-        <img src="rear-econ-logo.png" alt="Rear Econ Logo">
-      </a>
+      <a href="#top"><img src="rear-econ-logo.png" alt="Rear Econ Logo"></a>
     </div>
 
     <nav>
@@ -624,13 +302,12 @@
       <a href="#videos">Videos</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
-
       <div class="nav-indicator"></div>
     </nav>
   </div>
 </header>
 
-<section class="hero-brush fade">
+<section class="hero-brush">
   <div class="hero-inner">
     <h1>REAR Econ</h1>
     <p>We help aspiring applied economics researchers grow into world‑class, policy engaged, and socially conscious leaders.</p>
@@ -639,172 +316,88 @@
 </section>
 
 <!-- WORK -->
-<section id="work" class="section fade">
+<section id="work" class="section">
   <h2 class="section-title">Our Work</h2>
   <p class="section-sub">Selected areas where Rear Econ typically operates.</p>
 
   <div class="grid grid-3">
-
     <div class="card">
       <div class="card-label">Practice Area</div>
       <div class="card-title">Policy & Program Design</div>
-      <div class="card-body">
-        Structured economic frameworks to design, stress‑test, and refine public policies and social protection programs.
-      </div>
+      <div class="card-body">Structured economic frameworks to design, stress‑test, and refine public policies.</div>
     </div>
 
     <div class="card">
       <div class="card-label">Practice Area</div>
       <div class="card-title">Market & Sector Analysis</div>
-      <div class="card-body">
-        Deep dives into sectors, markets, and regulatory environments to inform investment and strategic decisions.
-      </div>
+      <div class="card-body">Deep dives into sectors, markets, and regulatory environments.</div>
     </div>
 
     <div class="card">
       <div class="card-label">Practice Area</div>
       <div class="card-title">Impact Evaluation</div>
-      <div class="card-body">
-        Quantitative and mixed‑method evaluations that connect interventions to measurable outcomes.
-      </div>
+      <div class="card-body">Quantitative and mixed‑method evaluations connecting interventions to outcomes.</div>
     </div>
-
   </div>
 </section>
 
-
-
-  <!-- Instagram embed script (must appear once) -->
-  <script async src="//www.instagram.com/embed.js"></script>
-</section>
-
-
 <!-- TEAM -->
-<section id="team" class="section fade">
+<section id="team" class="section">
   <h2 class="section-title">Team</h2>
   <p class="section-sub">People behind Rear Econ.</p>
 
   <div class="grid grid-2">
-
     <div class="card team-card">
-      <div class="avatar"><img src="prajjwal.jpg" alt="Prajjwal Dhungana"></div>
+      <div class="avatar"><img src="prajjwal.jpg"></div>
       <div>
         <div class="card-title">Prajjwal Dhungana</div>
         <div class="card-label">Founder</div>
-        <div class="card-body">
-          Work description with personal interest and experiences will be here.
-        </div>
+        <div class="card-body">Work description will be here.</div>
         <a class="team-link" href="https://www.linkedin.com/in/pradhu99/" target="_blank">LinkedIn</a>
       </div>
     </div>
 
     <div class="card team-card">
-      <div class="avatar"><img src="shreepriya.jpg" alt="Shreepriya Ghimire"></div>
+      <div class="avatar"><img src="shreepriya.jpg"></div>
       <div>
         <div class="card-title">Shreepriya Ghimire</div>
         <div class="card-label">Research Associate</div>
-        <div class="card-body">
-          Work description with personal interest and experiences will be here.
-        </div>
+        <div class="card-body">Work description will be here.</div>
         <a class="team-link" href="https://www.linkedin.com/in/shreepriya-ghimire" target="_blank">LinkedIn</a>
       </div>
     </div>
 
     <div class="card team-card">
-      <div class="avatar"><img src="saurya.jpg" alt="Saurya Pandit"></div>
+      <div class="avatar"><img src="saurya.jpg"></div>
       <div>
         <div class="card-title">Saurya Pandit</div>
         <div class="card-label">Research Associate</div>
-        <div class="card-body">
-          Work description with personal interest and experiences will be here.
-        </div>
+        <div class="card-body">Work description will be here.</div>
         <a class="team-link" href="https://www.linkedin.com/in/saurya-pandit-a558a0331/" target="_blank">LinkedIn</a>
       </div>
     </div>
 
     <div class="card team-card">
-      <div class="avatar"><img src="nischal.jpg" alt="Nischal Jugjali"></div>
+      <div class="avatar"><img src="nischal.jpg"></div>
       <div>
         <div class="card-title">Nischal Jugjali</div>
         <div class="card-label">Research Associate</div>
-        <div class="card-body">
-          Work description with personal interest and experiences will be here.
-        </div>
+        <div class="card-body">Work description will be here.</div>
         <a class="team-link" href="https://www.linkedin.com/in/nischaljugjali/" target="_blank">LinkedIn</a>
       </div>
     </div>
-
-  </div>
-</section>
-
-
-<!-- VIDEOS -->
-<section id="videos" class="section fade">
-  <h2 class="section-title">Meeting Sessions</h2>
-  <p class="section-sub">Watch our recorded discussions, workshops, and research sessions.</p>
-
-  <div class="grid grid-2">
-    <div class="card" style="padding:0;">
-      <iframe width="100%" height="315"
-        src="https://www.youtube.com/embed/VIDEO_ID_1"
-        frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <div class="card" style="padding:0;">
-      <iframe width="100%" height="315"
-        src="https://www.youtube.com/embed/VIDEO_ID_2"
-        frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="section fade">
-  <h2 class="section-title">About Rear Econ</h2>
-  <p class="section-sub">Here’s what we do.</p>
-
-  <div class="about-wrapper">
-
-    <div class="about-item">
-      <div class="about-icon">📊</div>
-      <p>Run practical research and data workshops that build real analytical skills.</p>
-    </div>
-
-    <div class="about-item">
-      <div class="about-icon">🤝</div>
-      <p>Connect emerging researchers with mentors who guide their academic and professional growth.</p>
-    </div>
-
-    <div class="about-item">
-      <div class="about-icon">🗂️</div>
-      <p>Collaborate on real‑world economic studies that sharpen applied research experience.</p>
-    </div>
-
-    <div class="about-item">
-      <div class="about-icon">🌐</div>
-      <p>Build networks and open doors to opportunities in policy, academia, and industry.</p>
-    </div>
-
-    <div class="about-item">
-      <div class="about-icon">✍️</div>
-      <p>Support writing, presenting, and publishing work so researchers can share their ideas with the world.</p>
-    </div>
-
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section fade">
+<section id="contact" class="section">
   <h2 class="section-title">Contact</h2>
   <p class="section-sub">Reach out to collaborate, learn, or connect with us.</p>
 
   <div class="contact-modern">
-
     <div class="contact-left">
       <h3>Reach Out To Us</h3>
-      <p class="contact-desc">
-        Whether you're a researcher, student, mentor, or organization, we’d love to hear from you.
-      </p>
+      <p class="contact-desc">Whether you're a researcher, student, mentor, or organization, we’d love to hear from you.</p>
 
       <div class="contact-item">
         <span class="contact-label">Email</span>
@@ -816,62 +409,21 @@
         <span class="contact-value">Lalitpur, Nepal</span>
       </div>
 
-      <div class="contact-item">
-        <span class="contact-label">Social</span>
-        <div class="contact-socials">
-          <a href="https://www.linkedin.com/company/rear-econ/posts/?feedView=all" target="_blank">LinkedIn</a>
-          <a href="https://www.instagram.com/rearecon2025/" target="_blank">Instagram</a>
-          <a href="https://www.facebook.com/p/REAR-Econ-61579375343643/" target="_blank">Facebook</a>
-          <a href="https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw" target="_blank">YouTube</a>
-        </div>
-      </div>
-
       <a href="mailto:rearecon2025@gmail.com" class="contact-btn">Start a conversation</a>
     </div>
 
     <div class="contact-right">
-      <img src="rear-econ-logo.jpeg" alt="Rear Econ" class="contact-graphic">
+      <img src="rear-econ-logo.jpeg" class="contact-graphic">
     </div>
-
   </div>
 </section>
-
 
 <footer>
   © <span id="year"></span> Rear Econ
 </footer>
+
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('show');
-    });
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll('.fade').forEach((el) => observer.observe(el));
-
-  window.addEventListener("scroll", () => {
-    const header = document.querySelector("header");
-    if (window.scrollY > 40) header.classList.add("shrink");
-    else header.classList.remove("shrink");
-  });
-
-  const navLinks = document.querySelectorAll("nav a");
-  const indicator = document.querySelector(".nav-indicator");
-
-  navLinks.forEach(link => {
-    link.addEventListener("mouseenter", (e) => {
-      const rect = e.target.getBoundingClientRect();
-      const navRect = e.target.parentElement.getBoundingClientRect();
-      indicator.style.width = rect.width + "px";
-      indicator.style.left = (rect.left - navRect.left) + "px";
-    });
-  });
-
-  document.querySelector("nav").addEventListener("mouseleave", () => {
-    indicator.style.width = "0px";
-  });
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
