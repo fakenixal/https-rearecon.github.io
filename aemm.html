@@ -14,7 +14,7 @@
 :root {
   --primary: #0E61A5;      /* Rear Econ Blue */
   --primary-dark: #0D3B66; /* Deep Blue */
-  
+
   --accent-orange: #E67E22;
   --accent-yellow: #F1C40F;
   --accent-brown: #5A3A22;
@@ -28,7 +28,7 @@
   --shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
 
-
+/* GLOBAL */
 body {
   margin: 0;
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -42,7 +42,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 50;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.75);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
@@ -63,8 +63,9 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: var(--muted);
+  color: var(--primary-dark);
   font-size: 0.9rem;
+  transition: 0.25s ease;
 }
 
 nav a:hover {
@@ -104,6 +105,17 @@ nav a:hover {
   font-weight: 600;
   color: var(--primary);
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.section-title::before {
+  content: "";
+  width: 4px;
+  height: 20px;
+  background: var(--accent-yellow);
+  border-radius: 2px;
 }
 
 .section-sub {
@@ -121,26 +133,20 @@ nav a:hover {
   grid-template-columns: repeat(2, 1fr);
 }
 
-/* PORTRAIT (first 5 posts) */
-.instagram-wrapper-portrait {
-  width: 100%;
-  max-width: 540px;
-  margin: 0 auto;
-}
-
-/* SQUARE (remaining posts) */
+/* INSTAGRAM WRAPPERS */
+.instagram-wrapper-portrait,
 .instagram-wrapper-square {
   width: 100%;
   max-width: 540px;
   margin: 0 auto;
 }
 
-/* Let Instagram control height — prevents cropping */
 .instagram-media {
   width: 100% !important;
   min-width: 100% !important;
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
   .grid-2 {
     grid-template-columns: 1fr;
@@ -284,7 +290,6 @@ nav a:hover {
     <div class="instagram-wrapper-square">
       <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DNlIkAaPD8F/" data-instgrm-version="14"></blockquote>
     </div>
-
 
   </div>
 
