@@ -19,6 +19,8 @@
   --accent-yellow: #F1C40F;
   --accent-brown: #5A3A22;
 
+  --accent: #E67E22;       /* Main accent color */
+
   --bg: #F4F4F4;
   --text: #1A1A1A;
   --muted: #6B7280;
@@ -27,7 +29,6 @@
   --radius: 14px;
   --shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
-
 
 body {
   margin: 0;
@@ -42,7 +43,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 50;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.75);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
@@ -63,8 +64,9 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: var(--muted);
+  color: var(--primary-dark);
   font-size: 0.9rem;
+  transition: 0.25s ease;
 }
 
 nav a:hover {
@@ -104,6 +106,17 @@ nav a:hover {
   font-weight: 600;
   color: var(--primary);
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.section-title::before {
+  content: "";
+  width: 4px;
+  height: 20px;
+  background: var(--accent-yellow);
+  border-radius: 2px;
 }
 
 .section-sub {
@@ -119,7 +132,7 @@ nav a:hover {
   background: #ffffff;
   border-radius: 18px;
   border: 1px solid var(--border);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+  box-shadow: var(--shadow);
 }
 
 .tlae-text {
@@ -155,7 +168,7 @@ nav a:hover {
   background: #ffffff;
   border-radius: 18px;
   border: 1px solid var(--border);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+  box-shadow: var(--shadow);
   text-align: center;
 }
 
@@ -172,7 +185,7 @@ nav a:hover {
 }
 
 .tlae-register-box a:hover {
-  background: #2563eb;
+  background: var(--primary-dark);
   transform: translateY(-2px);
 }
 
