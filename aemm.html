@@ -167,9 +167,17 @@ nav a:hover {
   min-width: 100% !important;
 }
 
-/* MOBILE */
-/* MOBILE NAV FIX — copied from index.html */
+/* ⭐ MOBILE FIXES */
 @media (max-width: 768px) {
+
+  /* Navbar container */
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  /* Navbar links */
   nav {
     gap: 1rem;
     flex-wrap: wrap;
@@ -184,6 +192,11 @@ nav a:hover {
     display: none;
   }
 
+  /* Prevent hero overlap */
+  body {
+    padding-top: 80px;
+  }
+
   .hero {
     padding: 7rem 1.2rem 4rem;
     text-align: center;
@@ -196,8 +209,17 @@ nav a:hover {
   .hero p {
     font-size: 1.05rem;
   }
-}
 
+  /* ⭐ FORCE INSTAGRAM POSTS TO 1 PER ROW */
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .instagram-wrapper-portrait,
+  .instagram-wrapper-square {
+    max-width: 100% !important;
+  }
+}
 </style>
 </head>
 
