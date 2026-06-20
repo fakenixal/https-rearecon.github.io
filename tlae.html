@@ -7,34 +7,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <link rel="icon" type="image/jpeg" href="favicon.jpeg">
 
 <style>
 :root {
-  --primary: #0E61A5;      /* Rear Econ Blue */
-  --primary-dark: #0D3B66; /* Deep Blue */
-  
+  --primary: #0E61A5;
+  --primary-dark: #0D3B66;
   --accent-orange: #E67E22;
   --accent-yellow: #F1C40F;
   --accent-brown: #5A3A22;
-
-  --accent: #E67E22;       /* Main accent color */
-
+  --accent: #E67E22;
   --bg: #F4F4F4;
   --text: #1A1A1A;
   --muted: #6B7280;
   --border: #E5E7EB;
-
   --radius: 14px;
   --shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
 
+/* GLOBAL */
 body {
   margin: 0;
   font-family: "Plus Jakarta Sans", sans-serif;
   background: var(--bg);
   color: var(--text);
+}
+
+/* FADE-IN ANIMATION */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* NAVBAR */
@@ -46,6 +53,7 @@ header {
   background: rgba(255,255,255,0.75);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
+  transition: padding 0.25s ease, box-shadow 0.25s ease;
 }
 
 .nav {
@@ -60,6 +68,7 @@ header {
 nav {
   display: flex;
   gap: 1.8rem;
+  position: relative;
 }
 
 nav a {
@@ -71,6 +80,18 @@ nav a {
 
 nav a:hover {
   color: var(--primary);
+}
+
+/* NAV INDICATOR */
+.nav-indicator {
+  position: absolute;
+  bottom: -6px;
+  height: 2px;
+  background: var(--accent-orange);
+  width: 0;
+  left: 0;
+  transition: all 0.25s ease;
+  border-radius: 2px;
 }
 
 /* HERO */
@@ -219,20 +240,21 @@ nav a:hover {
       <a href="index.html#videos">Videos</a>
       <a href="index.html#about">About</a>
       <a href="index.html#contact">Contact</a>
+      <div class="nav-indicator"></div>
     </nav>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero fade">
   <h1>Thinking Like An Aspiring Economist</h1>
   <p>
     A series featuring aspiring economists, exploring their motivations, challenges, and experiences that have shaped their journey.
   </p>
 </section>
 
-  <!-- TLAE VIDEOS -->
-<section class="section">
+<!-- TLAE VIDEOS -->
+<section class="section fade">
   <h2 class="section-title">TLAE Videos</h2>
   <p class="section-sub">Interviews, reflections, and stories from aspiring economists.</p>
 
@@ -249,9 +271,8 @@ nav a:hover {
   </div>
 </section>
 
-
 <!-- TLAE REGISTRATION -->
-<section class="section">
+<section class="section fade">
   <h2 class="section-title">TLAE Registration Link</h2>
   <p class="section-sub">Find the latest link for TLAE registration session here.</p>
 
@@ -267,7 +288,7 @@ nav a:hover {
 </section>
 
 <!-- TLAE ANNOUNCEMENTS -->
-<section class="section">
+<section class="section fade">
   <h2 class="section-title">TLAE Announcements</h2>
   <p class="section-sub">TLAE related posts and updates.</p>
 
@@ -307,6 +328,42 @@ nav a:hover {
 
   <script async src="//www.instagram.com/embed.js"></script>
 </section>
+
+<!-- ANIMATION + NAVBAR SCRIPTS -->
+<script>
+// Fade-in animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('show');
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.fade').forEach((el) => observer.observe(el));
+
+// Shrinking navbar
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  if (window.scrollY > 40) header.classList.add("shrink");
+  else header.classList.remove("shrink");
+});
+
+// Nav hover indicator
+const navLinks = document.querySelectorAll("nav a");
+const indicator = document.querySelector(".nav-indicator");
+
+navLinks.forEach(link => {
+  link.addEventListener("mouseenter", (e) => {
+    const rect = e.target.getBoundingClientRect();
+    const navRect = e.target.parentElement.getBoundingClientRect();
+    indicator.style.width = rect.width + "px";
+    indicator.style.left = (rect.left - navRect.left) + "px";
+  });
+});
+
+document.querySelector("nav").addEventListener("mouseleave", () => {
+  indicator.style.width = "0px";
+});
+</script>
 
 </body>
 </html>
