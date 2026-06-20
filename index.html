@@ -327,38 +327,38 @@ nav a:hover {
 }
 
 /* About Section */
-.about-wrapper {
-  max-width: 750px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.4rem;
-  padding: 2rem;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
-  border: 1px solid var(--border);
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
 }
 
-.about-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
+.about-card {
+  background: #fff;
+  padding: 1.8rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  text-align: left;
+}
+
+.about-card h3 {
+  color: var(--primary);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-card p {
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 .about-icon {
-  font-size: 1.4rem;
-  background: var(--accent);
-  color: #fff;
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(14,97,165,0.25);
+  height: 40px;
+  width: 40px;
+  opacity: 0.9;
 }
+
 
 /* Cards */
 .grid { display: grid; gap: 1.6rem; }
@@ -830,37 +830,45 @@ footer {
 
 
 <!-- ABOUT -->
-<section id="about" class="section fade">
+<section class="section" id="about">
   <h2 class="section-title">About Rear Econ</h2>
-  <p class="section-sub">Here’s what we do.</p>
+  <p class="section-sub">We help young economists grow through real work, real mentorship, and real opportunities.</p>
 
-  <div class="about-wrapper">
-    <div class="about-item">
-      <div class="about-icon">📊</div>
-      <p>Run practical research and data workshops that build real analytical skills.</p>
+  <div class="about-grid">
+
+    <div class="about-card">
+      <img src="icons/research.svg" class="about-icon">
+      <h3>Hands‑on Research Training</h3>
+      <p>We teach students to work with real data, real tools, and real economic questions.</p>
     </div>
 
-    <div class="about-item">
-      <div class="about-icon">🤝</div>
-      <p>Connect emerging researchers with mentors who guide their academic and professional growth.</p>
+    <div class="about-card">
+      <img src="icons/mentor.svg" class="about-icon">
+      <h3>Mentorship That Matters</h3>
+      <p>We connect emerging researchers with mentors who guide their academic and professional growth.</p>
     </div>
 
-    <div class="about-item">
-      <div class="about-icon">🗂️</div>
-      <p>Collaborate on real‑world economic studies that sharpen applied research experience.</p>
+    <div class="about-card">
+      <img src="icons/collab.svg" class="about-icon">
+      <h3>Applied Research Projects</h3>
+      <p>We collaborate on studies that give students real experience beyond the classroom.</p>
     </div>
 
-    <div class="about-item">
-      <div class="about-icon">🌐</div>
-      <p>Build networks and open doors to opportunities in policy, academia, and industry.</p>
+    <div class="about-card">
+      <img src="icons/network.svg" class="about-icon">
+      <h3>A Growing Research Community</h3>
+      <p>We create spaces where young economists meet, learn, and discover opportunities.</p>
     </div>
 
-    <div class="about-item">
-      <div class="about-icon">✍️</div>
-      <p>Support writing, presenting, and publishing work so researchers can share their ideas with the world.</p>
+    <div class="about-card">
+      <img src="icons/publish.svg" class="about-icon">
+      <h3>Writing & Publishing Support</h3>
+      <p>We help researchers write clearly, present confidently, and publish their work.</p>
     </div>
+
   </div>
 </section>
+
 
 <!-- CONTACT -->
 <section id="contact" class="section fade">
