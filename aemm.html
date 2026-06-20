@@ -167,32 +167,38 @@ nav a:hover {
   min-width: 100% !important;
 }
 
-/* ⭐ MOBILE FIXES */
+/* ⭐ COMPLETE MOBILE CSS FOR AEMM.html */
 @media (max-width: 768px) {
 
-  /* Navbar container */
+  /* NAVBAR CONTAINER — keep logo left, menu wraps below */
   .nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+    flex-wrap: nowrap;          /* prevents logo from jumping above nav */
+    justify-content: space-between;
+    gap: 0.5rem;
   }
 
-  /* Navbar links */
+  /* NAV LINKS — allow wrapping */
   nav {
-    gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem;
   }
 
   nav a {
     font-size: 0.85rem;
   }
 
+  /* Hide hover indicator on mobile */
   .nav-indicator {
     display: none;
   }
 
-  /* Prevent hero overlap */
+  /* Resize logo for mobile */
+  .logo img {
+    height: 50px;
+  }
+
+  /* Prevent hero from hiding behind fixed header */
   body {
     padding-top: 80px;
   }
@@ -220,6 +226,7 @@ nav a:hover {
     max-width: 100% !important;
   }
 }
+
 </style>
 </head>
 
