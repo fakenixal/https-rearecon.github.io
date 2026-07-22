@@ -53,15 +53,15 @@
 
 <style>
 :root {
-  --primary: #0E61A5;       /* Rear Econ Blue */
-  --primary-dark: #0D3B66;  /* Deep Blue */
-  --accent-orange: #E67E22; /* Orange */
-  --accent-yellow: #F1C40F; /* Yellow-Gold */
-  --accent-brown: #5A3A22;  /* Dark Brown */
-  --accent: #E67E22;        /* Main accent mapped to Orange */
+  --primary: #0E61A5;
+  --primary-dark: #0D3B66;
+  --accent-orange: #E67E22;
+  --accent-yellow: #F1C40F;
+  --accent-brown: #5A3A22;
+  --accent: #E67E22;
 
-  --bg: #F4F4F4;            /* Soft Gray */
-  --text: #1A1A1A;          /* Dark Text Gray */
+  --bg: #F4F4F4;
+  --text: #1A1A1A;
   --muted: #6B7280;
   --border: #E5E7EB;
 
@@ -80,14 +80,16 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
-.subtitle {
-  font-size: 1.4rem;           /* bigger text */
-  color: #E67E22;              /* Rear Econ orange */
-  margin-top: -8px;            /* pulls it closer to REAR Econ */
-  margin-bottom: 12px;         /* spacing before the tagline */
-  font-weight: 500;            /* slightly bold for emphasis */
-}
 
+/* ⭐ Updated Subtitle Styling */
+.subtitle {
+  font-size: 1.55rem;
+  color: var(--accent-orange);
+  margin-top: -18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
 
 /* Fix uneven card heights in Our Work section */
 #work .grid-3 {
@@ -101,7 +103,6 @@ body {
   height: 100%;
 }
 
-/* Ensure titles and labels don't push layout */
 #work .card-label {
   margin-bottom: 0.4rem;
   font-size: 0.85rem;
@@ -123,14 +124,12 @@ body {
   color: var(--muted);
 }
 
-/* Mobile fix */
 @media (max-width: 768px) {
   #work .card {
     height: auto;
   }
 }
 
-/* Fade-in animation */
 .fade {
   opacity: 0;
   transform: translateY(20px);
@@ -142,7 +141,6 @@ body {
   transform: translateY(0);
 }
 
-/* Fix Work Section Card Layout */
 #work .grid-3 {
   gap: 1.8rem;
 }
@@ -164,7 +162,6 @@ body {
   color: var(--muted);
 }
 
-/* Mobile improvements */
 @media (max-width: 768px) {
   #work .card {
     padding: 1.4rem;
@@ -201,14 +198,12 @@ header.shrink .nav {
   padding: 0.5rem 1.5rem;
 }
 
-/* Logo clickable */
 .logo img {
   height: 65px;
   width: auto;
   cursor: pointer;
 }
 
-/* Navigation */
 nav {
   position: relative;
   display: flex;
@@ -229,7 +224,6 @@ nav a:hover {
   text-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-/* Sliding highlight indicator */
 .nav-indicator {
   position: absolute;
   bottom: -6px;
@@ -271,7 +265,6 @@ nav a:hover {
   max-width: 600px;
 }
 
-/* Updated hero button */
 .hero-btn {
   background: transparent;
   color: var(--accent);
@@ -302,6 +295,23 @@ nav a:hover {
   background-size: cover;
   opacity: 0.9;
 }
+</style>
+</head>
+
+<body>
+
+<section class="hero-brush fade">
+  <div class="hero-inner">
+    <h1>REAR Econ</h1>
+    <p class="subtitle">A research initiative by Rear Global</p>
+    <p>We help aspiring applied economics researchers grow into world‑class, policy engaged, and socially conscious leaders.</p>
+    <a href="#about" class="hero-btn">Learn More</a>
+  </div>
+</section>
+
+</body>
+</html>
+
 
 /* Sections */
 .section {
