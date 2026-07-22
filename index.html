@@ -3,17 +3,17 @@
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Rear Econ",
-  "url": "https://rearecon.me",
-  "logo": "https://rearecon.me/rear-econ-logo.png",
-  "sameAs": [
-    "https://www.linkedin.com/company/rear-econ/posts/?feedView=all",
-    "https://www.instagram.com/rearecon2025/",
-    "https://www.facebook.com/p/REAR-Econ-6157f9375343643/",
-    "https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw"
-  ]
+"@context": "https://schema.org",
+"@type": "Organization",
+"name": "Rear Econ",
+"url": "https://rearecon.me",
+"logo": "https://rearecon.me/rear-econ-logo.png",
+"sameAs": [
+"https://www.linkedin.com/company/rear-econ/posts/?feedView=all",
+"https://www.instagram.com/rearecon2025/",
+"https://www.facebook.com/p/REAR-Econ-6157f9375343643/",
+"https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw"
+]
 }
 </script>
 
@@ -53,20 +53,20 @@
 
 <style>
 :root {
-  --primary: #0E61A5;       /* Rear Econ Blue */
-  --primary-dark: #0D3B66;  /* Deep Blue */
-  --accent-orange: #E67E22; /* Orange */
-  --accent-yellow: #F1C40F; /* Yellow-Gold */
-  --accent-brown: #5A3A22;  /* Dark Brown */
-  --accent: #E67E22;        /* Main accent mapped to Orange */
+--primary: #0E61A5;       /* Rear Econ Blue */
+--primary-dark: #0D3B66;  /* Deep Blue */
+--accent-orange: #E67E22; /* Orange */
+--accent-yellow: #F1C40F; /* Yellow-Gold */
+--accent-brown: #5A3A22;  /* Dark Brown */
+--accent: #E67E22;        /* Main accent mapped to Orange */
 
-  --bg: #F4F4F4;            /* Soft Gray */
-  --text: #1A1A1A;          /* Dark Text Gray */
-  --muted: #6B7280;
-  --border: #E5E7EB;
+--bg: #F4F4F4;            /* Soft Gray */
+--text: #1A1A1A;          /* Dark Text Gray */
+--muted: #6B7280;
+--border: #E5E7EB;
 
-  --radius: 14px;
-  --shadow: 0 8px 24px rgba(0,0,0,0.06);
+--radius: 14px;
+--shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
 
 html { scroll-behavior: smooth; }
@@ -74,329 +74,588 @@ html { scroll-behavior: smooth; }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  overflow-x: hidden;
+font-family: "Plus Jakarta Sans", sans-serif;
+background: var(--bg);
+color: var(--text);
+line-height: 1.6;
+overflow-x: hidden;
 }
 .subtitle {
-  font-size: 1.4rem;           /* bigger text */
-  color: #E67E22;              /* Rear Econ orange */
-  margin-top: -8px;            /* pulls it closer to REAR Econ */
-  margin-bottom: 12px;         /* spacing before the tagline */
-  font-weight: 500;            /* slightly bold for emphasis */
+  font-size: 1.1rem;
+  color: #6b7280; /* soft gray */
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
-
 
 /* Fix uneven card heights in Our Work section */
 #work .grid-3 {
-  align-items: stretch;
+align-items: stretch;
 }
 
 #work .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+height: 100%;
 }
 
 /* Ensure titles and labels don't push layout */
 #work .card-label {
-  margin-bottom: 0.4rem;
-  font-size: 0.85rem;
-  color: var(--accent);
-  font-weight: 600;
+margin-bottom: 0.4rem;
+font-size: 0.85rem;
+color: var(--accent);
+font-weight: 600;
 }
 
 #work .card-title {
-  margin-bottom: 0.6rem;
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--primary);
+margin-bottom: 0.6rem;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(--primary);
 }
 
 #work .card-body {
-  flex-grow: 1;
-  font-size: 0.95rem;
-  line-height: 1.55;
-  color: var(--muted);
+flex-grow: 1;
+font-size: 0.95rem;
+line-height: 1.55;
+color: var(--muted);
 }
 
 /* Mobile fix */
 @media (max-width: 768px) {
-  #work .card {
-    height: auto;
-  }
+#work .card {
+height: auto;
+}
 }
 
 /* Fade-in animation */
 .fade {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .fade.show {
-  opacity: 1;
-  transform: translateY(0);
+opacity: 1;
+transform: translateY(0);
 }
 
 /* Fix Work Section Card Layout */
 #work .grid-3 {
-  gap: 1.8rem;
+gap: 1.8rem;
 }
 
 #work .card {
-  padding: 1.8rem;
-  border-radius: 16px;
+padding: 1.8rem;
+border-radius: 16px;
 }
 
 #work .card-title {
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin-bottom: 0.6rem;
+font-size: 1.15rem;
+font-weight: 600;
+margin-bottom: 0.6rem;
 }
 
 #work .card-body {
-  font-size: 0.95rem;
-  line-height: 1.55;
-  color: var(--muted);
+font-size: 0.95rem;
+line-height: 1.55;
+color: var(--muted);
 }
 
 /* Mobile improvements */
 @media (max-width: 768px) {
-  #work .card {
-    padding: 1.4rem;
-  }
+#work .card {
+padding: 1.4rem;
+}
 }
 
 /* Sticky shrinking navbar */
 header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 50;
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  transition: padding 0.25s ease, box-shadow 0.25s ease;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 50;
+background: rgba(255,255,255,0.7);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid var(--border);
+transition: padding 0.25s ease, box-shadow 0.25s ease;
 }
 
 header .nav {
-  max-width: 1200px;
-  margin: auto;
-  padding: 1rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: padding 0.25s ease;
+max-width: 1200px;
+margin: auto;
+padding: 1rem 1.5rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+transition: padding 0.25s ease;
 }
 
 header.shrink {
-  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+box-shadow: 0 4px 18px rgba(0,0,0,0.08);
 }
 
 header.shrink .nav {
-  padding: 0.5rem 1.5rem;
+padding: 0.5rem 1.5rem;
 }
 
 /* Logo clickable */
 .logo img {
-  height: 65px;
-  width: auto;
-  cursor: pointer;
+height: 65px;
+width: auto;
+cursor: pointer;
 }
 
 /* Navigation */
 nav {
-  position: relative;
-  display: flex;
-  gap: 1.8rem;
-  flex-wrap: nowrap;
+position: relative;
+display: flex;
+gap: 1.8rem;
+flex-wrap: nowrap;
 }
 
 nav a {
-  font-size: 0.9rem;
-  color: var(--primary-dark);
-  text-decoration: none;
-  position: relative;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
+font-size: 0.9rem;
+color: var(--primary-dark);
+text-decoration: none;
+position: relative;
+transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 nav a:hover {
-  color: var(--primary);
-  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+color: var(--primary);
+text-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 /* Sliding highlight indicator */
 .nav-indicator {
-  position: absolute;
-  bottom: -6px;
-  height: 2px;
-  background: var(--accent);
-  width: 0;
-  left: 0;
-  transition: all 0.25s ease;
-  border-radius: 2px;
+position: absolute;
+bottom: -6px;
+height: 2px;
+background: var(--accent);
+width: 0;
+left: 0;
+transition: all 0.25s ease;
+border-radius: 2px;
 }
 
 /* HERO */
 .hero-brush {
-  position: relative;
-  padding: 10rem 1.5rem 6rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  overflow: hidden;
-  background: #f7f9fc;
+position: relative;
+padding: 10rem 1.5rem 6rem;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+overflow: hidden;
+background: #f7f9fc;
 }
 
 .hero-inner {
-  max-width: 650px;
-  z-index: 2;
+max-width: 650px;
+z-index: 2;
 }
 
 .hero-inner h1 {
-  font-size: 3.2rem;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 1.2rem;
+font-size: 3.2rem;
+font-weight: 700;
+color: var(--primary);
+margin-bottom: 1.2rem;
 }
 
 .hero-inner p {
-  font-size: 1.25rem;
-  color: var(--muted);
-  margin-bottom: 2.2rem;
-  max-width: 600px;
+font-size: 1.25rem;
+color: var(--muted);
+margin-bottom: 2.2rem;
+max-width: 600px;
 }
 
 /* Updated hero button */
 .hero-btn {
-  background: transparent;
-  color: var(--accent);
-  border: 2px solid var(--accent);
-  padding: 0.75rem 1.6rem;
-  border-radius: 999px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: 0.3s ease;
-  text-decoration: none;
+background: transparent;
+color: var(--accent);
+border: 2px solid var(--accent);
+padding: 0.75rem 1.6rem;
+border-radius: 999px;
+font-size: 0.95rem;
+font-weight: 500;
+transition: 0.3s ease;
+text-decoration: none;
 }
 
 .hero-btn:hover {
-  background: var(--accent);
-  color: #fff;
-  box-shadow: 0 8px 20px rgba(14,97,165,0.25);
+background: var(--accent);
+color: #fff;
+box-shadow: 0 8px 20px rgba(14,97,165,0.25);
 }
 
 .hero-brush::after {
-  content: "";
-  position: absolute;
-  right: -5%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 55%;
-  height: 80%;
-  background-image: url('data:image/svg+xml;utf8,<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg"><path d="M50 200 Q250 50 550 120 T750 200 Q550 350 250 280 T50 200" fill="%23e3efff"/></svg>');
-  background-size: cover;
-  opacity: 0.9;
+content: "";
+position: absolute;
+right: -5%;
+top: 50%;
+transform: translateY(-50%);
+width: 55%;
+height: 80%;
+background-image: url('data:image/svg+xml;utf8,<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg"><path d="M50 200 Q250 50 550 120 T750 200 Q550 350 250 280 T50 200" fill="%23e3efff"/></svg>');
+background-size: cover;
+opacity: 0.9;
+}
+
+/* Sections */
+.section {
+max-width: 1200px;
+margin: auto;
+padding: 4rem 1.5rem;
+}
+
+.section-title {
+font-size: 1.6rem;
+font-weight: 600;
+color: var(--primary);
+display: flex;
+align-items: center;
+gap: 0.8rem;
+margin-bottom: 1.2rem;
+}
+
+.section-title::before {
+content: "";
+width: 4px;
+height: 22px;
+background: var(--accent-yellow);
+border-radius: 2px;
+}
+
+.section-sub {
+color: var(--muted);
+font-size: 0.95rem;
+margin-bottom: 2rem;
+}
+
+/* About Section */
+.about-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
+margin-top: 2rem;
+}
+
+.about-card {
+background: #fff;
+padding: 1.8rem;
+border-radius: 14px;
+border: 1px solid var(--border);
+box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.about-header {
+display: flex;
+align-items: center;
+gap: 0.8rem;
+margin-bottom: 0.6rem;
+}
+
+.about-icon {
+height: 32px;
+width: 32px;
+flex-shrink: 0;
+opacity: 0.9;
+}
+
+.about-card h3 {
+margin: 0;
+font-size: 1.1rem;
+color: var(--primary);
+}
+
+.about-card p {
+color: var(--muted);
+line-height: 1.6;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+.about-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (max-width: 600px) {
+.about-grid {
+grid-template-columns: 1fr;
+}
+}
+
+
+
+/* Cards */
+.grid { display: grid; gap: 1.6rem; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+.card {
+background: #fff;
+padding: 1.6rem;
+border-radius: var(--radius);
+border: 1px solid var(--border);
+box-shadow: var(--shadow);
+transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+transform: translateY(-6px);
+box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* Team */
+
+/* TEAM NAME COLOR */
+.card-title {
+color: #0E61A5 !important;   /* Rear Econ Blue */
+font-weight: 600;
+}
+
+/* TEAM ROLE COLOR */
+.card-label {
+color: #714930 !important;   /* Brown-Gold */
+font-weight: 600;
+}
+
+.team-card {
+display: flex;
+gap: 1rem;
+align-items: flex-start;
+}
+
+.avatar {
+width: 90px;
+height: 90px;
+border-radius: 50%;
+overflow: hidden;
+border: 2px solid var(--accent-yellow);
+flex-shrink: 0;
+}
+
+.avatar img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+}
+
+.team-link {
+display: inline-block;
+margin-top: 0.8rem;
+font-size: 0.9rem;
+font-weight: 600;
+color: var(--primary);
+text-decoration: none;
+transition: 0.25s ease;
+}
+
+.team-link:hover {
+color: var(--primary-dark);
+}
+
+/* Contact Enhanced */
+.contact-modern {
+display: grid;
+grid-template-columns: 1.2fr 1fr;
+gap: 3rem;
+padding: 3rem;
+background: #ffffff;
+border-radius: 20px;
+border: 1px solid var(--border);
+box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+}
+
+.contact-left h3 {
+font-size: 1.4rem;
+font-weight: 600;
+color: var(--primary);
+margin-bottom: 0.8rem;
+}
+
+.contact-desc {
+color: var(--muted);
+margin-bottom: 2rem;
+line-height: 1.6;
+}
+
+.contact-item {
+margin-bottom: 1.6rem;
+}
+
+.contact-label {
+display: block;
+font-size: 0.85rem;
+font-weight: 600;
+color: var(--primary);
+margin-bottom: 0.3rem;
+}
+
+.contact-value {
+font-size: 1rem;
+color: var(--text);
+}
+
+.contact-socials a {
+display: inline-block;
+margin-right: 1rem;
+font-size: 0.95rem;
+color: var(--accent);
+text-decoration: none;
+font-weight: 500;
+}
+
+.contact-socials a:hover {
+text-decoration: underline;
+}
+
+.contact-btn {
+display: inline-block;
+margin-top: 1rem;
+padding: 0.9rem 1.8rem;
+background: var(--primary);
+color: #fff;
+border-radius: 999px;
+font-weight: 600;
+text-decoration: none;
+transition: 0.25s ease;
+}
+
+.contact-btn:hover {
+background: var(--primary-dark);
+transform: translateY(-2px);
+}
+
+.contact-right {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.contact-graphic {
+width: 80%;
+opacity: 0.9;
+filter: drop-shadow(0 8px 20px rgba(0,0,0,0.08));
+}
+
+@media (max-width: 768px) {
+.contact-modern {
+grid-template-columns: 1fr;
+padding: 2rem;
+}
+
+.contact-right {
+display: none;
+}
+}
+
+/* Footer */
+footer {
+text-align: center;
+padding: 2rem 1rem;
+color: var(--muted);
+font-size: 0.85rem;
+border-top: 1px solid var(--border);
+margin-top: 3rem;
 }
 
 /* ============================
-   MOBILE OPTIMIZATION
+  MOBILE OPTIMIZATION
 ============================ */
 @media (max-width: 768px) {
-  nav {
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+nav {
+gap: 1rem;
+flex-wrap: wrap;
+justify-content: center;
+}
 
-  nav a {
-    font-size: 0.85rem;
-  }
+nav a {
+font-size: 0.85rem;
+}
 
-  .nav-indicator {
-    display: none;
-  }
+.nav-indicator {
+display: none;
+}
 
-  .hero-brush {
-    padding: 7rem 1.2rem 4rem;
-    text-align: center;
-  }
+.hero-brush {
+padding: 7rem 1.2rem 4rem;
+text-align: center;
+}
 
-  .hero-inner h1 {
-    font-size: 2.2rem;
-  }
+.hero-inner h1 {
+font-size: 2.2rem;
+}
 
-  .hero-inner p {
-    font-size: 1.05rem;
-  }
+.hero-inner p {
+font-size: 1.05rem;
+}
 
-  .hero-brush::after {
-    width: 100%;
-    height: 45%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    opacity: 0.35;
-  }
+.hero-brush::after {
+width: 100%;
+height: 45%;
+right: 50%;
+transform: translate(50%, -50%);
+opacity: 0.35;
+}
 
-  .about-wrapper {
-    padding: 1.6rem;
-    gap: 1.2rem;
-  }
+.about-wrapper {
+padding: 1.6rem;
+gap: 1.2rem;
+}
 
-  .grid-3,
-  .grid-2 {
-    grid-template-columns: 1fr !important;
-  }
+.grid-3,
+.grid-2 {
+grid-template-columns: 1fr !important;
+}
 
-  .card {
-    padding: 1.3rem;
-  }
+.card {
+padding: 1.3rem;
+}
 
-  .team-card {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
+.team-card {
+flex-direction: column;
+text-align: center;
+align-items: center;
+}
 
-  .team-card .avatar {
-    margin-bottom: 0.6rem;
-  }
+.team-card .avatar {
+margin-bottom: 0.6rem;
+}
 
-  .contact-enhanced {
-    grid-template-columns: 1fr;
-    padding: 1.8rem;
-  }
+.contact-enhanced {
+grid-template-columns: 1fr;
+padding: 1.8rem;
+}
 
-  .contact-right {
-    display: none;
-  }
+.contact-right {
+display: none;
+}
 
-  .contact-heading {
-    font-size: 1.25rem;
-  }
+.contact-heading {
+font-size: 1.25rem;
+}
 
-  .contact-text {
-    font-size: 0.95rem;
-  }
+.contact-text {
+font-size: 0.95rem;
+}
 
-  .contact-row {
-    gap: 0.8rem;
-  }
+.contact-row {
+gap: 0.8rem;
+}
 
-  .contact-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
+.contact-icon {
+width: 40px;
+height: 40px;
+font-size: 1.2rem;
+}
 
-  .primary-btn {
-    width: 100%;
-    text-align: center;
-  }
+.primary-btn {
+width: 100%;
+text-align: center;
+}
 }
 </style>
 
@@ -407,67 +666,67 @@ nav a:hover {
 <a id="top"></a>
 
 <header>
-  <div class="nav">
-    <div class="logo">
-      <a href="#top">
-        <img src="rear-econ-logo.png" alt="Rear Econ Logo">
-      </a>
-    </div>
+<div class="nav">
+<div class="logo">
+<a href="#top">
+<img src="rear-econ-logo.png" alt="Rear Econ Logo">
+</a>
+</div>
 
-    <nav>
-      <a href="#work">Work</a>
-      <a href="aemm.html">AEMM</a>
-      <a href="tlae.html">TLAE</a>
-      <a href="twg.html">TWG</a>
-      <a href="#team">Team</a>
-      <a href="#videos">Videos</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <div class="nav-indicator"></div>
-    </nav>
-  </div>
+<nav>
+<a href="#work">Work</a>
+<a href="aemm.html">AEMM</a>
+<a href="tlae.html">TLAE</a>
+<a href="twg.html">TWG</a>
+<a href="#team">Team</a>
+<a href="#videos">Videos</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+<div class="nav-indicator"></div>
+</nav>
+</div>
 </header>
 
 <section class="hero-brush fade">
-  <div class="hero-inner">
-    <h1>REAR Econ</h1>
+<div class="hero-inner">
+<h1>REAR Econ</h1>
     <p class="subtitle">A research initiative by Rear Global</p>
-    <p>We help aspiring applied economics researchers grow into world‑class, policy engaged, and socially conscious leaders.</p>
-    <a href="#about" class="hero-btn">Learn More</a>
-  </div>
+<p>We help aspiring applied economics researchers grow into world‑class, policy engaged, and socially conscious leaders.</p>
+<a href="#about" class="hero-btn">Learn More</a>
+</div>
 </section>
 
 
 <!-- WORK -->
 <section id="work" class="section fade">
-  <h2 class="section-title">Our Work</h2>
-  <p class="section-sub">Selected areas where Rear Econ typically operates.</p>
+<h2 class="section-title">Our Work</h2>
+<p class="section-sub">Selected areas where Rear Econ typically operates.</p>
 
-  <div class="grid grid-3">
-    <div class="card">
-      <div class="card-label">Practice Area</div>
-      <div class="card-title">Capacity Building</div>
-      <div class="card-body">
-        Develop practical research, analytical, and leadership skills that equip aspiring economists to tackle real-world challenges and create meaningful impact.
-      </div>
-    </div>
+<div class="grid grid-3">
+<div class="card">
+<div class="card-label">Practice Area</div>
+<div class="card-title">Capacity Building</div>
+<div class="card-body">
+Develop practical research, analytical, and leadership skills that equip aspiring economists to tackle real-world challenges and create meaningful impact.
+</div>
+</div>
 
-    <div class="card">
-      <div class="card-label">Practice Area</div>
-      <div class="card-title">Primary Research</div>
-      <div class="card-body">
-        Conduct rigorous, evidence-based research that generates original insights and strengthens understanding of economic and social issues.
-      </div>
-    </div>
+<div class="card">
+<div class="card-label">Practice Area</div>
+<div class="card-title">Primary Research</div>
+<div class="card-body">
+Conduct rigorous, evidence-based research that generates original insights and strengthens understanding of economic and social issues.
+</div>
+</div>
 
-    <div class="card">
-      <div class="card-label">Practice Area</div>
-      <div class="card-title">Policy Enagement</div>
-      <div class="card-body">
-        Bridge research and action by connecting evidence with policy discussions, empowering future leaders to influence decisions that shape society.
-      </div>
-    </div>
-  </div>
+<div class="card">
+<div class="card-label">Practice Area</div>
+<div class="card-title">Policy Enagement</div>
+<div class="card-body">
+Bridge research and action by connecting evidence with policy discussions, empowering future leaders to influence decisions that shape society.
+</div>
+</div>
+</div>
 </section>
 
 <!-- Instagram embed script (must appear once) -->
@@ -477,259 +736,259 @@ nav a:hover {
 
 <!-- TEAM -->
 <section id="team" class="section fade">
-  <h2 class="section-title">Team</h2>
-  <p class="section-sub">People behind Rear Econ.</p>
+<h2 class="section-title">Team</h2>
+<p class="section-sub">People behind Rear Econ.</p>
 
-  <div class="grid grid-2">
+<div class="grid grid-2">
 
-    <!-- Prajjwal -->
-    <div class="card team-card">
-      <div class="avatar"><img src="Photos/prajjwal.jpg" alt="Prajjwal Dhungana"></div>
-      <div>
-        <div class="card-title">Prajjwal Dhungana</div>
-        <div class="card-label">Founder</div>
-        <div class="card-body">
-          Provides strategic oversight, directing institutional research priorities and administrative operations.
-        </div>
-        <a class="team-link" href="https://www.linkedin.com/in/pradhu99/" target="_blank">LinkedIn</a>
-      </div>
-    </div>
+<!-- Prajjwal -->
+<div class="card team-card">
+<div class="avatar"><img src="Photos/prajjwal.jpg" alt="Prajjwal Dhungana"></div>
+<div>
+<div class="card-title">Prajjwal Dhungana</div>
+<div class="card-label">Founder</div>
+<div class="card-body">
+Provides strategic oversight, directing institutional research priorities and administrative operations.
+</div>
+<a class="team-link" href="https://www.linkedin.com/in/pradhu99/" target="_blank">LinkedIn</a>
+</div>
+</div>
 
-    <!-- Prasanna -->
-    <div class="card team-card">
-      <div class="avatar"><img src="Photos/prasanna.jpeg" alt="Prasanna Parajuli"></div>
-      <div>
-        <div class="card-title">Prasanna Parajuli</div>
-        <div class="card-label">Research and Operations Manager</div>
-        <div class="card-body">
-          Facilitate organisational operations  while contributing to research priorities set by the institution.
-        </div>
-        <a class="team-link" href="https://www.linkedin.com/in/prasanna-parajuli-6a4225258/" target="_blank">LinkedIn</a>
-      </div>
-    </div>
+<!-- Prasanna -->
+<div class="card team-card">
+<div class="avatar"><img src="Photos/prasanna.jpeg" alt="Prasanna Parajuli"></div>
+<div>
+<div class="card-title">Prasanna Parajuli</div>
+<div class="card-label">Research and Operations Manager</div>
+<div class="card-body">
+Facilitate organisational operations  while contributing to research priorities set by the institution.
+</div>
+<a class="team-link" href="https://www.linkedin.com/in/prasanna-parajuli-6a4225258/" target="_blank">LinkedIn</a>
+</div>
+</div>
 
-    <!-- Saurya -->
-    <div class="card team-card">
-      <div class="avatar"><img src="Photos/saurya.jpg" alt="Saurya Pandit"></div>
-      <div>
-        <div class="card-title">Saurya Pandit</div>
-        <div class="card-label">Research Associate</div>
-        <div class="card-body">
-          Work description with personal interest and experiences will be here.
-        </div>
-        <a class="team-link" href="https://www.linkedin.com/in/saurya-pandit-a558a0331/" target="_blank">LinkedIn</a>
-      </div>
-    </div>
+<!-- Saurya -->
+<div class="card team-card">
+<div class="avatar"><img src="Photos/saurya.jpg" alt="Saurya Pandit"></div>
+<div>
+<div class="card-title">Saurya Pandit</div>
+<div class="card-label">Research Associate</div>
+<div class="card-body">
+Work description with personal interest and experiences will be here.
+</div>
+<a class="team-link" href="https://www.linkedin.com/in/saurya-pandit-a558a0331/" target="_blank">LinkedIn</a>
+</div>
+</div>
 
-    <!-- Nischal -->
-    <div class="card team-card">
-      <div class="avatar"><img src="Photos/nischal.jpg" alt="Nischal Jugjali"></div>
-      <div>
-        <div class="card-title">Nischal Jugjali</div>
-        <div class="card-label">Research Associate</div>
-        <div class="card-body">
-          Contributes to research article writing & data analytics. Creator of the company website, and maintains it.
-        </div>
-        <a class="team-link" href="https://www.linkedin.com/in/nischaljugjali/" target="_blank">LinkedIn</a>
-      </div>
-    </div>
+<!-- Nischal -->
+<div class="card team-card">
+<div class="avatar"><img src="Photos/nischal.jpg" alt="Nischal Jugjali"></div>
+<div>
+<div class="card-title">Nischal Jugjali</div>
+<div class="card-label">Research Associate</div>
+<div class="card-body">
+Contributes to research article writing & data analytics. Creator of the company website, and maintains it.
+</div>
+<a class="team-link" href="https://www.linkedin.com/in/nischaljugjali/" target="_blank">LinkedIn</a>
+</div>
+</div>
 
-    <!-- Shreepriya -->
-    <div class="card team-card">
-      <div class="avatar"><img src="Photos/shreepriya.jpg" alt="Shreepriya Ghimire"></div>
-      <div>
-        <div class="card-title">Shreepriya Ghimire</div>
-        <div class="card-label">Research Associate</div>
-        <div class="card-body">
-          Conducts literature reviews and data analytics, while managing the video editing projects.
-        </div>
-        <a class="team-link" href="https://www.linkedin.com/in/shreepriya-ghimire" target="_blank">LinkedIn</a>
-      </div>
-    </div>
+<!-- Shreepriya -->
+<div class="card team-card">
+<div class="avatar"><img src="Photos/shreepriya.jpg" alt="Shreepriya Ghimire"></div>
+<div>
+<div class="card-title">Shreepriya Ghimire</div>
+<div class="card-label">Research Associate</div>
+<div class="card-body">
+Conducts literature reviews and data analytics, while managing the video editing projects.
+</div>
+<a class="team-link" href="https://www.linkedin.com/in/shreepriya-ghimire" target="_blank">LinkedIn</a>
+</div>
+</div>
 
-    <!-- Krishu -->
-    <div class="card team-card">
-      <div class="avatar"><img src="Photos/krishu.jpg" alt="Krishu Lamichhane"></div>
-      <div>
-        <div class="card-title">Krishu Lamichhane</div>
-        <div class="card-label">Research Associate</div>
-        <div class="card-body">
-          Graduate student in economics, interested in policy research.
-        </div>
-        <a class="team-link" href="https://www.linkedin.com/in/krishu-lamichhane1/" target="_blank">LinkedIn</a>
-      </div>
-    </div>
+<!-- Krishu -->
+<div class="card team-card">
+<div class="avatar"><img src="Photos/krishu.jpg" alt="Krishu Lamichhane"></div>
+<div>
+<div class="card-title">Krishu Lamichhane</div>
+<div class="card-label">Research Associate</div>
+<div class="card-body">
+Graduate student in economics, interested in policy research.
+</div>
+<a class="team-link" href="https://www.linkedin.com/in/krishu-lamichhane1/" target="_blank">LinkedIn</a>
+</div>
+</div>
 
-  </div>
+</div>
 </section>
 
-  
+
 
 
 <!-- VIDEOS -->
 <section id="videos" class="section fade">
-  <h2 class="section-title">Letters to the Young</h2>
-  <p class="section-sub">REAR Econ interview at SANDEE @25</p>
+<h2 class="section-title">Letters to the Young</h2>
+<p class="section-sub">REAR Econ interview at SANDEE @25</p>
 
-  <div class="grid grid-2">
+<div class="grid grid-2">
 
-    <!-- First video (updated) -->
-    <div class="card" style="padding:0;">
-      <iframe 
-        width="100%" 
-        height="315"
-        src="https://www.youtube.com/embed/FwvZEq4RYIE"
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
-    </div>
+<!-- First video (updated) -->
+<div class="card" style="padding:0;">
+<iframe 
+width="100%" 
+height="315"
+src="https://www.youtube.com/embed/FwvZEq4RYIE"
+frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen>
+</iframe>
+</div>
 
-    <!-- Second video (placeholder or replace later) -->
-    <div class="card" style="padding:0;">
-      <iframe 
-        width="100%" 
-        height="315"
-        src="https://www.youtube.com/embed/-tnUUHmqHZo"
-        frameborder="0" 
-        allowfullscreen>
-      </iframe>
-    </div>
+<!-- Second video (placeholder or replace later) -->
+<div class="card" style="padding:0;">
+<iframe 
+width="100%" 
+height="315"
+src="https://www.youtube.com/embed/-tnUUHmqHZo"
+frameborder="0" 
+allowfullscreen>
+</iframe>
+</div>
 
-  </div>
+</div>
 </section>
 
 
 <!-- ABOUT -->
 <section class="section" id="about">
-  <h2 class="section-title">About Rear Econ</h2>
-  <p class="section-sub">
-    We help young economists grow through real work, real mentorship, and real opportunities.
-  </p>
+<h2 class="section-title">About Rear Econ</h2>
+<p class="section-sub">
+We help young economists grow through real work, real mentorship, and real opportunities.
+</p>
 
-  <div class="about-grid">
+<div class="about-grid">
 
-    <div class="about-card">
-      <div class="about-header">
-        <img src="logos/research.svg" class="about-icon">
-        <h3>Hands‑on Research Training</h3>
-      </div>
-      <p>We teach students to work with real data, real tools, and real economic questions.</p>
-    </div>
+<div class="about-card">
+<div class="about-header">
+<img src="logos/research.svg" class="about-icon">
+<h3>Hands‑on Research Training</h3>
+</div>
+<p>We teach students to work with real data, real tools, and real economic questions.</p>
+</div>
 
-    <div class="about-card">
-      <div class="about-header">
-        <img src="logos/mentor.svg" class="about-icon">
-        <h3>Mentorship That Matters</h3>
-      </div>
-      <p>We connect emerging researchers with mentors who guide their academic and professional growth.</p>
-    </div>
+<div class="about-card">
+<div class="about-header">
+<img src="logos/mentor.svg" class="about-icon">
+<h3>Mentorship That Matters</h3>
+</div>
+<p>We connect emerging researchers with mentors who guide their academic and professional growth.</p>
+</div>
 
-    <div class="about-card">
-      <div class="about-header">
-        <img src="logos/collab.svg" class="about-icon">
-        <h3>Applied Research Projects</h3>
-      </div>
-      <p>We collaborate on studies that give students real experience beyond the classroom.</p>
-    </div>
+<div class="about-card">
+<div class="about-header">
+<img src="logos/collab.svg" class="about-icon">
+<h3>Applied Research Projects</h3>
+</div>
+<p>We collaborate on studies that give students real experience beyond the classroom.</p>
+</div>
 
-    <div class="about-card">
-      <div class="about-header">
-        <img src="logos/community.svg" class="about-icon">
-        <h3>A Growing Research Community</h3>
-      </div>
-      <p>We create spaces where young economists meet, learn, and discover opportunities.</p>
-    </div>
+<div class="about-card">
+<div class="about-header">
+<img src="logos/community.svg" class="about-icon">
+<h3>A Growing Research Community</h3>
+</div>
+<p>We create spaces where young economists meet, learn, and discover opportunities.</p>
+</div>
 
-    <div class="about-card">
-      <div class="about-header">
-        <img src="logos/publish.svg" class="about-icon">
-        <h3>Writing & Publishing Support</h3>
-      </div>
-      <p>We help researchers write clearly, present confidently, and publish their work.</p>
-    </div>
+<div class="about-card">
+<div class="about-header">
+<img src="logos/publish.svg" class="about-icon">
+<h3>Writing & Publishing Support</h3>
+</div>
+<p>We help researchers write clearly, present confidently, and publish their work.</p>
+</div>
 
-  </div>
+</div>
 </section>
 
 
 
 <!-- CONTACT -->
 <section id="contact" class="section fade">
-  <h2 class="section-title">Contact</h2>
-  <p class="section-sub">Reach out to collaborate, learn, or connect with us.</p>
+<h2 class="section-title">Contact</h2>
+<p class="section-sub">Reach out to collaborate, learn, or connect with us.</p>
 
-  <div class="contact-modern">
-    <div class="contact-left">
-      <h3>Reach Out To Us</h3>
-      <p class="contact-desc">
-        Whether you're a researcher, student, mentor, or organization, we’d love to hear from you.
-      </p>
+<div class="contact-modern">
+<div class="contact-left">
+<h3>Reach Out To Us</h3>
+<p class="contact-desc">
+Whether you're a researcher, student, mentor, or organization, we’d love to hear from you.
+</p>
 
-      <div class="contact-item">
-        <span class="contact-label">Email</span>
-        <span class="contact-value">rearecon2025@gmail.com</span>
-      </div>
+<div class="contact-item">
+<span class="contact-label">Email</span>
+<span class="contact-value">rearecon2025@gmail.com</span>
+</div>
 
-      <div class="contact-item">
-        <span class="contact-label">Location</span>
-        <span class="contact-value">Lalitpur, Nepal</span>
-      </div>
+<div class="contact-item">
+<span class="contact-label">Location</span>
+<span class="contact-value">Lalitpur, Nepal</span>
+</div>
 
-      <div class="contact-item">
-        <span class="contact-label">Social</span>
-        <div class="contact-socials">
-          <a href="https://www.linkedin.com/company/rear-econ/posts/?feedView=all" target="_blank">LinkedIn</a>
-          <a href="https://www.instagram.com/rearecon2025/" target="_blank">Instagram</a>
-          <a href="https://www.facebook.com/p/REAR-Econ-61579375343643/" target="_blank">Facebook</a>
-          <a href="https://www.youtube.com/@REAREcon" target="_blank">YouTube</a>
-        </div>
-      </div>
+<div class="contact-item">
+<span class="contact-label">Social</span>
+<div class="contact-socials">
+<a href="https://www.linkedin.com/company/rear-econ/posts/?feedView=all" target="_blank">LinkedIn</a>
+<a href="https://www.instagram.com/rearecon2025/" target="_blank">Instagram</a>
+<a href="https://www.facebook.com/p/REAR-Econ-61579375343643/" target="_blank">Facebook</a>
+<a href="https://www.youtube.com/@REAREcon" target="_blank">YouTube</a>
+</div>
+</div>
 
-      <a href="mailto:rearecon2025@gmail.com" class="contact-btn">Start a conversation</a>
-    </div>
+<a href="mailto:rearecon2025@gmail.com" class="contact-btn">Start a conversation</a>
+</div>
 
-    <div class="contact-right">
-      <img src="rear-econ-logo.jpeg" alt="Rear Econ" class="contact-graphic">
-    </div>
-  </div>
+<div class="contact-right">
+<img src="rear-econ-logo.jpeg" alt="Rear Econ" class="contact-graphic">
+</div>
+</div>
 </section>
 
 <footer>
-  © <span id="year"></span> Rear Econ
+© <span id="year"></span> Rear Econ
 </footer>
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
 
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('show');
-  });
+entries.forEach(entry => {
+if (entry.isIntersecting) entry.target.classList.add('show');
+});
 }, { threshold: 0.15 });
 
 document.querySelectorAll('.fade').forEach((el) => observer.observe(el));
 
 window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
-  if (window.scrollY > 40) header.classList.add("shrink");
-  else header.classList.remove("shrink");
+const header = document.querySelector("header");
+if (window.scrollY > 40) header.classList.add("shrink");
+else header.classList.remove("shrink");
 });
 
 const navLinks = document.querySelectorAll("nav a");
 const indicator = document.querySelector(".nav-indicator");
 
 navLinks.forEach(link => {
-  link.addEventListener("mouseenter", (e) => {
-    const rect = e.target.getBoundingClientRect();
-    const navRect = e.target.parentElement.getBoundingClientRect();
-    indicator.style.width = rect.width + "px";
-    indicator.style.left = (rect.left - navRect.left) + "px";
-  });
+link.addEventListener("mouseenter", (e) => {
+const rect = e.target.getBoundingClientRect();
+const navRect = e.target.parentElement.getBoundingClientRect();
+indicator.style.width = rect.width + "px";
+indicator.style.left = (rect.left - navRect.left) + "px";
+});
 });
 
 document.querySelector("nav").addEventListener("mouseleave", () => {
-  indicator.style.width = "0px";
+indicator.style.width = "0px";
 });
 </script>
 
