@@ -6,18 +6,14 @@
 <title>Alumni – Rear Global</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- Typography -->
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- Favicon -->
 <link rel="icon" type="image/jpeg" href="favicon.jpeg">
 
 <style>
-/* Rear Econ Color Scheme */
 :root {
-  --primary: #1F3B57;      /* Rear Econ dark blue */
-  --accent: #2F80ED;       /* Rear Econ bright blue */
-  --bg: #F7F9FC;           /* Soft background */
+  --primary: #1F3B57;
+  --accent: #2F80ED;
+  --bg: #F7F9FC;
   --text: #1A1A1A;
   --muted: #6B7280;
   --border: #E5E7EB;
@@ -89,11 +85,30 @@ nav a:hover {
   margin: auto;
 }
 
-/* ALUMNI GRID */
-.alumni-grid {
+/* SECTION TITLES */
+.section {
   max-width: 1200px;
   margin: auto;
   padding: 4rem 1.5rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.section-sub {
+  font-size: 1rem;
+  color: var(--muted);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ALUMNI GRID */
+.alumni-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
@@ -120,7 +135,7 @@ nav a:hover {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
-  border: 3px solid var(--accent); /* Rear Econ blue accent */
+  border: 3px solid var(--accent);
 }
 
 .alumni-card h3 {
@@ -134,12 +149,47 @@ nav a:hover {
   color: var(--muted);
   font-size: 0.9rem;
 }
+
+/* FADE ANIMATIONS */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 </style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const faders = document.querySelectorAll(".fade");
+
+  const appearOptions = {
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+});
+</script>
+
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header>
   <div class="nav">
     <div class="logo">
@@ -153,8 +203,8 @@ nav a:hover {
       <a href="aemm.html">AEMM</a>
       <a href="tlae.html">TLAE</a>
       <a href="twg.html">TWG</a>
-      <a href="index.html#team">Team</a>
       <a href="alumni.html" style="color:var(--primary); font-weight:600;">Alumni</a>
+      <a href="index.html#team">Team</a>
       <a href="index.html#videos">Videos</a>
       <a href="index.html#about">About</a>
       <a href="index.html#contact">Contact</a>
@@ -162,27 +212,30 @@ nav a:hover {
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
+<section class="hero fade">
   <h1>Rear Global Alumni</h1>
   <p>Celebrating the students and researchers who completed their journey with Rear Econ and Rear Global.</p>
 </section>
 
-<!-- ALUMNI GRID -->
-<section class="alumni-grid">
+<section class="section fade">
+  <h2 class="section-title">Our Alumni</h2>
+  <p class="section-sub">Students and researchers who contributed to Rear Econ.</p>
 
-  <div class="alumni-card">
-    <img src="alumni1.jpg" alt="Alumni Photo">
-    <h3>Alumni Name</h3>
-    <p>Role / Achievement</p>
+  <div class="alumni-grid">
+
+    <div class="alumni-card fade">
+      <img src="alumni1.jpg" alt="Alumni Photo">
+      <h3>Alumni Name</h3>
+      <p>Role / Achievement</p>
+    </div>
+
+    <div class="alumni-card fade">
+      <img src="alumni2.jpg" alt="Alumni Photo">
+      <h3>Alumni Name</h3>
+      <p>Role / Achievement</p>
+    </div>
+
   </div>
-
-  <div class="alumni-card">
-    <img src="alumni2.jpg" alt="Alumni Photo">
-    <h3>Alumni Name</h3>
-    <p>Role / Achievement</p>
-  </div>
-
 </section>
 
 </body>
