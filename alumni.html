@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<title>Alumni – Rear Global</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/jpeg" href="favicon.jpeg">
+
+<style>
+:root {
+  --primary: #1f3b57;
+  --accent: #2f80ed;
+  --bg: #f7f9fc;
+  --text: #1a1a1a;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* NAVBAR */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 1.8rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+/* HERO */
+.hero {
+  padding: 10rem 1.5rem 5rem;
+  text-align: center;
+  background: linear-gradient(135deg, #eaf2ff, #ffffff);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 700px;
+  margin: auto;
+}
+
+/* ALUMNI GRID */
+.alumni-grid {
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.alumni-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.alumni-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.alumni-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.alumni-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <a href="index.html">
+        <img src="rear-econ-logo.png" alt="Rear Global Logo" style="height:60px;">
+      </a>
+    </div>
+
+    <nav>
+      <a href="index.html#work">Work</a>
+      <a href="aemm.html">AEMM</a>
+      <a href="tlae.html">TLAE</a>
+      <a href="twg.html">TWG</a>
+      <a href="alumni.html" style="color:var(--primary); font-weight:600;">Alumni</a>
+      <a href="index.html#team">Team</a>
+      <a href="index.html#videos">Videos</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Rear Global Alumni</h1>
+  <p>Celebrating the students and researchers who completed their journey with Rear Econ and Rear Global.</p>
+</section>
+
+<section class="alumni-grid">
+
+  <div class="alumni-card">
+    <img src="alumni1.jpg" alt="Alumni Photo">
+    <h3>Alumni Name</h3>
+    <p>Role / Achievement</p>
+  </div>
+
+  <div class="alumni-card">
+    <img src="alumni2.jpg" alt="Alumni Photo">
+    <h3>Alumni Name</h3>
+    <p>Role / Achievement</p>
+  </div>
+
+</section>
+
+</body>
+</html>
