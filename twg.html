@@ -208,8 +208,18 @@ nav a:hover {
 }
 /* MOBILE NAV FIX — copied from index.html */
 @media (max-width: 768px) {
+  header .nav {
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .logo img {
+    height: 48px;
+  }
+
   nav {
-    gap: 1rem;
+    gap: 0.5rem 0.9rem;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -223,7 +233,7 @@ nav a:hover {
   }
 
   .hero {
-    padding: 7rem 1.2rem 4rem;
+    padding: 8rem 1.2rem 4rem;
     text-align: center;
   }
 
