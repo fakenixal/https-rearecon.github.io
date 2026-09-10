@@ -1,0 +1,37 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "rearecon.me"
+        }
+      ],
+      "destination": "https://rearglobal.com.np/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.rearecon.me"
+        }
+      ],
+      "destination": "https://rearglobal.com.np/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "rearecon.vercel.app"
+        }
+      ],
+      "destination": "https://rearglobal.com.np/:path*",
+      "permanent": true
+    }
+  ]
+}
