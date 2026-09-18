@@ -67,6 +67,17 @@
       ],
       "destination": "https://rearglobal.com.np/:path*",
       "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "(.*)rearecon(.*)"
+        }
+      ],
+      "destination": "https://rearglobal.com.np/:path*",
+      "permanent": true
     }
   ]
 }
