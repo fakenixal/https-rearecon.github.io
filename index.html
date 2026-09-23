@@ -564,98 +564,329 @@ transition: 0.25s ease;
 color: var(--primary-dark);
 }
 
-/* Contact Enhanced */
-.contact-modern {
+/* Contact Section Styling */
+.contact-container {
 display: grid;
-grid-template-columns: 1.2fr 1fr;
-gap: 3rem;
-padding: 3rem;
+grid-template-columns: 1.25fr 0.95fr;
+gap: 2.5rem;
 background: #ffffff;
 border-radius: 20px;
 border: 1px solid var(--border);
-box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+padding: 3rem;
+overflow: hidden;
+position: relative;
 }
 
-.contact-left h3 {
-font-size: 1.4rem;
-font-weight: 600;
-color: var(--primary);
-margin-bottom: 0.8rem;
+.contact-container::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 6px;
+height: 100%;
+background: linear-gradient(180deg, var(--primary) 0%, var(--accent-orange) 100%);
+border-radius: 20px 0 0 20px;
 }
 
-.contact-desc {
-color: var(--muted);
+.contact-header {
 margin-bottom: 2rem;
+}
+
+.contact-header h3 {
+font-size: 1.6rem;
+font-weight: 700;
+color: var(--primary);
+margin-bottom: 0.5rem;
+letter-spacing: -0.3px;
+}
+
+.contact-header p {
+color: var(--muted);
+font-size: 1rem;
 line-height: 1.6;
 }
 
-.contact-item {
-margin-bottom: 1.6rem;
+.contact-details-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1.2rem;
+margin-bottom: 2rem;
 }
 
-.contact-label {
-display: block;
+.contact-detail-card {
+display: flex;
+align-items: center;
+gap: 0.8rem;
+padding: 1rem 1.1rem;
+background: #f8fafc;
+border: 1px solid #e2e8f0;
+border-radius: 14px;
+transition: all 0.25s ease;
+}
+
+.contact-detail-card:hover {
+background: #ffffff;
+border-color: var(--primary);
+box-shadow: 0 6px 16px rgba(14, 97, 165, 0.08);
+transform: translateY(-2px);
+}
+
+.contact-icon-box {
+width: 40px;
+height: 40px;
+border-radius: 10px;
+background: rgba(14, 97, 165, 0.08);
+color: var(--primary);
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+transition: all 0.25s ease;
+}
+
+.contact-detail-card:hover .contact-icon-box {
+background: var(--primary);
+color: #ffffff;
+}
+
+.contact-icon-box svg {
+width: 20px;
+height: 20px;
+fill: currentColor;
+}
+
+.contact-detail-info {
+display: flex;
+flex-direction: column;
+min-width: 0;
+}
+
+.contact-detail-label {
+font-size: 0.75rem;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+color: var(--muted);
+margin-bottom: 0.15rem;
+}
+
+.contact-detail-value {
+font-size: 0.88rem;
+font-weight: 600;
+color: var(--text);
+text-decoration: none;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+transition: color 0.2s ease;
+}
+
+a.contact-detail-value:hover {
+color: var(--primary);
+}
+
+@media (max-width: 1200px) and (min-width: 901px) {
+.contact-details-grid {
+grid-template-columns: 1fr;
+}
+}
+
+.contact-social-section {
+margin-bottom: 2rem;
+}
+
+.contact-social-label {
 font-size: 0.85rem;
 font-weight: 600;
+color: var(--primary-dark);
+margin-bottom: 0.8rem;
+display: block;
+}
+
+.contact-social-pills {
+display: flex;
+flex-wrap: wrap;
+gap: 0.6rem;
+}
+
+.social-pill {
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+padding: 0.55rem 1rem;
+background: #f1f5f9;
+border: 1px solid #e2e8f0;
+border-radius: 999px;
+font-size: 0.85rem;
+font-weight: 600;
+color: var(--text);
+text-decoration: none;
+transition: all 0.25s ease;
+}
+
+.social-pill svg {
+width: 16px;
+height: 16px;
+fill: currentColor;
+}
+
+.social-pill:hover {
+background: var(--primary);
+color: #ffffff;
+border-color: var(--primary);
+transform: translateY(-2px);
+box-shadow: 0 4px 12px rgba(14, 97, 165, 0.2);
+}
+
+.social-pill.linkedin:hover { background: #0077b5; border-color: #0077b5; }
+.social-pill.instagram:hover { background: #e1306c; border-color: #e1306c; }
+.social-pill.facebook:hover { background: #1877f2; border-color: #1877f2; }
+.social-pill.youtube:hover { background: #ff0000; border-color: #ff0000; }
+
+.contact-cta-wrapper {
+margin-top: 1.5rem;
+}
+
+.contact-primary-btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 0.6rem;
+padding: 0.9rem 2rem;
+background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+color: #ffffff;
+font-size: 0.95rem;
+font-weight: 600;
+border-radius: 999px;
+text-decoration: none;
+box-shadow: 0 6px 20px rgba(14, 97, 165, 0.25);
+transition: all 0.3s ease;
+}
+
+.contact-primary-btn svg {
+width: 18px;
+height: 18px;
+fill: currentColor;
+transition: transform 0.25s ease;
+}
+
+.contact-primary-btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 10px 25px rgba(14, 97, 165, 0.35);
+background: linear-gradient(135deg, var(--accent-orange) 0%, #d35400 100%);
+}
+
+.contact-primary-btn:hover svg {
+transform: translateX(4px);
+}
+
+/* Brand Card (Right Side) */
+.contact-brand-card {
+background: linear-gradient(145deg, #f8fafc 0%, #eef2f6 100%);
+border: 1px solid #e2e8f0;
+border-radius: 16px;
+padding: 2.2rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+justify-content: center;
+position: relative;
+overflow: hidden;
+}
+
+.contact-brand-card::after {
+content: "";
+position: absolute;
+bottom: -30px;
+right: -30px;
+width: 140px;
+height: 140px;
+background: rgba(14, 97, 165, 0.05);
+border-radius: 50%;
+pointer-events: none;
+}
+
+.brand-avatar-frame {
+width: 110px;
+height: 110px;
+border-radius: 50%;
+padding: 4px;
+background: linear-gradient(135deg, var(--primary) 0%, var(--accent-orange) 100%);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+margin-bottom: 1.2rem;
+}
+
+.brand-avatar-frame img {
+width: 100%;
+height: 100%;
+border-radius: 50%;
+object-fit: cover;
+background: #ffffff;
+}
+
+.brand-card-title {
+font-size: 1.3rem;
+font-weight: 700;
 color: var(--primary);
 margin-bottom: 0.3rem;
 }
 
-.contact-value {
-font-size: 1rem;
-color: var(--text);
-}
-
-.contact-socials a {
-display: inline-block;
-margin-right: 1rem;
-font-size: 0.95rem;
-color: var(--accent);
-text-decoration: none;
-font-weight: 500;
-}
-
-.contact-socials a:hover {
-text-decoration: underline;
-}
-
-.contact-btn {
-display: inline-block;
-margin-top: 1rem;
-padding: 0.9rem 1.8rem;
-background: var(--primary);
-color: #fff;
-border-radius: 999px;
+.brand-card-subtitle {
+font-size: 0.85rem;
 font-weight: 600;
-text-decoration: none;
-transition: 0.25s ease;
+color: var(--accent-orange);
+text-transform: uppercase;
+letter-spacing: 0.8px;
+margin-bottom: 1rem;
 }
 
-.contact-btn:hover {
-background: var(--primary-dark);
-transform: translateY(-2px);
+.brand-card-text {
+font-size: 0.9rem;
+color: var(--muted);
+line-height: 1.55;
+margin-bottom: 1.5rem;
 }
 
-.contact-right {
-display: flex;
+.brand-badge {
+display: inline-flex;
 align-items: center;
-justify-content: center;
+gap: 0.5rem;
+padding: 0.4rem 0.9rem;
+background: rgba(14, 97, 165, 0.08);
+color: var(--primary);
+border-radius: 999px;
+font-size: 0.8rem;
+font-weight: 600;
 }
 
-.contact-graphic {
-width: 80%;
-opacity: 0.9;
-filter: drop-shadow(0 8px 20px rgba(0,0,0,0.08));
+.brand-badge-dot {
+width: 8px;
+height: 8px;
+background: #10b981;
+border-radius: 50%;
 }
 
-@media (max-width: 768px) {
-.contact-modern {
+@media (max-width: 900px) {
+.contact-container {
 grid-template-columns: 1fr;
 padding: 2rem;
 }
 
-.contact-right {
-display: none;
+.contact-details-grid {
+grid-template-columns: 1fr;
+}
+}
+
+@media (max-width: 600px) {
+.contact-container {
+padding: 1.5rem;
+}
+
+.social-pill {
+flex: 1 1 calc(50% - 0.6rem);
+justify-content: center;
 }
 }
 
@@ -973,41 +1204,78 @@ Rear Econ is a research initiative under Rear Global. We help young economists g
 
 <!-- CONTACT -->
 <section id="contact" class="section fade">
-<h2 class="section-title">Contact</h2>
-<p class="section-sub">Reach out to collaborate, learn, or connect with us.</p>
+<h2 class="section-title">Get In Touch</h2>
+<p class="section-sub">Reach out to collaborate, learn, or connect with our research initiative.</p>
 
-<div class="contact-modern">
-<div class="contact-left">
+<div class="contact-container">
+<div class="contact-main">
+<div class="contact-header">
 <h3>Reach Out To Us</h3>
-<p class="contact-desc">
-Whether you're a researcher, student, mentor, or organization, we’d love to hear from you.
-</p>
-
-<div class="contact-item">
-<span class="contact-label">Email</span>
-<span class="contact-value">rearecon2025@gmail.com</span>
+<p>Whether you're a researcher, student, mentor, or partner organization, we’d love to hear from you.</p>
 </div>
 
-<div class="contact-item">
-<span class="contact-label">Location</span>
-<span class="contact-value">Lalitpur, Nepal</span>
+<div class="contact-details-grid">
+<div class="contact-detail-card">
+<div class="contact-icon-box">
+<svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
 </div>
-
-<div class="contact-item">
-<span class="contact-label">Social</span>
-<div class="contact-socials">
-<a href="https://www.linkedin.com/company/rear-econ/posts/?feedView=all" target="_blank">LinkedIn</a>
-<a href="https://www.instagram.com/rearecon2025/" target="_blank">Instagram</a>
-<a href="https://www.facebook.com/p/REAR-Econ-61579375343643/" target="_blank">Facebook</a>
-<a href="https://www.youtube.com/@REAREcon" target="_blank">YouTube</a>
+<div class="contact-detail-info">
+<span class="contact-detail-label">Email Us</span>
+<a href="mailto:rearecon2025@gmail.com" class="contact-detail-value">rearecon2025@gmail.com</a>
 </div>
 </div>
 
-<a href="mailto:rearecon2025@gmail.com" class="contact-btn">Start a conversation</a>
+<div class="contact-detail-card">
+<div class="contact-icon-box">
+<svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+</div>
+<div class="contact-detail-info">
+<span class="contact-detail-label">Location</span>
+<span class="contact-detail-value">Lalitpur, Nepal</span>
+</div>
+</div>
 </div>
 
-<div class="contact-right">
-<img src="rear-econ-logo.jpeg" alt="Rear Econ" class="contact-graphic">
+<div class="contact-social-section">
+<span class="contact-social-label">Connect On Social Media</span>
+<div class="contact-social-pills">
+<a href="https://www.linkedin.com/company/rear-econ/posts/?feedView=all" target="_blank" rel="noopener" class="social-pill linkedin">
+<svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.72a1.47 1.47 0 1 0 0 2.94 1.47 1.47 0 0 0 0-2.94z"/></svg>
+LinkedIn
+</a>
+<a href="https://www.instagram.com/rearecon2025/" target="_blank" rel="noopener" class="social-pill instagram">
+<svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+Instagram
+</a>
+<a href="https://www.facebook.com/p/REAR-Econ-61579375343643/" target="_blank" rel="noopener" class="social-pill facebook">
+<svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+Facebook
+</a>
+<a href="https://www.youtube.com/@REAREcon" target="_blank" rel="noopener" class="social-pill youtube">
+<svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+YouTube
+</a>
+</div>
+</div>
+
+<div class="contact-cta-wrapper">
+<a href="mailto:rearecon2025@gmail.com" class="contact-primary-btn">
+Start A Conversation
+<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+</div>
+</div>
+
+<div class="contact-brand-card">
+<div class="brand-avatar-frame">
+<img src="rear-econ-logo.jpeg" alt="Rear Econ Logo">
+</div>
+<h4 class="brand-card-title">Rear Econ</h4>
+<span class="brand-card-subtitle">Rear Global Initiative</span>
+<p class="brand-card-text">Connecting aspiring economists with mentorship, hands-on research experience, and policy engagement opportunities.</p>
+<div class="brand-badge">
+<span class="brand-badge-dot"></span> Open For Collaborations
+</div>
 </div>
 </div>
 </section>
