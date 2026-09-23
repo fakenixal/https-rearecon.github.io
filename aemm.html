@@ -345,7 +345,7 @@ nav a:hover {
   <h2 class="section-title">Episodes</h2>
   <p class="section-sub">Newest episodes appear first.</p>
 
-  <div class="grid grid-2">
+  <div class="grid grid-2" id="aemmGrid">
 
     <!-- FIRST 5 = PORTRAIT -->
     <div class="instagram-wrapper-portrait"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dc-5aBwDgxS/?img_index=1" data-instgrm-version="14"></blockquote></div>
@@ -447,6 +447,59 @@ if (navToggle && navMenu) {
     });
   });
 }
+
+// Automatic Instagram #AEMM post auto-loader
+async function loadAutoAemmPosts() {
+  try {
+    const res = await fetch('/api/aemm-posts');
+    if (!res.ok) return;
+    const data = await res.json();
+    if (!data.success || !data.posts || data.posts.length === 0) return;
+
+    const grid = document.getElementById('aemmGrid');
+    if (!grid) return;
+
+    // Collect existing permalinks in grid to avoid duplicates
+    const existingPermalinks = new Set();
+    grid.querySelectorAll('.instagram-media').forEach(el => {
+      const link = el.getAttribute('data-instgrm-permalink');
+      if (link) {
+        // Clean trailing slash / query params for matching
+        const cleanLink = link.split('?')[0].replace(/\/$/, '');
+        existingPermalinks.add(cleanLink);
+      }
+    });
+
+    let newPostsInserted = 0;
+    // Reverse array when prepending so newest remains at the very top
+    data.posts.slice().reverse().forEach((post) => {
+      const postCleanLink = post.permalink.split('?')[0].replace(/\/$/, '');
+      if (!existingPermalinks.has(postCleanLink)) {
+        const wrapper = document.createElement('div');
+        // Treat top posts as portrait wrapper
+        wrapper.className = 'instagram-wrapper-portrait';
+
+        const blockquote = document.createElement('blockquote');
+        blockquote.className = 'instagram-media';
+        blockquote.setAttribute('data-instgrm-permalink', post.permalink + '?img_index=1');
+        blockquote.setAttribute('data-instgrm-version', '14');
+
+        wrapper.appendChild(blockquote);
+        // Prepend new posts to top of grid
+        grid.insertBefore(wrapper, grid.firstChild);
+        newPostsInserted++;
+      }
+    });
+
+    if (newPostsInserted > 0 && window.instgrm && window.instgrm.Embeds) {
+      window.instgrm.Embeds.process();
+    }
+  } catch (e) {
+    console.log('Dynamic AEMM posts load bypassed, displaying static fallback embeds:', e);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadAutoAemmPosts);
 </script>
 
 </body>
