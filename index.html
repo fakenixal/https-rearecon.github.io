@@ -163,44 +163,133 @@ overflow-x: hidden;
 
 
 
-/* Fix uneven card heights in Our Work section */
+/* Refined Our Work section styling */
 #work .grid-3 {
 align-items: stretch;
+gap: 1.8rem;
 }
 
-#work .card {
+#work .work-card {
+background: #ffffff;
+border-radius: 18px;
+border: 1px solid var(--border);
+padding: 2rem;
 display: flex;
 flex-direction: column;
-justify-content: flex-start;
-height: 100%;
+justify-content: space-between;
+box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+position: relative;
+overflow: hidden;
 }
 
-/* Ensure titles and labels don't push layout */
-#work .card-label {
-margin-bottom: 0.4rem;
-font-size: 0.85rem;
-color: var(--accent);
-font-weight: 600;
+#work .work-card::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 4px;
+background: linear-gradient(90deg, var(--primary) 0%, var(--accent-orange) 100%);
+opacity: 0.8;
+transition: opacity 0.3s ease;
 }
 
-#work .card-title {
-margin-bottom: 0.6rem;
-font-size: 1.15rem;
-font-weight: 600;
+#work .work-card:hover {
+transform: translateY(-6px);
+box-shadow: 0 16px 36px rgba(14, 97, 165, 0.12);
+border-color: rgba(230, 126, 34, 0.4);
+}
+
+#work .work-card-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 1.2rem;
+}
+
+#work .work-icon-box {
+width: 46px;
+height: 46px;
+border-radius: 12px;
+background: rgba(14, 97, 165, 0.08);
 color: var(--primary);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.25rem;
+transition: background 0.3s ease, color 0.3s ease;
 }
 
-#work .card-body {
-flex-grow: 1;
-font-size: 0.95rem;
-line-height: 1.55;
+#work .work-card:hover .work-icon-box {
+background: var(--primary);
+color: #ffffff;
+}
+
+#work .work-card-tag {
+font-size: 0.75rem;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 0.8px;
+color: var(--accent-orange);
+background: rgba(230, 126, 34, 0.1);
+padding: 0.25rem 0.65rem;
+border-radius: 999px;
+}
+
+#work .work-card-title {
+font-size: 1.25rem;
+font-weight: 700;
+color: var(--primary-dark);
+margin-bottom: 0.6rem;
+}
+
+#work .work-card-desc {
+font-size: 0.92rem;
+line-height: 1.6;
 color: var(--muted);
+margin-bottom: 1.5rem;
+flex-grow: 1;
+}
+
+#work .work-deliverables-title {
+font-size: 0.78rem;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 0.6px;
+color: var(--primary-dark);
+margin-bottom: 0.6rem;
+}
+
+#work .work-deliverables-list {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+gap: 0.45rem;
+}
+
+#work .work-deliverable-item {
+font-size: 0.85rem;
+color: #374151;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+font-weight: 500;
+}
+
+#work .work-deliverable-item::before {
+content: "•";
+color: var(--accent-orange);
+font-size: 1.2rem;
+line-height: 0;
 }
 
 /* Mobile fix */
 @media (max-width: 768px) {
-#work .card {
-height: auto;
+#work .work-card {
+padding: 1.5rem;
 }
 }
 
@@ -1465,30 +1554,69 @@ Explore Initiative
 <!-- WORK -->
 <section id="work" class="section fade">
 <h2 class="section-title">Our Work</h2>
-<p class="section-sub">Selected areas where Rear Econ typically operates.</p>
+<p class="section-sub">Translating analytical rigor and mentorship into practical policy and research outcomes.</p>
 
 <div class="grid grid-3">
-<div class="card">
-<div class="card-label">Practice Area</div>
-<div class="card-title">Capacity Building</div>
-<div class="card-body">
-Develop practical research, analytical, and leadership skills that equip aspiring economists to tackle real-world challenges and create meaningful impact.
+<div class="work-card">
+<div>
+<div class="work-card-header">
+<div class="work-icon-box">🎓</div>
+<span class="work-card-tag">Practice Area</span>
+</div>
+<h3 class="work-card-title">Capacity Building</h3>
+<p class="work-card-desc">
+Equipping emerging scholars with advanced quantitative tools, research methodologies, and critical thinking essential for real-world policy analysis.
+</p>
+</div>
+<div>
+<div class="work-deliverables-title">Key Offerings</div>
+<ul class="work-deliverables-list">
+<li class="work-deliverable-item">Econometric & Data Analytics Training</li>
+<li class="work-deliverable-item">Mentorship & Peer Discussion Groups (TWG)</li>
+<li class="work-deliverable-item">Academic Writing & Publication Guidance</li>
+</ul>
 </div>
 </div>
 
-<div class="card">
-<div class="card-label">Practice Area</div>
-<div class="card-title">Primary Research</div>
-<div class="card-body">
-Conduct rigorous, evidence-based research that generates original insights and strengthens understanding of economic and social issues.
+<div class="work-card">
+<div>
+<div class="work-card-header">
+<div class="work-icon-box">📈</div>
+<span class="work-card-tag">Practice Area</span>
+</div>
+<h3 class="work-card-title">Primary & Applied Research</h3>
+<p class="work-card-desc">
+Executing empirical, evidence-based economic studies that address key social, developmental, and market dynamics across Nepal.
+</p>
+</div>
+<div>
+<div class="work-deliverables-title">Key Offerings</div>
+<ul class="work-deliverables-list">
+<li class="work-deliverable-item">Empirical Policy & Market Studies</li>
+<li class="work-deliverable-item">Field Surveys & Primary Data Collection</li>
+<li class="work-deliverable-item">Youth & Migration Economic Analysis</li>
+</ul>
 </div>
 </div>
 
-<div class="card">
-<div class="card-label">Practice Area</div>
-<div class="card-title">Policy Enagement</div>
-<div class="card-body">
-Bridge research and action by connecting evidence with policy discussions, empowering future leaders to influence decisions that shape society.
+<div class="work-card">
+<div>
+<div class="work-card-header">
+<div class="work-icon-box">🏛️</div>
+<span class="work-card-tag">Practice Area</span>
+</div>
+<h3 class="work-card-title">Policy Engagement</h3>
+<p class="work-card-desc">
+Connecting academic research with public discourse to ensure evidence reaches leaders, stakeholders, and decision-makers shaping society.
+</p>
+</div>
+<div>
+<div class="work-deliverables-title">Key Offerings</div>
+<ul class="work-deliverables-list">
+<li class="work-deliverable-item">Evidence Briefs & Working Papers</li>
+<li class="work-deliverable-item">AEMM Media & Economic Storytelling</li>
+<li class="work-deliverable-item">Interactive Symposia & Speaker Series (TLAE)</li>
+</ul>
 </div>
 </div>
 </div>
