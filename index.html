@@ -346,66 +346,414 @@ opacity: 0;
 transform: translateY(-7px) rotate(-45deg);
 }
 
-/* HERO */
+/* ============================
+   HERO SECTION REDESIGN
+============================ */
 .hero-brush {
 position: relative;
-padding: 10rem 1.5rem 6rem;
+padding: 7.5rem 1.5rem 5rem;
+background: linear-gradient(135deg, #fffcf7 0%, #fff3e8 50%, #ffebd9 100%);
+overflow: hidden;
+min-height: 82vh;
 display: flex;
 align-items: center;
-justify-content: flex-start;
-overflow: hidden;
-background: #f7f9fc;
 }
 
-.hero-inner {
-max-width: 650px;
+.hero-brush::before {
+content: "";
+position: absolute;
+top: -10%;
+right: -5%;
+width: 550px;
+height: 550px;
+background: radial-gradient(circle, rgba(230, 126, 34, 0.14) 0%, rgba(241, 196, 15, 0.08) 50%, transparent 70%);
+border-radius: 50%;
+pointer-events: none;
+z-index: 1;
+}
+
+.hero-container {
+max-width: 1200px;
+margin: 0 auto;
+width: 100%;
+display: grid;
+grid-template-columns: 1.15fr 0.85fr;
+gap: 3.5rem;
+align-items: center;
+position: relative;
 z-index: 2;
 }
 
+.hero-inner {
+max-width: 620px;
+}
+
+.hero-badge {
+display: inline-flex;
+align-items: center;
+gap: 0.6rem;
+padding: 0.45rem 1rem;
+background: rgba(230, 126, 34, 0.1);
+border: 1px solid rgba(230, 126, 34, 0.25);
+border-radius: 999px;
+font-size: 0.82rem;
+font-weight: 700;
+color: #d35400;
+margin-bottom: 1.2rem;
+letter-spacing: 0.2px;
+}
+
+.hero-badge-dot {
+width: 8px;
+height: 8px;
+background: var(--accent-orange);
+border-radius: 50%;
+box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.25);
+}
+
 .hero-inner h1 {
-font-size: 3.2rem;
+font-size: 3.6rem;
+font-weight: 800;
+color: var(--primary);
+line-height: 1.1;
+letter-spacing: -1px;
+margin-bottom: 0.6rem;
+}
+
+.hero-inner h1 span {
+color: var(--primary-dark);
+}
+
+.hero-inner .subtitle {
+font-size: 1.25rem;
+color: var(--accent-orange) !important;
+margin-top: 0;
+margin-bottom: 1.2rem;
+font-weight: 700;
+letter-spacing: -0.2px;
+}
+
+.hero-inner p.hero-desc {
+font-size: 1.12rem;
+color: #4b5563;
+line-height: 1.65;
+margin-bottom: 2rem;
+max-width: 560px;
+}
+
+.hero-actions {
+display: flex;
+align-items: center;
+gap: 1rem;
+flex-wrap: wrap;
+margin-bottom: 2.2rem;
+}
+
+.hero-primary-btn {
+display: inline-flex;
+align-items: center;
+gap: 0.6rem;
+padding: 0.85rem 1.8rem;
+background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+color: #ffffff;
+border-radius: 999px;
+font-size: 0.95rem;
+font-weight: 600;
+text-decoration: none;
+box-shadow: 0 8px 22px rgba(14, 97, 165, 0.25);
+transition: all 0.3s ease;
+}
+
+.hero-primary-btn svg {
+width: 18px;
+height: 18px;
+fill: none;
+stroke: currentColor;
+stroke-width: 2.2;
+stroke-linecap: round;
+stroke-linejoin: round;
+transition: transform 0.25s ease;
+}
+
+.hero-primary-btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 12px 28px rgba(230, 126, 34, 0.35);
+background: linear-gradient(135deg, var(--accent-orange) 0%, #d35400 100%);
+}
+
+.hero-primary-btn:hover svg {
+transform: translateX(4px);
+}
+
+.hero-secondary-btn {
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+padding: 0.85rem 1.6rem;
+background: #ffffff;
+color: var(--primary-dark);
+border: 1px solid rgba(230, 126, 34, 0.3);
+border-radius: 999px;
+font-size: 0.95rem;
+font-weight: 600;
+text-decoration: none;
+box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+transition: all 0.25s ease;
+}
+
+.hero-secondary-btn:hover {
+background: #fff8f2;
+border-color: var(--accent-orange);
+color: #d35400;
+transform: translateY(-2px);
+box-shadow: 0 6px 16px rgba(230, 126, 34, 0.15);
+}
+
+.hero-highlights {
+display: flex;
+align-items: center;
+gap: 1.5rem;
+padding-top: 1.2rem;
+border-top: 1px solid rgba(230, 126, 34, 0.15);
+flex-wrap: wrap;
+}
+
+.hero-highlight-item {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+font-size: 0.85rem;
+font-weight: 600;
+color: var(--primary-dark);
+}
+
+.hero-highlight-icon {
+width: 22px;
+height: 22px;
+border-radius: 50%;
+background: rgba(230, 126, 34, 0.15);
+color: var(--accent-orange);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 0.75rem;
+flex-shrink: 0;
+font-weight: 700;
+}
+
+/* Right Visual Area */
+.hero-visual {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.hero-visual-card {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(16px);
+border: 1px solid rgba(255, 255, 255, 0.9);
+border-radius: 24px;
+padding: 2rem;
+box-shadow: 0 20px 40px rgba(230, 126, 34, 0.08), 0 2px 10px rgba(0, 0, 0, 0.03);
+width: 100%;
+max-width: 410px;
+position: relative;
+z-index: 2;
+}
+
+.hero-visual-card::before {
+content: "";
+position: absolute;
+inset: -1px;
+border-radius: 25px;
+padding: 1px;
+background: linear-gradient(135deg, rgba(230, 126, 34, 0.35), rgba(14, 97, 165, 0.2));
+-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+pointer-events: none;
+}
+
+.hero-card-tag {
+font-size: 0.75rem;
+font-weight: 700;
+color: var(--accent-orange);
+text-transform: uppercase;
+letter-spacing: 1px;
+display: block;
+margin-bottom: 0.3rem;
+}
+
+.hero-visual-title {
+font-size: 1.2rem;
 font-weight: 700;
 color: var(--primary);
 margin-bottom: 1.2rem;
+padding-bottom: 0.8rem;
+border-bottom: 1px solid #f1f5f9;
 }
 
-.hero-inner p {
-font-size: 1.25rem;
+.hero-feature-list {
+display: flex;
+flex-direction: column;
+gap: 0.9rem;
+}
+
+.hero-feature-item {
+display: flex;
+align-items: flex-start;
+gap: 0.9rem;
+padding: 0.85rem;
+background: #fffcf8;
+border: 1px solid #ffede0;
+border-radius: 14px;
+transition: all 0.25s ease;
+text-align: left;
+}
+
+.hero-feature-item:hover {
+background: #ffffff;
+border-color: var(--accent-orange);
+box-shadow: 0 4px 14px rgba(230, 126, 34, 0.12);
+transform: translateX(3px);
+}
+
+.hero-feature-icon {
+width: 38px;
+height: 38px;
+border-radius: 10px;
+background: rgba(230, 126, 34, 0.12);
+color: var(--accent-orange);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.1rem;
+flex-shrink: 0;
+}
+
+.hero-feature-text {
+display: flex;
+flex-direction: column;
+}
+
+.hero-feature-title {
+font-size: 0.9rem;
+font-weight: 700;
+color: var(--primary-dark);
+}
+
+.hero-feature-sub {
+font-size: 0.78rem;
 color: var(--muted);
-margin-bottom: 2.2rem;
-max-width: 600px;
+line-height: 1.35;
+margin-top: 0.15rem;
 }
 
-/* Updated hero button */
-.hero-btn {
-background: transparent;
-color: var(--accent);
-border: 2px solid var(--accent);
-padding: 0.75rem 1.6rem;
-border-radius: 999px;
-font-size: 0.95rem;
-font-weight: 500;
-transition: 0.3s ease;
-text-decoration: none;
-}
-
-.hero-btn:hover {
-background: var(--accent);
-color: #fff;
-box-shadow: 0 8px 20px rgba(14,97,165,0.25);
-}
-
-.hero-brush::after {
-content: "";
+/* Floating accent badges */
+.floating-badge {
 position: absolute;
-right: -5%;
-top: 50%;
-transform: translateY(-50%);
-width: 55%;
-height: 80%;
-background-image: url('data:image/svg+xml;utf8,<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg"><path d="M50 200 Q250 50 550 120 T750 200 Q550 350 250 280 T50 200" fill="%23e3efff"/></svg>');
-background-size: cover;
-opacity: 0.9;
+background: #ffffff;
+border-radius: 14px;
+padding: 0.75rem 1rem;
+box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+border: 1px solid rgba(255, 237, 224, 0.9);
+display: flex;
+align-items: center;
+gap: 0.7rem;
+z-index: 3;
+animation: float 6s ease-in-out infinite;
+}
+
+.floating-badge.top-right {
+top: -20px;
+right: -20px;
+animation-delay: 0s;
+}
+
+.floating-badge.bottom-left {
+bottom: -20px;
+left: -20px;
+animation-delay: 3s;
+}
+
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-8px); }
+}
+
+.floating-icon {
+width: 34px;
+height: 34px;
+border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1rem;
+flex-shrink: 0;
+}
+
+.floating-badge.top-right .floating-icon {
+background: rgba(230, 126, 34, 0.12);
+color: var(--accent-orange);
+}
+
+.floating-badge.bottom-left .floating-icon {
+background: rgba(14, 97, 165, 0.1);
+color: var(--primary);
+}
+
+.floating-text-title {
+font-size: 0.82rem;
+font-weight: 700;
+color: var(--text);
+line-height: 1.2;
+}
+
+.floating-text-sub {
+font-size: 0.72rem;
+color: var(--muted);
+margin-top: 0.1rem;
+}
+
+@media (max-width: 992px) {
+.hero-container {
+grid-template-columns: 1fr;
+gap: 3rem;
+text-align: center;
+}
+
+.hero-inner {
+max-width: 100%;
+margin: 0 auto;
+}
+
+.hero-inner p.hero-desc {
+margin-left: auto;
+margin-right: auto;
+}
+
+.hero-actions {
+justify-content: center;
+}
+
+.hero-highlights {
+justify-content: center;
+}
+
+.hero-visual-card {
+margin: 0 auto;
+}
+
+.floating-badge.top-right {
+right: 0px;
+top: -15px;
+}
+
+.floating-badge.bottom-left {
+left: 0px;
+bottom: -15px;
+}
 }
 
 /* Sections */
@@ -1064,11 +1412,79 @@ text-align: center;
 </header>
 
 <section class="hero-brush fade">
+<div class="hero-container">
 <div class="hero-inner">
-<h1>REAR Econ</h1>
-    <p class="subtitle">A research initiative by Rear Global</p>
-<p>We help aspiring applied economics researchers grow into world‑class, policy engaged, and socially conscious leaders.</p>
-<a href="#about" class="hero-btn">Learn More</a>
+<div class="hero-badge">
+<span class="hero-badge-dot"></span> Research & Leadership Collective
+</div>
+<h1>REAR <span>Econ</span></h1>
+<p class="subtitle">A research initiative by Rear Global</p>
+<p class="hero-desc">We help aspiring applied economics researchers grow into world‑class, policy engaged, and socially conscious leaders through hands-on research and mentorship.</p>
+<div class="hero-actions">
+<a href="#about" class="hero-primary-btn">
+Explore Initiative
+<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+</a>
+<a href="#contact" class="hero-secondary-btn">Get In Touch</a>
+</div>
+<div class="hero-highlights">
+<div class="hero-highlight-item">
+<span class="hero-highlight-icon">✓</span> Mentorship Driven
+</div>
+<div class="hero-highlight-item">
+<span class="hero-highlight-icon">✓</span> Applied Research
+</div>
+<div class="hero-highlight-item">
+<span class="hero-highlight-icon">✓</span> Policy Engagement
+</div>
+</div>
+</div>
+
+<div class="hero-visual">
+<div class="floating-badge top-right">
+<div class="floating-icon">🌍</div>
+<div>
+<div class="floating-text-title">Nepal & Beyond</div>
+<div class="floating-text-sub">Global Perspective</div>
+</div>
+</div>
+
+<div class="hero-visual-card">
+<span class="hero-card-tag">Research Pillars</span>
+<h3 class="hero-visual-title">Core Initiatives</h3>
+<div class="hero-feature-list">
+<div class="hero-feature-item">
+<div class="hero-feature-icon">📊</div>
+<div class="hero-feature-text">
+<span class="hero-feature-title">Applied Research</span>
+<span class="hero-feature-sub">Rigorous, data-driven studies on key policy issues</span>
+</div>
+</div>
+<div class="hero-feature-item">
+<div class="hero-feature-icon">🎓</div>
+<div class="hero-feature-text">
+<span class="hero-feature-title">Capacity Building</span>
+<span class="hero-feature-sub">Training the next generation of economists</span>
+</div>
+</div>
+<div class="hero-feature-item">
+<div class="hero-feature-icon">🏛️</div>
+<div class="hero-feature-text">
+<span class="hero-feature-title">Policy Engagement</span>
+<span class="hero-feature-sub">Connecting academic insights to decision makers</span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="floating-badge bottom-left">
+<div class="floating-icon">🚀</div>
+<div>
+<div class="floating-text-title">Active Community</div>
+<div class="floating-text-sub">Mentors & Fellows</div>
+</div>
+</div>
+</div>
 </div>
 </section>
 
